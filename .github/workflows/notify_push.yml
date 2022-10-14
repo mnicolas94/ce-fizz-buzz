@@ -1,0 +1,17 @@
+name: Notify push to branch different from dev
+
+on:
+  push:
+    branches-ignore: [ "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: send message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_PERSONAL_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "Push to ${{ github.event.repository.name }}\nbranch: ${{ github.head_ref || github.ref_name }}\nauthor: ${{ github.event.pusher.name }}\ncommit message: ${{ github.event.head_commit.message }}"

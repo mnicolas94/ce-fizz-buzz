@@ -1,0 +1,12 @@
+name: Bump version patch on push to dev branch
+
+on:
+  push:
+    branches: [ dev, develop ]
+    
+jobs:
+  run:
+    uses: mnicolas94/UnityCICDWorkflows/.github/workflows/bump_patch.yml@v1-pre-13
+    secrets:
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}

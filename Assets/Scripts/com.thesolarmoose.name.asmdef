@@ -1,0 +1,28 @@
+{
+    "name": "com.thesolarmoose.name",
+    "rootNamespace": "",
+    "references": [
+        "GUID:48d718e2f73f47c48be09822f5881d60",
+        "GUID:2a4211a3f08a2994a89f7900a61c3cd9",
+        "GUID:5f5853784b75c8e428d4bb8bfff666dc",
+        "GUID:c35c6d9084ba1a541868fbd8c50a585a",
+        "GUID:3de88c88fbbb8f944b9210d496af9762",
+        "GUID:49b49c76ee64f6b41bf28ef951cb0e50",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:29492541a59d04a81b47a7f225e8a22d",
+        "GUID:14165214884ae4a619bfb290f28194a7",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

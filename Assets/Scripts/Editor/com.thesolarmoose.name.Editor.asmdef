@@ -1,0 +1,18 @@
+{
+    "name": "com.thesolarmoose.name.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:591197a4b0d08be4bb2689923abe1d83"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
