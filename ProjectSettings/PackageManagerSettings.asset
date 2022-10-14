@@ -29,6 +29,7 @@ MonoBehaviour:
     m_Name: OpenUPM
     m_Url: https://package.openupm.com
     m_Scopes:
+    - com.brunomikoski.animationsequencer
     - com.dbrizov
     - com.facticus.utils
     - com.mackysoft.serializereference-extensions
@@ -46,6 +47,6 @@ MonoBehaviour:
   m_RegistryInfoDraft:
     m_Modified: 0
     m_ErrorMessage: 
-    m_UserModificationsInstanceId: -830
-    m_OriginalInstanceId: -834
+    m_UserModificationsInstanceId: -848
+    m_OriginalInstanceId: -852
   m_LoadAssets: 0

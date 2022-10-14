@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.brunomikoski.animationsequencer": {
+      "version": "0.5.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.dbrizov.naughtyattributes": {
       "version": "2.1.4",
       "depth": 0,
@@ -67,7 +74,7 @@
       "hash": "3a3fecab29467a3aab9273536c20f2796c225b46"
     },
     "com.facticus.utils": {
-      "version": "0.12.10",
+      "version": "0.12.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

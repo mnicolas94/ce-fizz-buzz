@@ -8,7 +8,7 @@
     "com.facticus.modelview": "https://github.com/mnicolas94/facticus-modelview.git",
     "com.facticus.savesystem": "https://github.com/mnicolas94/unity-save-system.git",
     "com.facticus.serializable-predicate": "https://github.com/mnicolas94/facticus-serializable-predicate.git",
-    "com.facticus.utils": "0.12.10",
+    "com.facticus.utils": "0.12.12",
     "com.lms.version_mand": "https://github.com/mnicolas94/LMS.Version.git?path=/Assets/Version",
     "com.mackysoft.serializereference-extensions": "1.1.6",
     "com.unity-atoms.unity-atoms-base-atoms": "4.4.5",
@@ -63,13 +63,15 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.brunomikoski.animationsequencer": "0.5.1"
   },
   "scopedRegistries": [
     {
       "name": "OpenUPM",
       "url": "https://package.openupm.com",
       "scopes": [
+        "com.brunomikoski.animationsequencer",
         "com.dbrizov",
         "com.facticus.utils",
         "com.mackysoft.serializereference-extensions",
