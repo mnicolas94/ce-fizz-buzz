@@ -14,11 +14,12 @@ namespace Tests.EditorMode
             var dumb1 = new Enemy(new Vector2(1, 0), 1);
             var dumb2 = new Enemy(new Vector2(1, 1), 4);
             var dumb3 = new Enemy(new Vector2(1, 2), 7);
+            var dumb4 = new Enemy(new Vector2(4, 1), 8);
             var fizz = new Enemy(new Vector2(1, 1.5f), 3);
             var buzz = new Enemy(new Vector2(0.5f, 1), 5);
             var enemies = new List<Enemy>
             {
-                dumb1, dumb2, dumb3, fizz, buzz
+                dumb1, dumb2, dumb3, dumb4, fizz, buzz
             };
             var expected = new List<Enemy>{ dumb1, dumb2, dumb3 };
 

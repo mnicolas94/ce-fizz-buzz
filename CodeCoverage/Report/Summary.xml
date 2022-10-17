@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>10/17/2022 - 4:20:25 PM</Generatedon>
+    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>6</Classes>
+    <Files>6</Files>
+    <Coveredlines>98</Coveredlines>
+    <Uncoveredlines>213</Uncoveredlines>
+    <Coverablelines>311</Coverablelines>
+    <Totallines>1440</Totallines>
+    <Linecoverage>31.5</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+  </Summary>
+  <Coverage>
+    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="6" coverage="31.5" coveredlines="98" coverablelines="311" totallines="1440" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Core.Enemy" coverage="72.7" coveredlines="8" coverablelines="11" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.EnemyClassUtils" coverage="100" coveredlines="30" coverablelines="30" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameController" coverage="0" coveredlines="0" coverablelines="9" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameMechanics" coverage="100" coveredlines="47" coverablelines="47" totallines="81" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameRules" coverage="81.2" coveredlines="13" coverablelines="16" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Input.GameInputActions" coverage="0" coveredlines="0" coverablelines="198" totallines="1154" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

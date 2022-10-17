@@ -1,24 +1,28 @@
 ﻿using System;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace Core
 {
+    [CreateAssetMenu(fileName = "GameRules", menuName = "FizzBuzz/GameRules")]
     public class GameRules : ScriptableObject
     {
         /// <summary>
-        /// Minimum number an enemy will be generated with
+        /// Minimum number an enemy will be spawned with
         /// </summary>
-        [SerializeField] private int _minNumber;
+        [SerializeField, Foldout("Spawning")] private int _minNumber;
         /// <summary>
-        /// Maximum number an enemy will be generated with
+        /// Maximum number an enemy will be spawned with
         /// </summary>
-        [SerializeField] private int _maxNumber;
+        [SerializeField, Foldout("Spawning")] private int _maxNumber;
 
+        [SerializeField, Foldout("Spawning")] private float _distanceToSpawnEnemy;
+        
+        [SerializeField, Foldout("Player health")] private float _distanceToDamagePlayer;
+        
+        [SerializeField, Foldout("Player health")] private float _damagePerHit; 
+        
         [SerializeField] private float _moveDistancePerTurn;
-
-        [SerializeField] private float _distanceToDamagePlayer;
-
-        [SerializeField] private float _distanceToSpawnEnemy;
         
         /// <summary>
         /// Maximum distance a shot can bounce to hit other enemies
@@ -32,6 +36,8 @@ namespace Core
         public float MoveDistancePerTurn => _moveDistancePerTurn;
 
         public float DistanceToDamagePlayer => _distanceToDamagePlayer;
+
+        public float DamagePerHit => _damagePerHit;
 
         public float DistanceToSpawnEnemy => _distanceToSpawnEnemy;
 

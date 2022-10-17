@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Utils.Extensions;
 
 namespace Core
 {
@@ -76,6 +77,17 @@ namespace Core
                 neighborATuple.Item2.CompareTo(neighborBTuple.Item2));
             
             return sqrDistances[0];
+        }
+        
+        public static void ChangeEnemiesClass(EnemyClass newClass, List<Enemy> enemies, GameRules gameRules)
+        {
+            var newClassValues =
+                EnemyClassUtils.GetValuesFromClass(newClass, gameRules.MinNumber, gameRules.MaxNumber).ToList();
+            foreach (var enemy in enemies)
+            {
+                var randomValue = newClassValues.GetRandom();
+                enemy.ChangeClass(randomValue);
+            }
         }
     }
 }

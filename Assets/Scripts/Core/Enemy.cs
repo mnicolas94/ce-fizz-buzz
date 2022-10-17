@@ -23,6 +23,8 @@ namespace Core
 
         public EnemyClass CurrentClass => EnemyClassUtils.GetClassFromInt(_classes[_classes.Count - 1]);
 
+        public int Score => _classes[_classes.Count - 1];
+
         public Enemy(Vector2 position, int firstClass)
         {
             _position = position;
