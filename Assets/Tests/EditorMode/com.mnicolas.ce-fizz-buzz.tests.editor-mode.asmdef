@@ -2,6 +2,7 @@
     "name": "com.mnicolas.ce-fizz-buzz.tests.editor-mode",
     "rootNamespace": "",
     "references": [
+        "com.mnicolas.ce-fizz-buzz",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],
