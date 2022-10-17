@@ -1,0 +1,37 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+namespace Core
+{
+    /// <summary>
+    /// The core enemy data.
+    /// </summary>
+    public class Enemy
+    {
+        private Vector2 _position;
+        
+        /// <summary>
+        /// The classes (dumb, fizz, buzz, fizzbuzz) to which an enemy has belonged, as integers.
+        /// </summary>
+        private List<int> _classes;
+
+        public Vector2 Position
+        {
+            get => _position;
+            set => _position = value;
+        }
+
+        public int CurrentClass => _classes[_classes.Count - 1];
+
+        public Enemy(Vector2 position, int firstClass)
+        {
+            _position = position;
+            _classes = new List<int>{ firstClass };
+        }
+
+        public void ChangeClass(int newClass)
+        {
+            _classes.Add(newClass);
+        }
+    }
+}
