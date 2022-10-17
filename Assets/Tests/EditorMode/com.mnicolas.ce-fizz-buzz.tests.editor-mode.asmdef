@@ -3,6 +3,8 @@
     "rootNamespace": "",
     "references": [
         "com.mnicolas.ce-fizz-buzz",
+        "UnityAtoms.UnityAtomsBaseAtoms.Runtime",
+        "UnityAtoms.UnityAtomsCore.Runtime",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],
