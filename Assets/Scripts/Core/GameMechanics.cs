@@ -38,18 +38,27 @@ namespace Core
             
             // get enemies of the same class
             var targetClass = targetEnemy.CurrentClass;
-            var sameClassEnemies = enemies.Where(enemy => enemy.CurrentClass == targetClass).ToList();
+            var sameClassEnemies = enemies
+                .Where(enemy =>
+                {
+                    bool sameClass = enemy.CurrentClass == targetClass;
+                    bool differentToTarget = enemy != targetEnemy;
+                    return sameClass && differentToTarget;
+                })
+                .ToList();
 
             // loop to get the bounce sequence
             var currentEnemy = targetEnemy;
             bool closestIsInReach = true;
             while (closestIsInReach && sameClassEnemies.Count > 0)
             {
-                var (closest, distance) = GetClosestEnemy(currentEnemy, sameClassEnemies);
+                var (closest, sqrDistance) = GetClosestEnemy(currentEnemy, sameClassEnemies);
+                var distance = Mathf.Sqrt(sqrDistance);
                 closestIsInReach = distance < gameRules.DistanceToBounceShot;
                 
                 if (closestIsInReach)
                 {
+                    currentEnemy = closest;
                     bounceSequence.Add(closest);
                     sameClassEnemies.Remove(closest);
                 }
