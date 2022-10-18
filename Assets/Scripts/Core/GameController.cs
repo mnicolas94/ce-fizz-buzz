@@ -34,7 +34,6 @@ namespace Core
         public void PlayTurn(Enemy shotTarget, EnemyClass shotClass)
         {
             ShootEnemies(shotTarget, shotClass);
-
             MoveEnemies();
         }
 
@@ -74,6 +73,11 @@ namespace Core
         private void MoveEnemies()
         {
             // spawn enemies
+            var newEnemies = GameMechanics.SpawnEnemies(_gameRules.SpawnRules);
+            foreach (var enemy in newEnemies)
+            {
+                _enemies.Add(enemy);
+            }
             
             // move enemies
             GameMechanics.MoveEnemies(_enemies, _gameRules, out var attackingEnemies);

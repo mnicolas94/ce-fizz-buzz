@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55ca50626684f1d8444fdcf8bc549e8, type: 3}
   m_Name: GameRules
   m_EditorClassIdentifier: 
-  _minNumber: 0
-  _maxNumber: 0
-  _distanceToSpawnEnemy: 0
-  _moveDistancePerTurn: 0
-  _distanceToDamagePlayer: 0
-  _damagePerHit: 0
-  _distanceToBounceShot: 0
+  _spawnRules:
+    _minNumber: 1
+    _maxNumber: 15
+    _distanceToSpawnEnemy: 5.5
+  _healthRules:
+    _distanceToDamagePlayer: 1
+    _damagePerHit: 1
+  _moveDistancePerTurn: 1
+  _distanceToBounceShot: 1

@@ -16,7 +16,6 @@ namespace Core.GameRules
         /// </summary>
         [SerializeField] private float _distanceToBounceShot = 1;
 
-
         public SpawnRules SpawnRules
         {
             get => _spawnRules;

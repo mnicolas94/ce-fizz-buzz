@@ -2,6 +2,7 @@
 using System.Linq;
 using Core.GameRules;
 using UnityEngine;
+using Utils;
 using Utils.Extensions;
 
 namespace Core
@@ -68,17 +69,6 @@ namespace Core
 
             return bounceSequence;
         }
-
-        private static (Enemy, float) GetClosestEnemy(Enemy target, List<Enemy> neighbors)
-        {
-            var sqrDistances = neighbors.ConvertAll(neighbor => 
-                (neighbor, Vector2.SqrMagnitude(target.Position - neighbors[0].Position)));
-            
-            sqrDistances.Sort((neighborATuple, neighborBTuple) => 
-                neighborATuple.Item2.CompareTo(neighborBTuple.Item2));
-            
-            return sqrDistances[0];
-        }
         
         public static void ChangeEnemiesClass(EnemyClass newClass, List<Enemy> enemies, SpawnRules spawnRules)
         {
@@ -89,6 +79,42 @@ namespace Core
                 var randomValue = newClassValues.GetRandom();
                 enemy.ChangeClass(randomValue);
             }
+        }
+
+        public static List<Enemy> SpawnEnemies(SpawnRules spawnRules)
+        {
+            var enemiesSpawned = new List<Enemy>();
+            var spawnCount = Random.Range(spawnRules.MinSpawnCount, spawnRules.MaxSpawnCount);
+
+            // clamp to avoid negative values or above the number of circular sectors available for spawning
+            spawnCount = Mathf.Clamp(spawnCount, 0, spawnRules.CircularSectors);
+
+            var availableAngles = spawnRules.GetAvailableSpawnAngles();
+            
+            for (int i = 0; i < spawnCount; i++)
+            {
+                var angle = availableAngles.PopRandom();
+                var distance = spawnRules.DistanceToSpawnEnemy;
+                var position = MathUtils.FromPolar(distance, angle);
+                
+                var classValue = Random.Range(spawnRules.MinNumber, spawnRules.MaxNumber);
+                
+                var enemy = new Enemy(position, classValue);
+                enemiesSpawned.Add(enemy);
+            }
+
+            return enemiesSpawned;
+        }
+
+        private static (Enemy, float) GetClosestEnemy(Enemy target, List<Enemy> neighbors)
+        {
+            var sqrDistances = neighbors.ConvertAll(neighbor => 
+                (neighbor, Vector2.SqrMagnitude(target.Position - neighbors[0].Position)));
+            
+            sqrDistances.Sort((neighborATuple, neighborBTuple) => 
+                neighborATuple.Item2.CompareTo(neighborBTuple.Item2));
+            
+            return sqrDistances[0];
         }
     }
 }

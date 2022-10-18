@@ -10,7 +10,7 @@
     "com.facticus.modelview": "https://github.com/mnicolas94/facticus-modelview.git",
     "com.facticus.savesystem": "https://github.com/mnicolas94/unity-save-system.git",
     "com.facticus.serializable-predicate": "https://github.com/mnicolas94/facticus-serializable-predicate.git",
-    "com.facticus.utils": "0.12.12",
+    "com.facticus.utils": "https://github.com/mnicolas94/UnityUtils.git",
     "com.lms.version_mand": "https://github.com/mnicolas94/LMS.Version.git?path=/Assets/Version",
     "com.mackysoft.serializereference-extensions": "1.1.6",
     "com.unity-atoms.unity-atoms-base-atoms": "4.4.5",

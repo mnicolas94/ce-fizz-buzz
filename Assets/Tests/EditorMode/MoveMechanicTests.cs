@@ -9,7 +9,7 @@ namespace Tests.EditorMode
     public class MoveMechanicTests
     {
         [Test]
-        public void WhenMoveEnemies_PositionsChange_Test()
+        public void WhenMoveEnemies_PositionsChange()
         {
             // arrange
             var enemies = new List<Enemy>
@@ -34,7 +34,7 @@ namespace Tests.EditorMode
         }
         
         [Test]
-        public void WhenMoving_DontPassThroughPlayer_Test()
+        public void WhenMoving_DontPassThroughPlayer()
         {
             // arrange
             var enemy = new Enemy(new Vector2(1, 1), 1);
@@ -54,7 +54,7 @@ namespace Tests.EditorMode
         }
         
         [Test]
-        public void WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged_Test()
+        public void WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged()
         {
             // arrange
             var enemy1 = new Enemy(new Vector2(1, 1), 1);
