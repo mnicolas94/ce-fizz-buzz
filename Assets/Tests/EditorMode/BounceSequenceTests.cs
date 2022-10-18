@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Core;
+using Core.GameRules;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -24,7 +25,8 @@ namespace Tests.EditorMode
             var expected = new List<Enemy>{ dumb1, dumb2, dumb3 };
 
             // act
-            var rules = GameRules.Create(distanceToBounceShot: 1.1f);
+            var rules = ScriptableObject.CreateInstance<GameRules>();
+            rules.DistanceToBounceShot = 1.1f;
             var result = GameMechanics.GetShotBounceSequence(dumb1, enemies, rules);
 
             // assert

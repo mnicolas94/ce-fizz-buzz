@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Core;
+using Core.GameRules;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -18,7 +19,8 @@ namespace Tests.EditorMode
                 new Enemy(new Vector2(2, -4), 1),
                 new Enemy(new Vector2(-1, -1), 1),
             };
-            var rules = GameRules.Create();
+            var rules = ScriptableObject.CreateInstance<GameRules>();
+            rules.MoveDistancePerTurn = 1;
             var enemiesPositions = enemies.ConvertAll(enemy => (enemy, enemy.Position));
             
             // act
@@ -40,7 +42,8 @@ namespace Tests.EditorMode
             {
                 enemy
             };
-            var rules = GameRules.Create(moveDistancePerTurn: 10);
+            var rules = ScriptableObject.CreateInstance<GameRules>();
+            rules.MoveDistancePerTurn = 10;
             
             // act
             GameMechanics.MoveEnemies(enemies, rules, out var enemiesDamage);
@@ -65,8 +68,10 @@ namespace Tests.EditorMode
                 enemy3,
                 enemy4,
             };
-            var rules = GameRules.Create(distanceToDamagePlayer: 1);
-            
+            var rules = ScriptableObject.CreateInstance<GameRules>();
+            rules.MoveDistancePerTurn = 1;
+            rules.HealthRules.DistanceToDamagePlayer = 1;
+
             // act
             GameMechanics.MoveEnemies(enemies, rules, out var enemiesDamage);
             

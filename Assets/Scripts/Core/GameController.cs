@@ -8,9 +8,9 @@ namespace Core
         private FloatVariable _playerHealth;
         private IntVariable _score;
         private IList<Enemy> _enemies;
-        private GameRules _gameRules;
+        private GameRules.GameRules _gameRules;
 
-        public GameController(FloatVariable playerHealth, IntVariable score, IList<Enemy> enemies, GameRules gameRules)
+        public GameController(FloatVariable playerHealth, IntVariable score, IList<Enemy> enemies, GameRules.GameRules gameRules)
         {
             _playerHealth = playerHealth;
             _score = score;
@@ -18,7 +18,6 @@ namespace Core
             _gameRules = gameRules;
         }
 
-        
         /// <summary>
         /// Spawn and move enemies when game starts. Similar to PlayTurn() without the shooting step.
         /// </summary>
@@ -65,7 +64,7 @@ namespace Core
             else
             {
                 // change enemies' classes
-                GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _gameRules);
+                GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _gameRules.SpawnRules);
             }
         }
 
@@ -82,7 +81,7 @@ namespace Core
             foreach (var attackingEnemy in attackingEnemies)
             {
                 _enemies.Remove(attackingEnemy);
-                _playerHealth.Value -= _gameRules.DamagePerHit;
+                _playerHealth.Value -= _gameRules.HealthRules.DamagePerHit;
             }
         }
     }
