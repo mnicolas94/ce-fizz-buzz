@@ -1,8 +1,12 @@
-﻿namespace Core.TurnSteps
+﻿using System;
+using UnityEngine;
+
+namespace Core.TurnSteps
 {
+    [Serializable]
     public class ScoreChangedTurnStep : TurnStep
     {
-        private int _scoreChange;
+        [SerializeField] private int _scoreChange;
 
         public int ScoreChange => _scoreChange;
 

@@ -1,8 +1,12 @@
-﻿namespace Core.TurnSteps
+﻿using System;
+using UnityEngine;
+
+namespace Core.TurnSteps
 {
+    [Serializable]
     public class HealPlayerTurnStep : TurnStep
     {
-        private float _heal;
+        [SerializeField] private float _heal;
 
         public float Heal => _heal;
 

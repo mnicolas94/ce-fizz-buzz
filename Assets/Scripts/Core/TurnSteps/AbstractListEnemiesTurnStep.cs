@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Core.TurnSteps
 {
+    [Serializable]
     public abstract class AbstractListEnemiesTurnStep : TurnStep
     {
-        private List<Enemy> _enemies;
+        [SerializeField] private List<Enemy> _enemies;
 
         public List<Enemy> Enemies => _enemies;
 

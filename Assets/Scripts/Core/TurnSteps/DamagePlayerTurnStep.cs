@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Core.TurnSteps
 {
+    [Serializable]
     public class DamagePlayerTurnStep : AbstractListEnemiesTurnStep
     {
-        private float _damage;
+        [SerializeField] private float _damage;
 
         public float Damage => _damage;
 

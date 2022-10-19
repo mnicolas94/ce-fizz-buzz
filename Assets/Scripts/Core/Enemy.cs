@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
@@ -6,14 +7,15 @@ namespace Core
     /// <summary>
     /// The core enemy data.
     /// </summary>
+    [Serializable]
     public class Enemy
     {
-        private Vector2 _position;
+        [SerializeField] private Vector2 _position;
         
         /// <summary>
         /// The classes (dumb, fizz, buzz, fizzbuzz) to which an enemy has belonged, as integers.
         /// </summary>
-        private List<int> _classes;
+        [SerializeField] private List<int> _classes;
 
         public Vector2 Position
         {
