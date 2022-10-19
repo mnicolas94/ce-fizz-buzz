@@ -2,10 +2,12 @@
     "name": "com.mnicolas.ce-fizz-buzz",
     "rootNamespace": "",
     "references": [
+        "GUID:375a2b2d1d3bd46ba98f8cd67b6afde6",
         "GUID:48d718e2f73f47c48be09822f5881d60",
         "GUID:2a4211a3f08a2994a89f7900a61c3cd9",
         "GUID:5f5853784b75c8e428d4bb8bfff666dc",
         "GUID:c35c6d9084ba1a541868fbd8c50a585a",
+        "GUID:fedbbe7b0a1fa934d9d0d8f056581b8e",
         "GUID:3de88c88fbbb8f944b9210d496af9762",
         "GUID:49b49c76ee64f6b41bf28ef951cb0e50",
         "GUID:776d03a35f1b52c4a9aed9f56d7b4229",

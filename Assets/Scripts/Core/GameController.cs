@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Core.TurnSteps;
 using UnityAtoms.BaseAtoms;
 
 namespace Core
@@ -10,20 +12,20 @@ namespace Core
         private IList<Enemy> _enemies;
         private GameRules.GameRules _gameRules;
 
-        public GameController(FloatVariable playerHealth, IntVariable score, IList<Enemy> enemies, GameRules.GameRules gameRules)
+        public GameController(FloatVariable playerHealth, IntVariable score, GameRules.GameRules gameRules)
         {
             _playerHealth = playerHealth;
             _score = score;
-            _enemies = enemies;
             _gameRules = gameRules;
+            _enemies = new List<Enemy>();
         }
 
         /// <summary>
         /// Spawn and move enemies when game starts. Similar to PlayTurn() without the shooting step.
         /// </summary>
-        public void StartGame()
+        public List<TurnStep> StartGame()
         {
-            MoveEnemies();
+            return ExecuteEnemiesActions().ToList();
         }
 
         /// <summary>
@@ -31,10 +33,12 @@ namespace Core
         /// </summary>
         /// <param name="shotTarget"></param>
         /// <param name="shotClass"></param>
-        public void PlayTurn(Enemy shotTarget, EnemyClass shotClass)
+        public List<TurnStep> PlayTurn(Enemy shotTarget, EnemyClass shotClass)
         {
-            ShootEnemies(shotTarget, shotClass);
-            MoveEnemies();
+            var turnSteps = ExecutePlayerActions(shotTarget, shotClass);
+            turnSteps = turnSteps.Concat(ExecuteEnemiesActions());
+
+            return turnSteps.ToList();
         }
 
         /// <summary>
@@ -42,7 +46,7 @@ namespace Core
         /// </summary>
         /// <param name="shotTarget"></param>
         /// <param name="shotClass"></param>
-        private void ShootEnemies(Enemy shotTarget, EnemyClass shotClass)
+        private IEnumerable<TurnStep> ExecutePlayerActions(Enemy shotTarget, EnemyClass shotClass)
         {
             // get neighbour enemies sorted by shot bounce
             var shotBounceSequence = GameMechanics.GetShotBounceSequence(shotTarget, _enemies, _gameRules);
@@ -53,24 +57,29 @@ namespace Core
             if (sameClass)
             {
                 // destroy enemies
+                int totalScore = 0;
                 foreach (var enemy in shotBounceSequence)
                 {
                     _enemies.Remove(enemy);
                     _score.Value += enemy.Score;
+                    totalScore += enemy.Score;
                     // TODO heal based on score
                 }
+                yield return new DestroyTurnStep(shotBounceSequence, shotClass);
+                yield return new ScoreChangedTurnStep(totalScore);
             }
             else
             {
                 // change enemies' classes
                 GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _gameRules.SpawnRules);
+                yield return new ChangeClassTurnStep(shotBounceSequence, shotClass);
             }
         }
 
         /// <summary>
         /// Move enemies and do damage to player for each enemy that gets close
         /// </summary>
-        private void MoveEnemies()
+        private IEnumerable<TurnStep> ExecuteEnemiesActions()
         {
             // spawn enemies
             var newEnemies = GameMechanics.SpawnEnemies(_gameRules.SpawnRules);
@@ -78,15 +87,22 @@ namespace Core
             {
                 _enemies.Add(enemy);
             }
+            yield return new SpawnTurnStep(newEnemies);
             
             // move enemies
             GameMechanics.MoveEnemies(_enemies, _gameRules, out var attackingEnemies);
+            var nonAttackingEnemies = _enemies.Where(enemy => !attackingEnemies.Contains(enemy)).ToList();
+            
+            yield return new MoveTurnStep(nonAttackingEnemies);
 
+            float totalDamage = 0;
             foreach (var attackingEnemy in attackingEnemies)
             {
                 _enemies.Remove(attackingEnemy);
                 _playerHealth.Value -= _gameRules.HealthRules.DamagePerHit;
+                totalDamage += _gameRules.HealthRules.DamagePerHit;
             }
+            yield return new DamagePlayerTurnStep(attackingEnemies, totalDamage);
         }
     }
 }
