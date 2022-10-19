@@ -13,11 +13,20 @@ namespace Core
         private GameRules.GameRules _gameRules;
 
         public GameController(FloatVariable playerHealth, IntVariable score, GameRules.GameRules gameRules)
+            : this(playerHealth, score, gameRules, new List<Enemy>())
+        {
+        }
+        
+        public GameController(
+            FloatVariable playerHealth,
+            IntVariable score,
+            GameRules.GameRules gameRules,
+            List<Enemy> initialEnemies)
         {
             _playerHealth = playerHealth;
             _score = score;
             _gameRules = gameRules;
-            _enemies = new List<Enemy>();
+            _enemies = initialEnemies;
         }
 
         /// <summary>
@@ -102,7 +111,11 @@ namespace Core
                 _playerHealth.Value -= _gameRules.HealthRules.DamagePerHit;
                 totalDamage += _gameRules.HealthRules.DamagePerHit;
             }
-            yield return new DamagePlayerTurnStep(attackingEnemies, totalDamage);
+
+            if (attackingEnemies.Count > 0)
+            {
+                yield return new DamagePlayerTurnStep(attackingEnemies, totalDamage);
+            }
         }
     }
 }

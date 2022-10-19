@@ -8,10 +8,10 @@ namespace Core.GameRules
     public class SpawnRules
     {
         [SerializeField, Tooltip("Min number of enemies to spawn per turn.")]
-        private int _minSpawnCount;
+        private int _minSpawnCount = 1;
         
         [SerializeField, Tooltip("Max number of enemies to spawn per turn.")]
-        private int _maxSpawnCount;
+        private int _maxSpawnCount = 1;
         
         [SerializeField, Tooltip("Minimum number an enemy will be spawned with.")]
         private int _minNumber = 1;
