@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bc11ffe6754f76b2cdbcbf65f35d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _appearanceSettings: {fileID: 11400000, guid: 1672b9a89e55dd149871ee790f825875, type: 2}
+  _spriteRenderer: {fileID: 3966136585237183765}
   _spawnAnimation: {fileID: 8976504005861705391}
   _moveAnimation: {fileID: 1409525069096328476}
   _destroyAnimation: {fileID: 8020744519609809331}
