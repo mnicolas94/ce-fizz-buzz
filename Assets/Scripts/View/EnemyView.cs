@@ -1,7 +1,5 @@
-﻿using System.Threading.Tasks;
-using BrunoMikoski.AnimationSequencer;
+﻿using BrunoMikoski.AnimationSequencer;
 using Core;
-using DG.Tweening;
 using UnityEngine;
 
 namespace View
@@ -10,6 +8,7 @@ namespace View
     {
         [SerializeField] private AnimationSequencerController _spawnAnimation;
         [SerializeField] private AnimationSequencerController _moveAnimation;
+        [SerializeField] private AnimationSequencerController _destroyAnimation;
 
         private Enemy _enemyData;
 
@@ -19,9 +18,12 @@ namespace View
 
         public AnimationSequencerController MoveAnimation => _moveAnimation;
 
+        public AnimationSequencerController DestroyAnimation => _destroyAnimation;
+
         public void SetEnemyData(Enemy enemy)
         {
             _enemyData = enemy;
+            gameObject.name = $"Enemy - {enemy.CurrentClass} ({enemy.Score})";
         }
     }
 }

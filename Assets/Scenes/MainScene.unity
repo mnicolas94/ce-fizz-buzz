@@ -613,6 +613,53 @@ Transform:
   m_Father: {fileID: 1971944467}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &523633166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523633167}
+  - component: {fileID: 523633168}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &523633167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523633166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971944467}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523633168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523633166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f98e87be324bb8bb1d4bbfe35a5322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameController: {fileID: 1387679554}
+  _enemyView: {fileID: 0}
+  _shotClass: 0
 --- !u!1 &907627146
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSteps:
+  - rid: 761664056048222269
   - rid: 761664056048222232
   - rid: 761664039437205507
   updateType: 0
@@ -711,6 +759,14 @@ MonoBehaviour:
         flowType: 0
         _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
         _enemiesPool: {fileID: 1944110328}
+    - rid: 761664056048222269
+      type: {class: DestroyEnemiesSequence, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      data:
+        delay: 0
+        flowType: 0
+        _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
+        _enemiesPool: {fileID: 1944110328}
+        _shotSequenceRenderer: {fileID: 1498455978}
 --- !u!1 &1362311533
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +861,53 @@ MonoBehaviour:
   _scoreVariable: {fileID: 11400000, guid: 226ef8047917d424db1876b6953b026a, type: 2}
   _gameRules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}
   _turnRenderer: {fileID: 907627148}
+--- !u!1 &1498455976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498455977}
+  - component: {fileID: 1498455978}
+  m_Layer: 0
+  m_Name: ShotAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498455977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498455976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971944467}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498455978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498455976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faccb5b50c16453b8eded2222483218f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rayPrefab: {fileID: 4791325487752516797, guid: 1abc8271f7b401b4e932b97579ea9445, type: 3}
+  _timeBetweenRays: 0.1
+  _enemySequenceDelay: 0.05
 --- !u!1 &1944110326
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +985,8 @@ Transform:
   - {fileID: 1387679553}
   - {fileID: 907627147}
   - {fileID: 1944110327}
+  - {fileID: 1498455977}
+  - {fileID: 523633167}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
