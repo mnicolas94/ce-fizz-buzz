@@ -724,6 +724,7 @@ MonoBehaviour:
   - rid: 761664058760888394
   - rid: 761664056048222232
   - rid: 761664039437205507
+  - rid: 761664058760888400
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
@@ -776,6 +777,13 @@ MonoBehaviour:
         _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
         _enemiesPool: {fileID: 1944110328}
         _shotSequenceRenderer: {fileID: 1498455978}
+    - rid: 761664058760888400
+      type: {class: DamagePlayerTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      data:
+        delay: 0
+        flowType: 1
+        _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
+        _enemiesPool: {fileID: 1944110328}
 --- !u!1 &1362311533
 GameObject:
   m_ObjectHideFlags: 0
