@@ -721,6 +721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationSteps:
   - rid: 761664056048222269
+  - rid: 761664058760888394
   - rid: 761664056048222232
   - rid: 761664039437205507
   updateType: 0
@@ -753,14 +754,22 @@ MonoBehaviour:
         _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
         _enemiesPool: {fileID: 1944110328}
     - rid: 761664056048222232
-      type: {class: SpawnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      type: {class: SpawnTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
       data:
         delay: 0
         flowType: 0
         _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
         _enemiesPool: {fileID: 1944110328}
     - rid: 761664056048222269
-      type: {class: DestroyEnemiesSequence, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      type: {class: DestroyEnemiesTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      data:
+        delay: 0
+        flowType: 0
+        _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
+        _enemiesPool: {fileID: 1944110328}
+        _shotSequenceRenderer: {fileID: 1498455978}
+    - rid: 761664058760888394
+      type: {class: ChangeClassTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
       data:
         delay: 0
         flowType: 0

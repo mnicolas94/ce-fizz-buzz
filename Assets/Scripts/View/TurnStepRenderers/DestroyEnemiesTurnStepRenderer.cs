@@ -9,7 +9,7 @@ using Utils.Attributes;
 namespace View.TurnStepRenderers
 {
     [Serializable]
-    public class DestroyEnemiesSequence : TurnStepRenderer
+    public class DestroyEnemiesTurnStepRenderer : TurnStepRenderer
     {
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)]
         private EnemyViewPool _enemiesPool;
@@ -22,24 +22,26 @@ namespace View.TurnStepRenderers
         public override void AddTweenToSequence(Sequence animationSequence)
         {
             var turnStep = _lastTurnData.FirstOrDefault(step => step is DestroyTurnStep);
-            if (turnStep is DestroyTurnStep destroyStep)
+            if (turnStep is DestroyTurnStep destroyTurnStep)
             {
-                var enemiesViews = destroyStep.Enemies.Select(enemy => _enemiesPool.GetView(enemy)).ToList();
+                var enemiesViews = destroyTurnStep.Enemies.Select(enemy => _enemiesPool.GetView(enemy)).ToList();
                 var shotSequence = _shotSequenceRenderer.GetShotSequence(
                     enemiesViews,
-                    destroyStep.ShotClass,
-                    enemyView =>
-                    {
-                        var sequence = enemyView.DestroyAnimation.GenerateSequence();
-                        sequence.onComplete += () => _enemiesPool.RemoveView(enemyView.EnemyData);
-                        return sequence;
-                    });
+                    destroyTurnStep.ShotClass,
+                    GetShotEnemySequence);
             
                 if (FlowType == FlowType.Append)
                     animationSequence.Append(shotSequence);
                 else
                     animationSequence.Join(shotSequence);
             }
+        }
+
+        private Sequence GetShotEnemySequence(EnemyView enemyView)
+        {
+            var sequence = enemyView.DestroyAnimation.GenerateSequence();
+            sequence.onComplete += () => _enemiesPool.RemoveView(enemyView.EnemyData);
+            return sequence;
         }
 
         public override void ResetToInitialState()

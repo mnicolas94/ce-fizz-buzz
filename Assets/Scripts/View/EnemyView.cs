@@ -15,6 +15,7 @@ namespace View
         [SerializeField] private AnimationSequencerController _spawnAnimation;
         [SerializeField] private AnimationSequencerController _moveAnimation;
         [SerializeField] private AnimationSequencerController _destroyAnimation;
+        [SerializeField] private AnimationSequencerController _changeClassAnimation;
 
         private Enemy _enemyData;
 
@@ -25,6 +26,8 @@ namespace View
         public AnimationSequencerController MoveAnimation => _moveAnimation;
 
         public AnimationSequencerController DestroyAnimation => _destroyAnimation;
+
+        public AnimationSequencerController ChangeClassAnimation => _changeClassAnimation;
 
         public void SetEnemyData(Enemy enemy)
         {

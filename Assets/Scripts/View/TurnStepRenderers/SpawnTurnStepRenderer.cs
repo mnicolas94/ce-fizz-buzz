@@ -9,7 +9,7 @@ using Utils.Attributes;
 namespace View.TurnStepRenderers
 {
     [Serializable]
-    public class SpawnStepRenderer : TurnStepRenderer
+    public class SpawnTurnStepRenderer : TurnStepRenderer
     {
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)]
         private EnemyViewPool _enemiesPool;
