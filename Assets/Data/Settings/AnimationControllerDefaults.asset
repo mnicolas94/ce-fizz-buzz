@@ -25,7 +25,7 @@ MonoBehaviour:
   preferUsingPreviousDirection: 1
   useRelative: 0
   preferUsingPreviousRelativeValue: 1
-  autoplayMode: 0
+  autoplayMode: 2
   playOnAwake: 0
   pauseOnAwake: 0
   timeScaleIndependent: 0

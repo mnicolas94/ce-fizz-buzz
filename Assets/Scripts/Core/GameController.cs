@@ -96,6 +96,7 @@ namespace Core
             {
                 _enemies.Add(enemy);
             }
+
             yield return new SpawnTurnStep(newEnemies);
             
             // move enemies

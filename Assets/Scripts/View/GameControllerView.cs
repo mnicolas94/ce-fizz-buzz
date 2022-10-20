@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core;
 using Core.GameRules;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
-using UnityEngine.Pool;
+using Utils.Attributes;
 
 namespace View
 {
@@ -14,37 +16,23 @@ namespace View
         [SerializeField] private IntVariable _scoreVariable;
         [SerializeField] private GameRules _gameRules;
 
-        [SerializeField] private EnemyView _enemyViewPrefab;
+        [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private TurnRenderer _turnRenderer;
 
         private GameController _gameController;
-        private Dictionary<Enemy, EnemyView> _dataViewMap = new Dictionary<Enemy, EnemyView>();
-        private ObjectPool<EnemyView> _enemiesPool;
 
-        private void Start()
-        {
-            _enemiesPool = new ObjectPool<EnemyView>(
-                () => Instantiate(_enemyViewPrefab, transform),
-                view => view.gameObject.SetActive(true),
-                view => view.gameObject.SetActive(false)
-                );
-        }
-        
-        
-
+        [ContextMenu("Start game")]
         public async Task StartGame()
         {
             _gameController = new GameController(_healthVariable, _scoreVariable, _gameRules);
-            _gameController.StartGame();
+            
+            var turnSteps = _gameController.StartGame();
+            await _turnRenderer.RenderTurn(turnSteps);
         }
 
-        public async Task PlayTurn()
+        public async Task PlayTurn(Enemy enemy, EnemyClass shotClass)
         {
-            
-        }
-
-        private void DrawTurn()
-        {
-            
+            var turnSteps = _gameController.PlayTurn(enemy, shotClass);
+            await _turnRenderer.RenderTurn(turnSteps);
         }
     }
 }

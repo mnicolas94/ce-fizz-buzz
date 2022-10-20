@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: GameRules
   m_EditorClassIdentifier: 
   _spawnRules:
+    _minSpawnCount: 4
+    _maxSpawnCount: 4
     _minNumber: 1
     _maxNumber: 15
     _distanceToSpawnEnemy: 5.5
+    _circularSectors: 18
   _healthRules:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1

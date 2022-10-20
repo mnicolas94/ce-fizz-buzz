@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.TheSolarMoose.UnityProjectTemplate
+    Standalone: com.Facticus.FizzBuzz
   buildNumber:
     Standalone: 0.3.16
     iPhone: 0
