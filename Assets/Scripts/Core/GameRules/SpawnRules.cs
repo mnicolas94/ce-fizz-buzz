@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Core.GameRules
 {
@@ -59,6 +60,11 @@ namespace Core.GameRules
         {
             get => _distanceToSpawnEnemy;
             set => _distanceToSpawnEnemy = value;
+        }
+
+        public int GetRandomClassValue()
+        {
+            return Random.Range(MinNumber, MaxNumber + 1);
         }
 
         public List<float> GetAvailableSpawnAngles()

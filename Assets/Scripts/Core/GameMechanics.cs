@@ -97,7 +97,7 @@ namespace Core
                 var distance = spawnRules.DistanceToSpawnEnemy;
                 var position = MathUtils.FromPolar(distance, angle);
                 
-                var classValue = Random.Range(spawnRules.MinNumber, spawnRules.MaxNumber);
+                var classValue = spawnRules.GetRandomClassValue();
                 
                 var enemy = new Enemy(position, classValue);
                 enemiesSpawned.Add(enemy);
