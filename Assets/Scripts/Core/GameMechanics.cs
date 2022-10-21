@@ -95,6 +95,7 @@ namespace Core
             {
                 var angle = availableAngles.PopRandom();
                 var distance = spawnRules.DistanceToSpawnEnemy;
+
                 var position = MathUtils.FromPolar(distance, angle);
                 
                 var classValue = spawnRules.GetRandomClassValue();
@@ -109,7 +110,7 @@ namespace Core
         private static (Enemy, float) GetClosestEnemy(Enemy target, List<Enemy> neighbors)
         {
             var sqrDistances = neighbors.ConvertAll(neighbor => 
-                (neighbor, Vector2.SqrMagnitude(target.Position - neighbors[0].Position)));
+                (neighbor, Vector2.SqrMagnitude(target.Position - neighbor.Position)));
             
             sqrDistances.Sort((neighborATuple, neighborBTuple) => 
                 neighborATuple.Item2.CompareTo(neighborBTuple.Item2));

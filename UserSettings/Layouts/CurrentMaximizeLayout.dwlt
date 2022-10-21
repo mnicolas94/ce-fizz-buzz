@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 260.8
     height: 413.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -2027,7 +2027,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 16690000
     m_LastClickedInstanceID: 26902
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

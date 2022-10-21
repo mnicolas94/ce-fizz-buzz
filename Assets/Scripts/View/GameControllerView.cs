@@ -18,13 +18,21 @@ namespace View
         [SerializeField] private GameRules _gameRules;
 
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private TurnRenderer _turnRenderer;
+        [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private EnemyViewPool _enemiesPool;
 
         private GameController _gameController;
 
         [ContextMenu("Start game")]
         public async Task StartGame()
         {
-            _gameController = new GameController(_healthVariable, _maxHealth, _scoreVariable, _gameRules);
+            var game = new GameController(_healthVariable, _maxHealth, _scoreVariable, _gameRules);
+            await StartGame(game);
+        }
+        
+        public async Task StartGame(GameController game)
+        {
+            _enemiesPool.Clear();
+            _gameController = game;
             
             var turnSteps = _gameController.StartGame();
             await _turnRenderer.RenderTurn(turnSteps);

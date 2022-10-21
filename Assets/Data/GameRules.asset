@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GameRules
   m_EditorClassIdentifier: 
   _spawnRules:
-    _minSpawnCount: 4
-    _maxSpawnCount: 4
+    _minSpawnCount: 18
+    _maxSpawnCount: 18
     _minNumber: 1
     _maxNumber: 15
     _distanceToSpawnEnemy: 5.5
@@ -23,4 +23,4 @@ MonoBehaviour:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1
   _moveDistancePerTurn: 1
-  _distanceToBounceShot: 2
+  _distanceToBounceShot: 3

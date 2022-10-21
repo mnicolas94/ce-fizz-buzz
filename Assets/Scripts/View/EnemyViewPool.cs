@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Core;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -38,6 +39,11 @@ namespace View
 
             return view;
         }
+        
+        public List<EnemyView> GetViews()
+        {
+            return _dataToViewMap.Values.ToList();
+        }
 
         public void RemoveView(Enemy enemy)
         {
@@ -46,6 +52,17 @@ namespace View
                 var view = _dataToViewMap[enemy];
                 _enemiesPool.Release(view);
             }
+        }
+
+        public void Clear()
+        {
+            foreach (var enemy in _dataToViewMap.Keys)
+            {
+                var view = _dataToViewMap[enemy];
+                _enemiesPool.Release(view);
+            }
+            
+            _dataToViewMap.Clear();
         }
     }
 }

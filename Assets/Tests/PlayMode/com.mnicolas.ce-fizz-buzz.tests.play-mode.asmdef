@@ -2,6 +2,9 @@
     "name": "com.mnicolas.ce-fizz-buzz.tests.play-mode",
     "rootNamespace": "",
     "references": [
+        "BrunoMikoski.AnimationSequencer",
+        "com.mnicolas.ce-fizz-buzz",
+        "DOTween.Modules",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

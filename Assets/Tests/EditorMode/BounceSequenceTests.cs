@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Core;
 using Core.GameRules;
 using NUnit.Framework;
@@ -8,26 +9,41 @@ namespace Tests.EditorMode
 {
     public class BounceSequenceTests
     {
-        [Test]
-        public void GetShotBounceSequence_Test()
+        private static readonly List<Enemy> Enemies = new List<Enemy>
+        {
+            new Enemy(new Vector2(1, 0), 1),
+            new Enemy(new Vector2(1, 1.1f), 4),
+            new Enemy(new Vector2(1, 2), 7),
+            new Enemy(new Vector2(1, 4), 8),
+            new Enemy(new Vector2(0, 1.5f), 3),
+            new Enemy(new Vector2(0.4f, 2), 9),
+            new Enemy(new Vector2(1, 1.5f), 12),
+            new Enemy(new Vector2(0.5f, 1), 5),
+            new Enemy(new Vector2(1.5f, 1), 15),
+        };
+        
+        
+        [TestCase(1.2f, 0, 0, 1, 2)]
+        [TestCase(2.1f, 0, 0, 1, 2, 3)]
+        [TestCase(2.1f, 1, 1, 2, 0)]
+        [TestCase(0.1f, 0, 0)]
+        [TestCase(1f, 4, 4, 5, 6)]
+        [TestCase(1.1f, 5, 5, 4, 6)]
+        [TestCase(100f, 7, 7)]
+        [TestCase(100f, 8, 8)]
+        public void GetShotBounceSequence_OrderIsCorrect(
+            float distanceRule,
+            int shotIndex,
+            params int [] sequenceIndices)
         {
             // arrange
-            var dumb1 = new Enemy(new Vector2(1, 0), 1);
-            var dumb2 = new Enemy(new Vector2(1, 1), 4);
-            var dumb3 = new Enemy(new Vector2(1, 2), 7);
-            var dumb4 = new Enemy(new Vector2(4, 1), 8);
-            var fizz = new Enemy(new Vector2(1, 1.5f), 3);
-            var buzz = new Enemy(new Vector2(0.5f, 1), 5);
-            var enemies = new List<Enemy>
-            {
-                dumb1, dumb2, dumb3, dumb4, fizz, buzz
-            };
-            var expected = new List<Enemy>{ dumb1, dumb2, dumb3 };
+            var rules = ScriptableObject.CreateInstance<GameRules>();
+            rules.DistanceToBounceShot = distanceRule;
+            var shootEnemy = Enemies[shotIndex];
+            var expected = sequenceIndices.Select(index => Enemies[index]).ToList();
 
             // act
-            var rules = ScriptableObject.CreateInstance<GameRules>();
-            rules.DistanceToBounceShot = 1.1f;
-            var result = GameMechanics.GetShotBounceSequence(dumb1, enemies, rules);
+            var result = GameMechanics.GetShotBounceSequence(shootEnemy, Enemies, rules);
 
             // assert
             Assert.AreEqual(expected.Count, result.Count);
