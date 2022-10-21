@@ -33,13 +33,14 @@ namespace Tests.EditorMode
             // arrange
             var rules = ScriptableObject.CreateInstance<GameRules>();
             var playerHealth = ScriptableObject.CreateInstance<FloatVariable>();
+            var maxHealth = ScriptableObject.CreateInstance<FloatConstant>();
             var scoreVariable = ScriptableObject.CreateInstance<IntVariable>();
             var enemy = new Enemy(Vector2.right, 1);
             var enemies = new List<Enemy>
             {
                 enemy
             };
-            var gameController = new GameController(playerHealth, scoreVariable, rules, enemies);
+            var gameController = new GameController(playerHealth, maxHealth, scoreVariable, rules, enemies);
             var expectedShotClass = EnemyClass.Dumb;
 
             // act
@@ -63,6 +64,7 @@ namespace Tests.EditorMode
             var rules = ScriptableObject.CreateInstance<GameRules>();
             rules.DistanceToBounceShot = 1;
             var playerHealth = ScriptableObject.CreateInstance<FloatVariable>();
+            var maxHealth = ScriptableObject.CreateInstance<FloatConstant>();
             var scoreVariable = ScriptableObject.CreateInstance<IntVariable>();
             var enemies = new List<Enemy>();
             foreach (var number in numbers)
@@ -71,7 +73,7 @@ namespace Tests.EditorMode
                 enemies.Add(enemy);
             }
             
-            var gameController = new GameController(playerHealth, scoreVariable, rules, enemies);
+            var gameController = new GameController(playerHealth, maxHealth, scoreVariable, rules, enemies);
             var firstEnemy = enemies[0];
             var enemyClass = firstEnemy.CurrentClass;
 
@@ -90,13 +92,14 @@ namespace Tests.EditorMode
             // arrange
             var rules = ScriptableObject.CreateInstance<GameRules>();
             var playerHealth = ScriptableObject.CreateInstance<FloatVariable>();
+            var maxHealth = ScriptableObject.CreateInstance<FloatConstant>();
             var scoreVariable = ScriptableObject.CreateInstance<IntVariable>();
             var enemy = new Enemy(Vector2.right, 1);
             var enemies = new List<Enemy>
             {
                 enemy
             };
-            var gameController = new GameController(playerHealth, scoreVariable, rules, enemies);
+            var gameController = new GameController(playerHealth, maxHealth, scoreVariable, rules, enemies);
             var expectedShotClass = EnemyClass.Fizz;
 
             // act
@@ -117,6 +120,7 @@ namespace Tests.EditorMode
             rules.HealthRules.DamagePerHit = 1;
             rules.HealthRules.DistanceToDamagePlayer = 1;
             var playerHealth = ScriptableObject.CreateInstance<FloatVariable>();
+            var maxHealth = ScriptableObject.CreateInstance<FloatConstant>();
             var scoreVariable = ScriptableObject.CreateInstance<IntVariable>();
             var enemy1 = new Enemy(new Vector2(1.1f, 0), 1);
             var enemy2 = new Enemy(new Vector2(0, 1.8f), 1);
@@ -129,7 +133,7 @@ namespace Tests.EditorMode
                 enemy3,
                 enemy4,
             };
-            var gameController = new GameController(playerHealth, scoreVariable, rules, enemies);
+            var gameController = new GameController(playerHealth, maxHealth, scoreVariable, rules, enemies);
             var expectedDamage = 3;
 
             // act

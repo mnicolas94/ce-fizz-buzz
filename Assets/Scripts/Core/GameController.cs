@@ -8,22 +8,25 @@ namespace Core
     public class GameController
     {
         private FloatVariable _playerHealth;
+        private FloatConstant _maxHealth;
         private IntVariable _score;
         private IList<Enemy> _enemies;
         private GameRules.GameRules _gameRules;
 
-        public GameController(FloatVariable playerHealth, IntVariable score, GameRules.GameRules gameRules)
-            : this(playerHealth, score, gameRules, new List<Enemy>())
+        public GameController(FloatVariable playerHealth, FloatConstant maxHealth, IntVariable score, GameRules.GameRules gameRules)
+            : this(playerHealth, maxHealth, score, gameRules, new List<Enemy>())
         {
         }
         
         public GameController(
             FloatVariable playerHealth,
+            FloatConstant maxHealth,
             IntVariable score,
             GameRules.GameRules gameRules,
             List<Enemy> initialEnemies)
         {
             _playerHealth = playerHealth;
+            _maxHealth = maxHealth;
             _score = score;
             _gameRules = gameRules;
             _enemies = initialEnemies;
@@ -34,6 +37,9 @@ namespace Core
         /// </summary>
         public List<TurnStep> StartGame()
         {
+            // initialize health to maximum
+            _playerHealth.Value = _maxHealth.Value;
+            
             return ExecuteEnemiesActions().ToList();
         }
 

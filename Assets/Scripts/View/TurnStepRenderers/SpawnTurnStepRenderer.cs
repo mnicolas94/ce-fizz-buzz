@@ -30,7 +30,7 @@ namespace View.TurnStepRenderers
                 }).ToList();
                 
                 var animations = enemiesViews.Select(view => view.SpawnAnimation.GenerateSequence());
-                Sequence sequence = DOTween.Sequence();
+                var sequence = DOTween.Sequence();
                 foreach (var animation in animations)
                 {
                     sequence.Join(animation);

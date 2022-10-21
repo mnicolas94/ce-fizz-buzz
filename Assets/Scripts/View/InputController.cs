@@ -53,43 +53,48 @@ namespace View
         {
             var pointerAction = InputActionUtils.GetPointAction();
             pointerAction.Enable();
-            
-            while (!ct.IsCancellationRequested)
+
+            try
             {
-                // wait enter enemy
-                var enemyView = await WaitEnterEnemy(pointerAction, ct);
-                var enemyPosition = enemyView.transform.position;
-
-                var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-                var linkedCt = linkedCts.Token;
-
-                try
+                while (!ct.IsCancellationRequested)
                 {
-                    // show weapon selector popup
-                    var popupTask = Popups.ShowPopup(_selectorPopupPrefab, enemyPosition, linkedCt);
-                    var enterDifferentEnemyTask = WaitEnterDifferentEnemy(enemyView, pointerAction, linkedCt);
-                    var leaveEnemyTask = WaitCursorLeaveEnemy(pointerAction, enemyPosition, linkedCt);
+                    // wait enter enemy
+                    var enemyView = await WaitEnterEnemy(pointerAction, ct);
+                    var enemyPosition = enemyView.transform.position;
 
-                    var finishedTask = await Task.WhenAny(popupTask, enterDifferentEnemyTask, leaveEnemyTask);
-                   
-                    // cancel unfinished tasks
-                    linkedCts.Cancel();
-                    
-                    if (finishedTask == popupTask)
+                    var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+                    var linkedCt = linkedCts.Token;
+
+                    try
                     {
-                        var shotClass = await popupTask;
-                        // play turn
-                        await _gameController.PlayTurn(enemyView.EnemyData, shotClass);
+                        // show weapon selector popup
+                        var popupTask = Popups.ShowPopup(_selectorPopupPrefab, enemyPosition, linkedCt);
+                        var enterDifferentEnemyTask = WaitEnterDifferentEnemy(enemyView, pointerAction, linkedCt);
+                        var leaveEnemyTask = WaitCursorLeaveEnemy(pointerAction, enemyPosition, linkedCt);
+
+                        var finishedTask = await Task.WhenAny(popupTask, enterDifferentEnemyTask, leaveEnemyTask);
+                   
+                        // cancel unfinished tasks
+                        linkedCts.Cancel();
+                    
+                        if (finishedTask == popupTask)
+                        {
+                            var shotClass = await popupTask;
+                            // play turn
+                            await _gameController.PlayTurn(enemyView.EnemyData, shotClass);
+                        }
+                    }
+                    finally
+                    {
+                        linkedCts.Dispose();
                     }
                 }
-                finally
-                {
-                    linkedCts.Dispose();
-                }
             }
-            
-            pointerAction.Disable();
-            pointerAction.Dispose();
+            finally
+            {
+                pointerAction.Disable();
+                pointerAction.Dispose();
+            }
         }
 
         private async Task<EnemyView> WaitEnterEnemy(InputAction pointerAction, CancellationToken ct)

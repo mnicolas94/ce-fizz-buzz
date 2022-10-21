@@ -13,6 +13,7 @@ namespace View
     public class GameControllerView : MonoBehaviour
     {
         [SerializeField] private FloatVariable _healthVariable;
+        [SerializeField] private FloatConstant _maxHealth;
         [SerializeField] private IntVariable _scoreVariable;
         [SerializeField] private GameRules _gameRules;
 
@@ -23,7 +24,7 @@ namespace View
         [ContextMenu("Start game")]
         public async Task StartGame()
         {
-            _gameController = new GameController(_healthVariable, _scoreVariable, _gameRules);
+            _gameController = new GameController(_healthVariable, _maxHealth, _scoreVariable, _gameRules);
             
             var turnSteps = _gameController.StartGame();
             await _turnRenderer.RenderTurn(turnSteps);
