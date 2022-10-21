@@ -46,10 +46,10 @@ namespace View.TurnStepRenderers
                 var enemySequence = onRayReachedEnemy(enemyView);
                 
                 var delay = _timeBetweenRays * i;
-                sequence.Join(raySequence);
-                sequence.Join(enemySequence);
                 raySequence.SetDelay(delay);
                 enemySequence.SetDelay(delay + _enemySequenceDelay);
+                sequence.Join(raySequence);
+                sequence.Join(enemySequence);
             }
 
             return sequence;

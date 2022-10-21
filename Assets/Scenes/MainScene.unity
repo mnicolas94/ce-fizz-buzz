@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rayPrefab: {fileID: 4791325487752516797, guid: 1abc8271f7b401b4e932b97579ea9445, type: 3}
   _timeBetweenRays: 0.1
-  _enemySequenceDelay: 0.05
+  _enemySequenceDelay: 0.1
 --- !u!1 &1614856569
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GameRules
   m_EditorClassIdentifier: 
   _spawnRules:
-    _minSpawnCount: 18
-    _maxSpawnCount: 18
+    _minSpawnCount: 1
+    _maxSpawnCount: 5
     _minNumber: 1
     _maxNumber: 15
     _distanceToSpawnEnemy: 5.5
