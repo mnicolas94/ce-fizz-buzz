@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84324a492d674045a929b53224d45fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _appearanceSettings: {fileID: 11400000, guid: 1672b9a89e55dd149871ee790f825875, type: 2}
   _ray: {fileID: 4791325487752516796}
   _spriteRenderer: {fileID: 4791325487752516738}
   _pivotPoint: 0.5

@@ -2,11 +2,15 @@
 using BrunoMikoski.AnimationSequencer;
 using Core;
 using UnityEngine;
+using Utils.Attributes;
+using View.EnemyClassAppearance;
 
 namespace View
 {
     public class ShotRay : MonoBehaviour
     {
+        [SerializeField, AutoProperty(AutoPropertyMode.Asset)]
+        private AppearanceSettings _appearanceSettings;
         [SerializeField] private Transform _ray;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
@@ -35,7 +39,8 @@ namespace View
 
         public void SetShotClass(EnemyClass shotClass)
         {
-            
+            var color = _appearanceSettings.GetAppearance(shotClass).Color;
+            _spriteRenderer.color = color;
         }
     }
 }
