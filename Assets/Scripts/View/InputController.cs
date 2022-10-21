@@ -25,9 +25,6 @@ namespace View
         private Vector2 _cursorLeaveBounds;
 
         [SerializeField] private WeaponSelector _selectorPopupPrefab;
-        
-        [SerializeField] private EnemyView _enemyView;
-        [SerializeField] private EnemyClass _shotClass;
 
         private CancellationTokenSource _cts;
         private readonly RaycastHit2D[] _raycastResultsBuffer = new RaycastHit2D[10];
@@ -149,7 +146,6 @@ namespace View
 
                 if (Mathf.Abs(delta.x) > _cursorLeaveBounds.x || Mathf.Abs(delta.y) > _cursorLeaveBounds.y)
                 {
-                    Debug.Log($"cursor {cursorPosition} | enemy {enemyPosition}");
                     inside = false;
                 }
 
