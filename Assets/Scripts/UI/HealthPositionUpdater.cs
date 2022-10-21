@@ -1,21 +1,24 @@
-﻿using UnityEngine;
+﻿using BrunoMikoski.AnimationSequencer;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils.Attributes;
 using Utils.Input;
 
 namespace UI
 {
+    /// <summary>
+    /// Position the health bar in different positions based on the cursor position
+    /// </summary>
     public class HealthPositionUpdater : MonoBehaviour
     {
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)]
         private Camera _camera;
 
-        [SerializeField] private RectTransform _healthTransform;
-
-        [SerializeField] private Vector2 _topPosition;
-        [SerializeField] private Vector2 _bottomPosition;
+        [SerializeField] private AnimationSequencerController _showOnTopAnimation;
+        [SerializeField] private AnimationSequencerController _showBellowAnimation;
         
         private InputAction _pointerAction;
+        private float _previousFrameYSign;
 
         private void Start()
         {
@@ -38,8 +41,15 @@ namespace UI
             var pointerScreenPosition = _pointerAction.ReadValue<Vector2>();
             var pointerWorldPosition = (Vector2) _camera.ScreenToWorldPoint(pointerScreenPosition);
 
-            var newPosition = pointerWorldPosition.y >= 0 ? _bottomPosition : _topPosition;
-            _healthTransform.anchoredPosition = newPosition;
+            var yCursorSign = Mathf.Sign(pointerWorldPosition.y);
+            
+            if (yCursorSign != _previousFrameYSign)
+            {
+                var animation = yCursorSign >= 0 ? _showBellowAnimation : _showOnTopAnimation;
+                animation.Play();
+            }
+
+            _previousFrameYSign = yCursorSign;
         }
     }
 }
