@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1409525068927798530}
   - component: {fileID: 1409525068927798531}
   - component: {fileID: 3966136585237183765}
-  m_Layer: 0
+  - component: {fileID: 7874196208699261007}
+  m_Layer: 6
   m_Name: EnemyView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,6 +106,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7874196208699261007
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409525068927798528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!1 &1409525068997432534
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1409525068997432537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409525069096328477}
   - component: {fileID: 1409525069096328476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305184788217675208}
   - component: {fileID: 7680673281318084230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChangeClass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170993461380981696}
   - component: {fileID: 6494058043711693902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460047640224117073}
   - component: {fileID: 8020744519609809331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Destroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4349023138013475205}
   - component: {fileID: 8976504005861705391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10d422b52559da41aa9676770a8fc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSteps: []
+  animationSteps:
+  - rid: 761664078700085275
+  - rid: 761664078700085273
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
@@ -637,4 +666,56 @@ MonoBehaviour:
   progress: -1
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 761664078700085273
+      type: {class: DOTweenAnimationStep, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        delay: 0
+        flowType: 0
+        target: {fileID: 1409525068927798528}
+        duration: 0.2
+        loopCount: 0
+        loopType: 0
+        actions:
+        - rid: 761664078700085274
+    - rid: 761664078700085274
+      type: {class: ScaleDOTweenAction, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        direction: 0
+        ease:
+          ease: 7
+          curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        isRelative: 0
+        scale: {x: 1, y: 1, z: 1}
+        axisConstraint: 0
+    - rid: 761664078700085275
+      type: {class: DOTweenAnimationStep, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        delay: 0
+        flowType: 0
+        target: {fileID: 1409525068927798528}
+        duration: 0
+        loopCount: 0
+        loopType: 0
+        actions:
+        - rid: 761664078700085281
+    - rid: 761664078700085281
+      type: {class: ScaleDOTweenAction, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        direction: 0
+        ease:
+          ease: 7
+          curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        isRelative: 0
+        scale: {x: 0, y: 0, z: 0}
+        axisConstraint: 0

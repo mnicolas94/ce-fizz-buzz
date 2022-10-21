@@ -32,7 +32,7 @@ namespace View
             else
             {
                 view = _enemiesPool.Get();
-                view.SetEnemyData(enemy);
+                view.Initialize(enemy);
                 _dataToViewMap.Add(enemy, view);
             }
 

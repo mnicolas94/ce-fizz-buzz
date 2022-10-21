@@ -23,4 +23,4 @@ MonoBehaviour:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1
   _moveDistancePerTurn: 1
-  _distanceToBounceShot: 1
+  _distanceToBounceShot: 2

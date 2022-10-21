@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1323.2001
     height: 777.60004
   m_ShowMode: 0
-  m_Title: Test Runner
+  m_Title: Game
   m_RootView: {fileID: 5}
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -94,9 +94,9 @@ MonoBehaviour:
     y: 0
     width: 882.4
     height: 777.60004
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
   - {fileID: 19}
@@ -104,8 +104,8 @@ MonoBehaviour:
   - {fileID: 21}
   - {fileID: 17}
   - {fileID: 16}
-  m_Selected: 2
-  m_LastSelected: 1
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 131
+  controlID: 135
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 126
+  controlID: 76
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,12 +246,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1044.8
+    width: 943.2
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 2235
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,12 +271,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1044.8
+    width: 943.2
     height: 450.4
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 184
+  controlID: 65
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,10 +294,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 326.4
+    width: 331.2
     height: 450.4
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -318,12 +318,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 326.4
+    x: 331.2
     y: 0
-    width: 718.4
+    width: 612
     height: 450.4
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 26}
   m_Panes:
   - {fileID: 26}
@@ -347,7 +347,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 450.4
-    width: 1044.8
+    width: 943.2
     height: 272.4
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
@@ -372,12 +372,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1044.8
+    x: 943.2
     y: 0
-    width: 491.19995
+    width: 592.8
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 29}
   m_Panes:
   - {fileID: 29}
@@ -473,7 +473,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -37548
+  m_LastInspectedObjectInstanceID: 32794
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -859,22 +859,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/View
+    - Assets/Data/Settings
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/View
+  - Assets/Data/Settings
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\_cosas\Desarrollo\GameDev\Projects\ce-fizz-buzz
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 326b0000
-    m_LastClickedID: 27442
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a000000ca9a3b
+    m_SelectedIDs: 7e6c0000
+    m_LastClickedID: 27774
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000786c00000aa2000054a4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -902,7 +902,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a0000
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1104,7 +1104,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 194
+    ID: 212
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1188,7 +1188,7 @@ MonoBehaviour:
       name: FizzBuzz
       fullName: FizzBuzz
       resultStatus: 1
-      duration: 0.2312097
+      duration: 0.2230855
       messages: 
       output: 
       stacktrace: 
@@ -1204,7 +1204,7 @@ MonoBehaviour:
       name: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll
       fullName: C:/_cosas/Desarrollo/GameDev/Projects/ce-fizz-buzz/Library/ScriptAssemblies/com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll
       resultStatus: 1
-      duration: 0.1504822
+      duration: 0.1627459
       messages: 
       output: 
       stacktrace: 
@@ -1220,7 +1220,7 @@ MonoBehaviour:
       name: Tests
       fullName: Tests
       resultStatus: 1
-      duration: 0.1443308
+      duration: 0.1590996
       messages: 
       output: 
       stacktrace: 
@@ -1236,7 +1236,7 @@ MonoBehaviour:
       name: EditorMode
       fullName: Tests.EditorMode
       resultStatus: 1
-      duration: 0.1438601
+      duration: 0.1585694
       messages: 
       output: 
       stacktrace: 
@@ -1252,7 +1252,7 @@ MonoBehaviour:
       name: BounceSequenceTests
       fullName: Tests.EditorMode.BounceSequenceTests
       resultStatus: 1
-      duration: 0.0393335
+      duration: 0.0542884
       messages: 
       output: 
       stacktrace: 
@@ -1268,7 +1268,7 @@ MonoBehaviour:
       name: GetShotBounceSequence_Test
       fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_Test
       resultStatus: 1
-      duration: 0.0223253
+      duration: 0.0298653
       messages: 
       output: 
       stacktrace: 
@@ -1285,7 +1285,7 @@ MonoBehaviour:
       name: FizzBuzzLogicTests
       fullName: Tests.EditorMode.FizzBuzzLogicTests
       resultStatus: 1
-      duration: 0.024223
+      duration: 0.0282684
       messages: 
       output: 
       stacktrace: 
@@ -1301,7 +1301,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test
       resultStatus: 1
-      duration: 0.0052675
+      duration: 0.0068428
       messages: 
       output: 
       stacktrace: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(1,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(1,Dumb)
       resultStatus: 1
-      duration: 0.0013686
+      duration: 0.0026441
       messages: 
       output: 
       stacktrace: 
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(2,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(2,Dumb)
       resultStatus: 1
-      duration: 0.0001377
+      duration: 0.0002047
       messages: 
       output: 
       stacktrace: 
@@ -1351,7 +1351,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(3,Fizz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(3,Fizz)
       resultStatus: 1
-      duration: 0.0000814
+      duration: 0.0001066
       messages: 
       output: 
       stacktrace: 
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(4,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(4,Dumb)
       resultStatus: 1
-      duration: 0.0001006
+      duration: 0.0000989
       messages: 
       output: 
       stacktrace: 
@@ -1385,7 +1385,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(5,Buzz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(5,Buzz)
       resultStatus: 1
-      duration: 0.0000864
+      duration: 0.0000994
       messages: 
       output: 
       stacktrace: 
@@ -1402,7 +1402,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(6,Fizz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(6,Fizz)
       resultStatus: 1
-      duration: 0.0000915
+      duration: 0.0000995
       messages: 
       output: 
       stacktrace: 
@@ -1419,7 +1419,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(7,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(7,Dumb)
       resultStatus: 1
-      duration: 0.0000783
+      duration: 0.000097
       messages: 
       output: 
       stacktrace: 
@@ -1436,7 +1436,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(8,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(8,Dumb)
       resultStatus: 1
-      duration: 0.0000801
+      duration: 0.0001143
       messages: 
       output: 
       stacktrace: 
@@ -1453,7 +1453,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(15,FizzBuzz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(15,FizzBuzz)
       resultStatus: 1
-      duration: 0.0000853
+      duration: 0.0000997
       messages: 
       output: 
       stacktrace: 
@@ -1470,7 +1470,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test
       resultStatus: 1
-      duration: 0.0089466
+      duration: 0.0115455
       messages: 
       output: 
       stacktrace: 
@@ -1486,7 +1486,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Dumb,1,15,1,2,4,7,8,11,13,14)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Dumb,1,15,1,2,4,7,8,11,13,14)
       resultStatus: 1
-      duration: 0.0016559
+      duration: 0.0019677
       messages: 
       output: 
       stacktrace: 
@@ -1503,7 +1503,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Fizz,1,15,3,6,9,12)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Fizz,1,15,3,6,9,12)
       resultStatus: 1
-      duration: 0.0002298
+      duration: 0.0002545
       messages: 
       output: 
       stacktrace: 
@@ -1520,7 +1520,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Buzz,1,15,5,10)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Buzz,1,15,5,10)
       resultStatus: 1
-      duration: 0.0000872
+      duration: 0.0008029
       messages: 
       output: 
       stacktrace: 
@@ -1537,7 +1537,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(FizzBuzz,1,15,15)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(FizzBuzz,1,15,15)
       resultStatus: 1
-      duration: 0.0001132
+      duration: 0.0001435
       messages: 
       output: 
       stacktrace: 
@@ -1554,7 +1554,7 @@ MonoBehaviour:
       name: GameControllerTests
       fullName: Tests.EditorMode.GameControllerTests
       resultStatus: 1
-      duration: 0.0458449
+      duration: 0.0408834
       messages: 
       output: 
       stacktrace: 
@@ -1570,7 +1570,7 @@ MonoBehaviour:
       name: WhenEnemiesGetTooClose_PlayerGetsDamaged
       fullName: Tests.EditorMode.GameControllerTests.WhenEnemiesGetTooClose_PlayerGetsDamaged
       resultStatus: 1
-      duration: 0.0185629
+      duration: 0.0130222
       messages: 
       output: 
       stacktrace: 
@@ -1587,7 +1587,7 @@ MonoBehaviour:
       name: WhenGameStarts_SpawnAndMoveTurnStepsOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenGameStarts_SpawnAndMoveTurnStepsOccur
       resultStatus: 1
-      duration: 0.0008238
+      duration: 0.0007807
       messages: 
       output: 
       stacktrace: 
@@ -1604,7 +1604,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithDifferentClassShot_ChangeClassStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithDifferentClassShot_ChangeClassStepOccur
       resultStatus: 1
-      duration: 0.0009566
+      duration: 0.001301
       messages: 
       output: 
       stacktrace: 
@@ -1621,7 +1621,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_DestroyStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_DestroyStepOccur
       resultStatus: 1
-      duration: 0.0045251
+      duration: 0.0051497
       messages: 
       output: 
       stacktrace: 
@@ -1638,7 +1638,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur
       resultStatus: 1
-      duration: 0.0113097
+      duration: 0.012158
       messages: 
       output: 
       stacktrace: 
@@ -1654,7 +1654,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(4,4)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(4,4)
       resultStatus: 1
-      duration: 0.0015361
+      duration: 0.0019137
       messages: 
       output: 
       stacktrace: 
@@ -1671,7 +1671,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(3,3,2)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(3,3,2)
       resultStatus: 1
-      duration: 0.0003433
+      duration: 0.000385
       messages: 
       output: 
       stacktrace: 
@@ -1688,7 +1688,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(1,1,3,5,15)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(1,1,3,5,15)
       resultStatus: 1
-      duration: 0.000273
+      duration: 0.0004131
       messages: 
       output: 
       stacktrace: 
@@ -1705,7 +1705,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(6,2,4,6)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(6,2,4,6)
       resultStatus: 1
-      duration: 0.0007356
+      duration: 0.0006812
       messages: 
       output: 
       stacktrace: 
@@ -1722,7 +1722,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(15,15,1,2,3,4,5,6)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(15,15,1,2,3,4,5,6)
       resultStatus: 1
-      duration: 0.0003427
+      duration: 0.0003828
       messages: 
       output: 
       stacktrace: 
@@ -1739,7 +1739,7 @@ MonoBehaviour:
       name: MoveMechanicTests
       fullName: Tests.EditorMode.MoveMechanicTests
       resultStatus: 1
-      duration: 0.0183272
+      duration: 0.0182288
       messages: 
       output: 
       stacktrace: 
@@ -1755,7 +1755,7 @@ MonoBehaviour:
       name: WhenMoveEnemies_PositionsChange
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoveEnemies_PositionsChange
       resultStatus: 1
-      duration: 0.0049571
+      duration: 0.0052022
       messages: 
       output: 
       stacktrace: 
@@ -1772,7 +1772,7 @@ MonoBehaviour:
       name: WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged
       resultStatus: 1
-      duration: 0.000505
+      duration: 0.00057
       messages: 
       output: 
       stacktrace: 
@@ -1789,7 +1789,7 @@ MonoBehaviour:
       name: WhenMoving_DontPassThroughPlayer
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoving_DontPassThroughPlayer
       resultStatus: 1
-      duration: 0.0038682
+      duration: 0.0039989
       messages: 
       output: 
       stacktrace: 
@@ -1806,7 +1806,7 @@ MonoBehaviour:
       name: SpawningTests
       fullName: Tests.EditorMode.SpawningTests
       resultStatus: 1
-      duration: 0.0113487
+      duration: 0.0116485
       messages: 
       output: 
       stacktrace: 
@@ -1822,7 +1822,7 @@ MonoBehaviour:
       name: GetAvailableSpawnAngles_Test
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test
       resultStatus: 1
-      duration: 0.0022955
+      duration: 0.0024672
       messages: 
       output: 
       stacktrace: 
@@ -1838,7 +1838,7 @@ MonoBehaviour:
       name: GetAvailableSpawnAngles_Test(2,0,180)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(2,0,180)
       resultStatus: 1
-      duration: 0.0006053
+      duration: 0.000894
       messages: 
       output: 
       stacktrace: 
@@ -1855,7 +1855,7 @@ MonoBehaviour:
       name: GetAvailableSpawnAngles_Test(4,0,90,180,270)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(4,0,90,180,270)
       resultStatus: 1
-      duration: 0.0001641
+      duration: 0.0001798
       messages: 
       output: 
       stacktrace: 
@@ -1872,7 +1872,7 @@ MonoBehaviour:
       name: GetAvailableSpawnAngles_Test(10,0,36,72,108,144,180,216,252,288,324)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(10,0,36,72,108,144,180,216,252,288,324)
       resultStatus: 1
-      duration: 0.0001225
+      duration: 0.0001189
       messages: 
       output: 
       stacktrace: 
@@ -1889,7 +1889,7 @@ MonoBehaviour:
       name: WhenSpawnEnemies_NoMoreThanCircularSectorsCountAreSpawned
       fullName: Tests.EditorMode.SpawningTests.WhenSpawnEnemies_NoMoreThanCircularSectorsCountAreSpawned
       resultStatus: 1
-      duration: 0.001031
+      duration: 0.0009726
       messages: 
       output: 
       stacktrace: 
@@ -1906,7 +1906,7 @@ MonoBehaviour:
       name: WhenSpawnEnemies_TheCorrectCountIsReturned
       fullName: Tests.EditorMode.SpawningTests.WhenSpawnEnemies_TheCorrectCountIsReturned
       resultStatus: 1
-      duration: 0.0003604
+      duration: 0.0003324
       messages: 
       output: 
       stacktrace: 
@@ -1918,7 +1918,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1023
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests][suite]
-    m_ResultText: WhenShootEnemyWithSameClassShot_ScoreStepOccur (0.011s)
+    m_ResultText: WhenShootEnemyWithSameClassShot_ScoreStepOccur (0.012s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1971,9 +1971,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1628.8
-    y: 25.6
+    y: 28
     width: 881.4
-    height: 759
+    height: 756.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2021,9 +2021,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 881.4
-      height: 738
+      height: 735.60004
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 440.7, y: 369}
+    m_Translation: {x: 440.7, y: 367.80002}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -2031,12 +2031,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -440.7
-      y: -369
+      y: -367.80002
       width: 881.4
-      height: 738
+      height: 735.60004
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1101.75, y: 948.75}
+  m_LastWindowPixelSize: {x: 1101.75, y: 945.75006}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -2064,7 +2064,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 524
-    width: 1043.8
+    width: 942.2
     height: 251.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2095,10 +2095,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 192.6}
-    m_SelectedIDs: 8c6a0000
-    m_LastClickedID: 27276
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a000000ca9a3b
+    scrollPos: {x: 0, y: 300}
+    m_SelectedIDs: e26b0000
+    m_LastClickedID: 27618
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000786c00000aa2000054a4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2114,7 +2114,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 14}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2126,7 +2126,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a0000
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2204,7 +2204,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 325.4
+    width: 330.2
     height: 429.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2213,9 +2213,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 546dffff
-      m_LastClickedID: -37548
-      m_ExpandedIDs: 2a70ffff4670ffff1074ffff3476ffff9cafffff8eb0ffffc4bcfffffebeffff72c8ffff9ccaffff22cfffff6eecffff18fbffff
+      m_SelectedIDs: c63effff
+      m_LastClickedID: -49466
+      m_ExpandedIDs: c63effff7e40ffffc656ffffbc57ffff906ffffff07bffffca7dffff0afbfffff4ffffff0a69000010690000fcb500002eb6000016c0000042c0000048c0000024c800002ac80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2231,7 +2231,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 12}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2259,9 +2259,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 326.4
+    x: 331.2
     y: 73.6
-    width: 716.4
+    width: 610
     height: 429.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2272,8 +2272,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -2497,9 +2497,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.41262603, y: 0.02297192, z: -0.07340286}
+    m_Target: {x: -0.8476337, y: -1.1561847, z: 0.057568066}
     speed: 2
-    m_Value: {x: -0.41262603, y: 0.02297192, z: -0.07340286}
+    m_Value: {x: -0.8476337, y: -1.1561847, z: 0.057568066}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2550,9 +2550,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.3067474
+    m_Target: 4.4345765
     speed: 2
-    m_Value: 7.3067474
+    m_Value: 4.4345765
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2633,7 +2633,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f45c0000
     m_LastClickedID: 23796
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a0000
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2661,7 +2661,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000806a0000826a0000846a0000866a0000886a00008a6a00008c6a00008e6a0000
+    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2739,7 +2739,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 524
-    width: 1043.8
+    width: 848.6
     height: 251.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2765,9 +2765,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1044.8
+    x: 943.2
     y: 73.6
-    width: 490.19995
+    width: 591.8
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2776,7 +2776,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: -160
+    m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

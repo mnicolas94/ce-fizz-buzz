@@ -32,7 +32,7 @@ namespace View
 
         public AnimationSequencerController AttackAnimation => _attackAnimation;
 
-        public void SetEnemyData(Enemy enemy)
+        public void Initialize(Enemy enemy)
         {
             _enemyData = enemy;
             UpdateAppearance();
