@@ -39,6 +39,7 @@ namespace Core
         {
             // initialize health to maximum
             _playerHealth.Value = _maxHealth.Value;
+            _score.Value = 0;
             
             return ExecuteEnemiesActions().ToList();
         }

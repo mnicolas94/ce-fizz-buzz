@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>10/21/2022 - 5:43:47 PM</Generatedon>
+    <Generatedon>10/21/2022 - 6:38:55 PM</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
     <Classes>40</Classes>
     <Files>38</Files>
-    <Coveredlines>484</Coveredlines>
-    <Uncoveredlines>243</Uncoveredlines>
-    <Coverablelines>727</Coverablelines>
-    <Totallines>1795</Totallines>
-    <Linecoverage>66.5</Linecoverage>
+    <Coveredlines>493</Coveredlines>
+    <Uncoveredlines>253</Uncoveredlines>
+    <Coverablelines>746</Coverablelines>
+    <Totallines>1796</Totallines>
+    <Linecoverage>66</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="40" coverage="66.5" coveredlines="484" coverablelines="727" totallines="1895" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="40" coverage="66" coveredlines="493" coverablelines="746" totallines="1896" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Core.Enemy" coverage="100" coveredlines="13" coverablelines="13" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.EnemyClassUtils" coverage="100" coveredlines="30" coverablelines="30" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.GameController" coverage="100" coveredlines="62" coverablelines="62" totallines="128" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameController" coverage="87.6" coveredlines="71" coverablelines="81" totallines="129" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameMechanics" coverage="100" coveredlines="71" coverablelines="71" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.GameRules" coverage="83.3" coveredlines="10" coverablelines="12" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.HealthRules" coverage="100" coveredlines="6" coverablelines="6" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" />

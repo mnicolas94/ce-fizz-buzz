@@ -22,5 +22,5 @@ MonoBehaviour:
   _healthRules:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1
-  _moveDistancePerTurn: 1
+  _moveDistancePerTurn: 0.5
   _distanceToBounceShot: 3
