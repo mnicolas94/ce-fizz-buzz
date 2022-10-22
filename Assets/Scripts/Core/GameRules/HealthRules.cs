@@ -10,6 +10,9 @@ namespace Core.GameRules
         
         [SerializeField] private float _damagePerHit = 1;
 
+        [SerializeField] private int _healPlayerOnScoreMultiplier = 100;
+        [SerializeField] private int _healAmount = 1;
+
         public float DistanceToDamagePlayer
         {
             get => _distanceToDamagePlayer;
@@ -20,6 +23,18 @@ namespace Core.GameRules
         {
             get => _damagePerHit;
             set => _damagePerHit = value;
+        }
+
+        public int HealPlayerOnScoreMultiplier
+        {
+            get => _healPlayerOnScoreMultiplier;
+            set => _healPlayerOnScoreMultiplier = value;
+        }
+
+        public int HealAmount
+        {
+            get => _healAmount;
+            set => _healAmount = value;
         }
     }
 }

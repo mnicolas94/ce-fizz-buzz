@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>10/21/2022 - 6:38:55 PM</Generatedon>
+    <Generatedon>10/22/2022 - 9:44:06 AM</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
     <Classes>40</Classes>
     <Files>38</Files>
-    <Coveredlines>493</Coveredlines>
-    <Uncoveredlines>253</Uncoveredlines>
-    <Coverablelines>746</Coverablelines>
-    <Totallines>1796</Totallines>
-    <Linecoverage>66</Linecoverage>
+    <Coveredlines>517</Coveredlines>
+    <Uncoveredlines>256</Uncoveredlines>
+    <Coverablelines>773</Coverablelines>
+    <Totallines>1835</Totallines>
+    <Linecoverage>66.8</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="40" coverage="66" coveredlines="493" coverablelines="746" totallines="1896" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="40" coverage="66.8" coveredlines="517" coverablelines="773" totallines="1935" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Core.Enemy" coverage="100" coveredlines="13" coverablelines="13" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.EnemyClassUtils" coverage="100" coveredlines="30" coverablelines="30" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.GameController" coverage="87.6" coveredlines="71" coverablelines="81" totallines="129" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameController" coverage="86.7" coveredlines="85" coverablelines="98" totallines="153" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameMechanics" coverage="100" coveredlines="71" coverablelines="71" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.GameRules" coverage="83.3" coveredlines="10" coverablelines="12" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.GameRules.HealthRules" coverage="100" coveredlines="6" coverablelines="6" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameRules.HealthRules" coverage="75" coveredlines="12" coverablelines="16" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.SpawnRules" coverage="90" coveredlines="27" coverablelines="30" totallines="83" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.AbstractListEnemiesTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.AbstractShootTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -29,7 +29,7 @@
       <Class name="Core.TurnSteps.DamagePlayerTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.DestroyTurnStep" coverage="100" coveredlines="3" coverablelines="3" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.EnemyPositionTuple" coverage="81.8" coveredlines="9" coverablelines="11" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.TurnSteps.HealPlayerTurnStep" coverage="0" coveredlines="0" coverablelines="5" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.TurnSteps.HealPlayerTurnStep" coverage="80" coveredlines="4" coverablelines="5" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.MoveTurnStep" coverage="100" coveredlines="3" coverablelines="3" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.ScoreChangedTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.SpawnTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />

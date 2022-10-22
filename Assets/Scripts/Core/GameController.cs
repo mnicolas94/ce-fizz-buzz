@@ -13,6 +13,8 @@ namespace Core
         private IList<Enemy> _enemies;
         private GameRules.GameRules _gameRules;
 
+        private int _lastScoreMultiplierHeal;
+
         public GameController(FloatVariable playerHealth, FloatConstant maxHealth, IntVariable score, GameRules.GameRules gameRules)
             : this(playerHealth, maxHealth, score, gameRules, new List<Enemy>())
         {
@@ -79,8 +81,16 @@ namespace Core
                     _enemies.Remove(enemy);
                     _score.Value += enemy.Score;
                     totalScore += enemy.Score;
-                    // TODO heal based on score
                 }
+
+                // heal player based on score
+                var healAmount = ComputeHealAmountBasedOnScore();
+                if (healAmount > 0)
+                {
+                    _playerHealth.Value += healAmount;
+                    yield return new HealPlayerTurnStep(healAmount);
+                }
+                
                 yield return new DestroyTurnStep(shotBounceSequence, shotClass);
                 yield return new ScoreChangedTurnStep(totalScore);
             }
@@ -90,6 +100,20 @@ namespace Core
                 GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _gameRules.SpawnRules);
                 yield return new ChangeClassTurnStep(shotBounceSequence, shotClass);
             }
+        }
+
+        /// <summary>
+        /// Compute the healing amount based on reached score.
+        /// </summary>
+        /// <returns></returns>
+        private int ComputeHealAmountBasedOnScore()
+        {
+            var difference = _score.Value - _lastScoreMultiplierHeal;
+            var multiplier = _gameRules.HealthRules.HealPlayerOnScoreMultiplier;
+            int healAmount = difference / multiplier;
+            _lastScoreMultiplierHeal = _score.Value - _score.Value % multiplier;
+
+            return healAmount;
         }
 
         /// <summary>

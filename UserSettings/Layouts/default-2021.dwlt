@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,9 +39,9 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 1628.8
-    y: 28
+    y: 25.6
     width: 1323.2001
-    height: 777.60004
+    height: 780
   m_ShowMode: 0
   m_Title: Game
   m_RootView: {fileID: 5}
@@ -66,13 +66,13 @@ MonoBehaviour:
     x: 882.4
     y: 0
     width: 440.80005
-    height: 777.60004
+    height: 780
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
-  - {fileID: 18}
+  - {fileID: 19}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &4
@@ -93,16 +93,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 882.4
-    height: 777.60004
+    height: 780
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 23}
-  - {fileID: 19}
   - {fileID: 22}
+  - {fileID: 18}
   - {fileID: 21}
-  - {fileID: 17}
+  - {fileID: 20}
   - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 2
@@ -126,11 +125,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1323.2001
-    height: 777.60004
+    height: 780
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 135
+  controlID: 27361
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +179,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 
+  m_LastLoadedLayoutName: 2Monitors
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 76
+  controlID: 27468
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,12 +245,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 943.2
+    width: 1013.6
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 64
+  controlID: 27473
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,12 +270,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 943.2
+    width: 1013.6
     height: 450.4
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 65
+  controlID: 27474
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,13 +293,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 331.2
+    width: 365.6
     height: 450.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 25}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 25}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &13
@@ -318,16 +317,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 331.2
+    x: 365.6
     y: 0
-    width: 612
+    width: 648
     height: 450.4
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 26}
+  m_ActualView: {fileID: 25}
   m_Panes:
+  - {fileID: 25}
   - {fileID: 26}
-  - {fileID: 27}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &14
@@ -347,14 +346,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 450.4
-    width: 943.2
+    width: 1013.6
     height: 272.4
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 24}
-  - {fileID: 28}
+  - {fileID: 23}
+  - {fileID: 27}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &15
@@ -372,46 +371,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 943.2
+    x: 1013.6
     y: 0
-    width: 592.8
+    width: 522.4
     height: 722.8
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 29}
+  m_ActualView: {fileID: 28}
   m_Panes:
-  - {fileID: 29}
+  - {fileID: 28}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5115ff20f1ea204dac14fa49c0e8f69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 445, y: 385}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Code Coverage
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1628.8
-    y: 28
-    width: 881.4
-    height: 756.60004
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,14 +403,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1628.8
-    y: 28
+    y: 25.6
     width: 881.4
-    height: 756.60004
+    height: 759
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &18
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,14 +444,14 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 32794
+  m_LastInspectedObjectInstanceID: 71166
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,9 +472,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1628.8
-    y: 28
+    y: 25.6
     width: 881.4
-    height: 756.60004
+    height: 759
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -514,7 +485,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -26.400024}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -818,7 +789,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -839,9 +810,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 2511.2
-    y: 28
+    y: 25.6
     width: 439.80005
-    height: 756.60004
+    height: 759
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -859,22 +830,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Data/Settings
+    - Assets/Tests/EditorMode
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Data/Settings
+  - Assets/Tests/EditorMode
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\_cosas\Desarrollo\GameDev\Projects\ce-fizz-buzz
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e6c0000
-    m_LastClickedID: 27774
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000786c00000aa2000054a4000000ca9a3b
+    m_SelectedIDs: 306d0000
+    m_LastClickedID: 27952
+    m_ExpandedIDs: 00000000686c00006a6c00006c6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -902,7 +873,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
+    m_ExpandedIDs: 00000000686c00006a6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -958,7 +929,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
---- !u!114 &21
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1073,9 +1044,9 @@ MonoBehaviour:
         userData: 0
       m_VisibleColumns: 00000000010000000200000003000000
       m_SortedColumns: 
-    window: {fileID: 21}
+    window: {fileID: 20}
     m_VerticalSplitterPercent: 0.8
---- !u!114 &22
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1096,19 +1067,19 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1628.8
-    y: 28
+    y: 25.6
     width: 881.4
-    height: 756.60004
+    height: 759
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 212
+    ID: 27504
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 515.2
+    - 516.8
     - 172
     relativeSizes:
     - 0.75
@@ -1119,7 +1090,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 687.2
+    lastTotalSize: 688.8
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1129,14 +1100,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 22}
+    m_Window: {fileID: 21}
     m_NewResultList:
-    - id: 1004
-      uniqueId: '[DungeonCrawl][suite]'
-      name: DungeonCrawl
-      fullName: DungeonCrawl
-      resultStatus: 0
-      duration: 0
+    - id: 1048
+      uniqueId: '[FizzBuzz][suite]'
+      name: FizzBuzz
+      fullName: FizzBuzz
+      resultStatus: 1
+      duration: 4.208483
       messages: 
       output: 
       stacktrace: 
@@ -1147,13 +1118,119 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
+    - id: 1051
+      uniqueId: '[com.mnicolas.ce-fizz-buzz.tests.play-mode.dll][suite]'
+      name: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll
+      fullName: C:/_cosas/Desarrollo/GameDev/Projects/ce-fizz-buzz/Library/ScriptAssemblies/com.mnicolas.ce-fizz-buzz.tests.play-mode.dll
+      resultStatus: 1
+      duration: 4.0581274
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1048
+      parentUniqueId: '[FizzBuzz][suite]'
+    - id: 1052
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/[Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 3.9871273
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1051
+      parentUniqueId: '[com.mnicolas.ce-fizz-buzz.tests.play-mode.dll][suite]'
+    - id: 1053
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode][suite]
+      name: PlayMode
+      fullName: Tests.PlayMode
+      resultStatus: 1
+      duration: 3.9703603
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1052
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/[Tests][suite]
+    - id: 1049
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/PlayMode/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode.EnemyViewTests][suite]
+      name: EnemyViewTests
+      fullName: Tests.PlayMode.EnemyViewTests
+      resultStatus: 1
+      duration: 3.961313
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1053
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode][suite]
+    - id: 1003
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/PlayMode/EnemyViewTests/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode.EnemyViewTests.AfterMoveAnimation_EnemyViewGetTheCorrectPosition]
+      name: AfterMoveAnimation_EnemyViewGetTheCorrectPosition
+      fullName: Tests.PlayMode.EnemyViewTests.AfterMoveAnimation_EnemyViewGetTheCorrectPosition
+      resultStatus: 1
+      duration: 2.8744342
+      messages: 
+      output: 'DontDestroyOnLoad only works for root GameObjects or components on
+        root GameObjects.
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/PlayMode/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode.EnemyViewTests][suite]
+    - id: 1002
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/PlayMode/EnemyViewTests/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode.EnemyViewTests.AfterStartGame_EnemiesViewsGetTheCorrectPosition]
+      name: AfterStartGame_EnemiesViewsGetTheCorrectPosition
+      fullName: Tests.PlayMode.EnemyViewTests.AfterStartGame_EnemiesViewsGetTheCorrectPosition
+      resultStatus: 1
+      duration: 1.0257049
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.play-mode.dll/Tests/PlayMode/[com.mnicolas.ce-fizz-buzz.tests.play-mode][Tests.PlayMode.EnemyViewTests][suite]
+    m_ResultText: 'AfterMoveAnimation_EnemyViewGetTheCorrectPosition (2.874s)
+
+      ---
+
+      DontDestroyOnLoad
+      only works for root GameObjects or components on root GameObjects.'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 991f652fffffff7f
+      m_SelectedIDs: 7bf554d2
+      m_LastClickedID: -766184069
+      m_ExpandedIDs: 236232851687b28c42b7a9de140cdef4c77e330d991f652fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1181,14 +1258,14 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 22}
+    m_Window: {fileID: 21}
     m_NewResultList:
     - id: 1000
       uniqueId: '[FizzBuzz][suite]'
       name: FizzBuzz
       fullName: FizzBuzz
       resultStatus: 1
-      duration: 0.2230855
+      duration: 0.4120941
       messages: 
       output: 
       stacktrace: 
@@ -1199,12 +1276,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1030
+    - id: 1041
       uniqueId: '[com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll][suite]'
       name: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll
       fullName: C:/_cosas/Desarrollo/GameDev/Projects/ce-fizz-buzz/Library/ScriptAssemblies/com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll
       resultStatus: 1
-      duration: 0.1627459
+      duration: 0.3491512
       messages: 
       output: 
       stacktrace: 
@@ -1215,12 +1292,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[FizzBuzz][suite]'
-    - id: 1031
+    - id: 1042
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/[Tests][suite]
       name: Tests
       fullName: Tests
       resultStatus: 1
-      duration: 0.1590996
+      duration: 0.3468544
       messages: 
       output: 
       stacktrace: 
@@ -1229,14 +1306,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1030
+      parentId: 1041
       parentUniqueId: '[com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll][suite]'
-    - id: 1032
+    - id: 1043
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
       name: EditorMode
       fullName: Tests.EditorMode
       resultStatus: 1
-      duration: 0.1585694
+      duration: 0.3463818
       messages: 
       output: 
       stacktrace: 
@@ -1245,14 +1322,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1031
+      parentId: 1042
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/[Tests][suite]
     - id: 1001
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests][suite]
       name: BounceSequenceTests
       fullName: Tests.EditorMode.BounceSequenceTests
       resultStatus: 1
-      duration: 0.0542884
+      duration: 0.1850355
       messages: 
       output: 
       stacktrace: 
@@ -1261,14 +1338,30 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1032
+      parentId: 1043
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
-    - id: 1002
-      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_Test]
-      name: GetShotBounceSequence_Test
-      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_Test
+    - id: 1013
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+      name: GetShotBounceSequence_OrderIsCorrect
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect
       resultStatus: 1
-      duration: 0.0298653
+      duration: 0.1787238
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1009
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests][suite]
+    - id: 1002
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.2f,0,0,1,2)]
+      name: GetShotBounceSequence_OrderIsCorrect(1.2f,0,0,1,2)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.2f,0,0,1,2)
+      resultStatus: 1
+      duration: 0.1167646
       messages: 
       output: 
       stacktrace: 
@@ -1278,14 +1371,133 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests][suite]
+      parentId: 1010
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1003
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(2.1f,0,0,1,2,3)]
+      name: GetShotBounceSequence_OrderIsCorrect(2.1f,0,0,1,2,3)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(2.1f,0,0,1,2,3)
+      resultStatus: 1
+      duration: 0.0002881
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1004
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(2.1f,1,1,2,0)]
+      name: GetShotBounceSequence_OrderIsCorrect(2.1f,1,1,2,0)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(2.1f,1,1,2,0)
+      resultStatus: 1
+      duration: 0.0002127
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1004
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(0.1f,0,0)]
+      name: GetShotBounceSequence_OrderIsCorrect(0.1f,0,0)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(0.1f,0,0)
+      resultStatus: 1
+      duration: 0.0001226
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1005
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.0f,4,4,5,6)]
+      name: GetShotBounceSequence_OrderIsCorrect(1.0f,4,4,5,6)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.0f,4,4,5,6)
+      resultStatus: 1
+      duration: 0.0001132
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1007
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.1f,5,5,4,6)]
+      name: GetShotBounceSequence_OrderIsCorrect(1.1f,5,5,4,6)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(1.1f,5,5,4,6)
+      resultStatus: 1
+      duration: 0.000114
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1008
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(100.0f,7,7)]
+      name: GetShotBounceSequence_OrderIsCorrect(100.0f,7,7)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(100.0f,7,7)
+      resultStatus: 1
+      duration: 0.0001096
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
+    - id: 1009
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/GetShotBounceSequence_OrderIsCorrect/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(100.0f,8,8)]
+      name: GetShotBounceSequence_OrderIsCorrect(100.0f,8,8)
+      fullName: Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect(100.0f,8,8)
+      resultStatus: 1
+      duration: 0.0001028
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/BounceSequenceTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.BounceSequenceTests.GetShotBounceSequence_OrderIsCorrect][suite]
     - id: 1003
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.FizzBuzzLogicTests][suite]
       name: FizzBuzzLogicTests
       fullName: Tests.EditorMode.FizzBuzzLogicTests
       resultStatus: 1
-      duration: 0.0282684
+      duration: 0.0384817
       messages: 
       output: 
       stacktrace: 
@@ -1294,14 +1506,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1032
+      parentId: 1043
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
     - id: 1013
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/FizzBuzzLogicTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test][suite]
       name: GetEnemyClassFromValue_Test
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test
       resultStatus: 1
-      duration: 0.0068428
+      duration: 0.0100557
       messages: 
       output: 
       stacktrace: 
@@ -1317,7 +1529,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(1,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(1,Dumb)
       resultStatus: 1
-      duration: 0.0026441
+      duration: 0.0017248
       messages: 
       output: 
       stacktrace: 
@@ -1334,7 +1546,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(2,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(2,Dumb)
       resultStatus: 1
-      duration: 0.0002047
+      duration: 0.0002194
       messages: 
       output: 
       stacktrace: 
@@ -1351,7 +1563,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(3,Fizz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(3,Fizz)
       resultStatus: 1
-      duration: 0.0001066
+      duration: 0.0000917
       messages: 
       output: 
       stacktrace: 
@@ -1368,7 +1580,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(4,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(4,Dumb)
       resultStatus: 1
-      duration: 0.0000989
+      duration: 0.0000799
       messages: 
       output: 
       stacktrace: 
@@ -1385,7 +1597,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(5,Buzz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(5,Buzz)
       resultStatus: 1
-      duration: 0.0000994
+      duration: 0.0000782
       messages: 
       output: 
       stacktrace: 
@@ -1402,7 +1614,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(6,Fizz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(6,Fizz)
       resultStatus: 1
-      duration: 0.0000995
+      duration: 0.0000817
       messages: 
       output: 
       stacktrace: 
@@ -1419,7 +1631,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(7,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(7,Dumb)
       resultStatus: 1
-      duration: 0.000097
+      duration: 0.0000845
       messages: 
       output: 
       stacktrace: 
@@ -1436,7 +1648,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(8,Dumb)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(8,Dumb)
       resultStatus: 1
-      duration: 0.0001143
+      duration: 0.0000794
       messages: 
       output: 
       stacktrace: 
@@ -1453,7 +1665,7 @@ MonoBehaviour:
       name: GetEnemyClassFromValue_Test(15,FizzBuzz)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetEnemyClassFromValue_Test(15,FizzBuzz)
       resultStatus: 1
-      duration: 0.0000997
+      duration: 0.0000805
       messages: 
       output: 
       stacktrace: 
@@ -1470,7 +1682,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test
       resultStatus: 1
-      duration: 0.0115455
+      duration: 0.014167
       messages: 
       output: 
       stacktrace: 
@@ -1486,7 +1698,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Dumb,1,15,1,2,4,7,8,11,13,14)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Dumb,1,15,1,2,4,7,8,11,13,14)
       resultStatus: 1
-      duration: 0.0019677
+      duration: 0.0016553
       messages: 
       output: 
       stacktrace: 
@@ -1503,7 +1715,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Fizz,1,15,3,6,9,12)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Fizz,1,15,3,6,9,12)
       resultStatus: 1
-      duration: 0.0002545
+      duration: 0.0001861
       messages: 
       output: 
       stacktrace: 
@@ -1520,7 +1732,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(Buzz,1,15,5,10)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(Buzz,1,15,5,10)
       resultStatus: 1
-      duration: 0.0008029
+      duration: 0.0000888
       messages: 
       output: 
       stacktrace: 
@@ -1537,7 +1749,7 @@ MonoBehaviour:
       name: GetValuesFromEnemyClass_Test(FizzBuzz,1,15,15)
       fullName: Tests.EditorMode.FizzBuzzLogicTests.GetValuesFromEnemyClass_Test(FizzBuzz,1,15,15)
       resultStatus: 1
-      duration: 0.0001435
+      duration: 0.0000825
       messages: 
       output: 
       stacktrace: 
@@ -1554,7 +1766,7 @@ MonoBehaviour:
       name: GameControllerTests
       fullName: Tests.EditorMode.GameControllerTests
       resultStatus: 1
-      duration: 0.0408834
+      duration: 0.0791778
       messages: 
       output: 
       stacktrace: 
@@ -1563,14 +1775,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1043
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
     - id: 1029
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenEnemiesGetTooClose_PlayerGetsDamaged]
       name: WhenEnemiesGetTooClose_PlayerGetsDamaged
       fullName: Tests.EditorMode.GameControllerTests.WhenEnemiesGetTooClose_PlayerGetsDamaged
       resultStatus: 1
-      duration: 0.0130222
+      duration: 0.029234
       messages: 
       output: 
       stacktrace: 
@@ -1581,13 +1793,47 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1019
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests][suite]
+    - id: 1029
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenGameStarts_HealthIsCorrectlyInitialized]
+      name: WhenGameStarts_HealthIsCorrectlyInitialized
+      fullName: Tests.EditorMode.GameControllerTests.WhenGameStarts_HealthIsCorrectlyInitialized
+      resultStatus: 1
+      duration: 0.0013086
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests][suite]
+    - id: 1030
+      uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenGameStarts_ScoreIsCorrectlyInitialized]
+      name: WhenGameStarts_ScoreIsCorrectlyInitialized
+      fullName: Tests.EditorMode.GameControllerTests.WhenGameStarts_ScoreIsCorrectlyInitialized
+      resultStatus: 1
+      duration: 0.0062478
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests][suite]
     - id: 1020
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenGameStarts_SpawnAndMoveTurnStepsOccur]
       name: WhenGameStarts_SpawnAndMoveTurnStepsOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenGameStarts_SpawnAndMoveTurnStepsOccur
       resultStatus: 1
-      duration: 0.0007807
+      duration: 0.0006615
       messages: 
       output: 
       stacktrace: 
@@ -1599,12 +1845,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1019
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests][suite]
-    - id: 1022
+    - id: 1028
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithDifferentClassShot_ChangeClassStepOccur]
       name: WhenShootEnemyWithDifferentClassShot_ChangeClassStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithDifferentClassShot_ChangeClassStepOccur
       resultStatus: 1
-      duration: 0.001301
+      duration: 0.000929
       messages: 
       output: 
       stacktrace: 
@@ -1621,7 +1867,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_DestroyStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_DestroyStepOccur
       resultStatus: 1
-      duration: 0.0051497
+      duration: 0.0013
       messages: 
       output: 
       stacktrace: 
@@ -1633,12 +1879,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1019
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests][suite]
-    - id: 1026
+    - id: 1027
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur
       resultStatus: 1
-      duration: 0.012158
+      duration: 0.0285705
       messages: 
       output: 
       stacktrace: 
@@ -1654,7 +1900,7 @@ MonoBehaviour:
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(4,4)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(4,4)
       resultStatus: 1
-      duration: 0.0019137
+      duration: 0.0012558
       messages: 
       output: 
       stacktrace: 
@@ -1664,14 +1910,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
     - id: 1023
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/WhenShootEnemyWithSameClassShot_ScoreStepOccur/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(3,3,2)]
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(3,3,2)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(3,3,2)
       resultStatus: 1
-      duration: 0.000385
+      duration: 0.0004426
       messages: 
       output: 
       stacktrace: 
@@ -1681,14 +1927,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
     - id: 1024
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/WhenShootEnemyWithSameClassShot_ScoreStepOccur/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(1,1,3,5,15)]
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(1,1,3,5,15)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(1,1,3,5,15)
       resultStatus: 1
-      duration: 0.0004131
+      duration: 0.0004487
       messages: 
       output: 
       stacktrace: 
@@ -1698,14 +1944,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
     - id: 1025
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/WhenShootEnemyWithSameClassShot_ScoreStepOccur/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(6,2,4,6)]
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(6,2,4,6)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(6,2,4,6)
       resultStatus: 1
-      duration: 0.0006812
+      duration: 0.0005261
       messages: 
       output: 
       stacktrace: 
@@ -1715,14 +1961,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
     - id: 1026
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/WhenShootEnemyWithSameClassShot_ScoreStepOccur/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(15,15,1,2,3,4,5,6)]
       name: WhenShootEnemyWithSameClassShot_ScoreStepOccur(15,15,1,2,3,4,5,6)
       fullName: Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur(15,15,1,2,3,4,5,6)
       resultStatus: 1
-      duration: 0.0003828
+      duration: 0.0005375
       messages: 
       output: 
       stacktrace: 
@@ -1734,12 +1980,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1027
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/GameControllerTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.GameControllerTests.WhenShootEnemyWithSameClassShot_ScoreStepOccur][suite]
-    - id: 1019
+    - id: 1030
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests][suite]
       name: MoveMechanicTests
       fullName: Tests.EditorMode.MoveMechanicTests
       resultStatus: 1
-      duration: 0.0182288
+      duration: 0.0212416
       messages: 
       output: 
       stacktrace: 
@@ -1748,14 +1994,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1032
+      parentId: 1043
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
-    - id: 1020
+    - id: 1031
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/MoveMechanicTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests.WhenMoveEnemies_PositionsChange]
       name: WhenMoveEnemies_PositionsChange
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoveEnemies_PositionsChange
       resultStatus: 1
-      duration: 0.0052022
+      duration: 0.0050672
       messages: 
       output: 
       stacktrace: 
@@ -1765,14 +2011,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1019
+      parentId: 1030
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests][suite]
-    - id: 1022
+    - id: 1033
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/MoveMechanicTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests.WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged]
       name: WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoveEnemyIntoDamageZone_ReturnItAsEnemyThatDamaged
       resultStatus: 1
-      duration: 0.00057
+      duration: 0.0006418
       messages: 
       output: 
       stacktrace: 
@@ -1782,14 +2028,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1019
+      parentId: 1030
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests][suite]
-    - id: 1021
+    - id: 1032
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/MoveMechanicTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests.WhenMoving_DontPassThroughPlayer]
       name: WhenMoving_DontPassThroughPlayer
       fullName: Tests.EditorMode.MoveMechanicTests.WhenMoving_DontPassThroughPlayer
       resultStatus: 1
-      duration: 0.0039989
+      duration: 0.0047493
       messages: 
       output: 
       stacktrace: 
@@ -1799,14 +2045,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1019
+      parentId: 1030
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.MoveMechanicTests][suite]
-    - id: 1023
+    - id: 1034
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests][suite]
       name: SpawningTests
       fullName: Tests.EditorMode.SpawningTests
       resultStatus: 1
-      duration: 0.0116485
+      duration: 0.0173528
       messages: 
       output: 
       stacktrace: 
@@ -1815,14 +2061,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1032
+      parentId: 1043
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode][suite]
-    - id: 1027
+    - id: 1038
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test][suite]
       name: GetAvailableSpawnAngles_Test
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test
       resultStatus: 1
-      duration: 0.0024672
+      duration: 0.0069798
       messages: 
       output: 
       stacktrace: 
@@ -1831,14 +2077,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1023
+      parentId: 1034
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests][suite]
-    - id: 1024
+    - id: 1035
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/GetAvailableSpawnAngles_Test/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(2,0,180)]
       name: GetAvailableSpawnAngles_Test(2,0,180)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(2,0,180)
       resultStatus: 1
-      duration: 0.000894
+      duration: 0.0010687
       messages: 
       output: 
       stacktrace: 
@@ -1848,14 +2094,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1027
+      parentId: 1038
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test][suite]
-    - id: 1025
+    - id: 1036
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/GetAvailableSpawnAngles_Test/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(4,0,90,180,270)]
       name: GetAvailableSpawnAngles_Test(4,0,90,180,270)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(4,0,90,180,270)
       resultStatus: 1
-      duration: 0.0001798
+      duration: 0.0001598
       messages: 
       output: 
       stacktrace: 
@@ -1865,14 +2111,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1027
+      parentId: 1038
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test][suite]
-    - id: 1026
+    - id: 1037
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/GetAvailableSpawnAngles_Test/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(10,0,36,72,108,144,180,216,252,288,324)]
       name: GetAvailableSpawnAngles_Test(10,0,36,72,108,144,180,216,252,288,324)
       fullName: Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test(10,0,36,72,108,144,180,216,252,288,324)
       resultStatus: 1
-      duration: 0.0001189
+      duration: 0.0001165
       messages: 
       output: 
       stacktrace: 
@@ -1882,14 +2128,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1027
+      parentId: 1038
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.GetAvailableSpawnAngles_Test][suite]
-    - id: 1029
+    - id: 1040
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.WhenSpawnEnemies_NoMoreThanCircularSectorsCountAreSpawned]
       name: WhenSpawnEnemies_NoMoreThanCircularSectorsCountAreSpawned
       fullName: Tests.EditorMode.SpawningTests.WhenSpawnEnemies_NoMoreThanCircularSectorsCountAreSpawned
       resultStatus: 1
-      duration: 0.0009726
+      duration: 0.0010628
       messages: 
       output: 
       stacktrace: 
@@ -1899,14 +2145,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1023
+      parentId: 1034
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests][suite]
-    - id: 1028
+    - id: 1039
       uniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/SpawningTests/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests.WhenSpawnEnemies_TheCorrectCountIsReturned]
       name: WhenSpawnEnemies_TheCorrectCountIsReturned
       fullName: Tests.EditorMode.SpawningTests.WhenSpawnEnemies_TheCorrectCountIsReturned
       resultStatus: 1
-      duration: 0.0003324
+      duration: 0.0003671
       messages: 
       output: 
       stacktrace: 
@@ -1916,15 +2162,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1023
+      parentId: 1034
       parentUniqueId: com.mnicolas.ce-fizz-buzz.tests.editor-mode.dll/Tests/EditorMode/[com.mnicolas.ce-fizz-buzz.tests.editor-mode][Tests.EditorMode.SpawningTests][suite]
-    m_ResultText: WhenShootEnemyWithSameClassShot_ScoreStepOccur (0.012s)
+    m_ResultText: WhenGameStarts_HealthIsCorrectlyInitialized (0.001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4e1a7654
-      m_LastClickedID: 1417026126
-      m_ExpandedIDs: adfeb68133ee798445cf0c8ab7ebf49602a1b4990981179a5539929ac7b8389c3ae1b0a891bb54b027882bb37bb75cb47de9ccb88b7160b998cb44bb0c7849c3de245dc8cdf5d8c8bd576dc9a6c3c4d29f7c89d48427f0d7f807e1d8c3933eed140cdef4d37a23f7a8a9fafb8ea4380b860cb61371c8a5151e73c81762c0d61e991f652fdfdce9394b37113b343f18504e1a7654bcc56955568b385e5efed76cffffff7f
+      m_SelectedIDs: d7fb4088
+      m_LastClickedID: -2009007145
+      m_ExpandedIDs: adfeb68133ee798445cf0c8ab7ebf49602a1b4990981179a5539929ac7b8389c3ae1b0a891bb54b027882bb37bb75cb47de9ccb88b7160b998cb44bb0c7849c3de245dc8cdf5d8c8bd576dc9a6c3c4d29f7c89d48427f0d7f807e1d8c3933eedc2a278ed140cdef4a8a9fafb8ea4380b860cb61371c8a5151e73c81762c0d61e991f652fdfdce939bcc56955568b385e5efed76cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1950,7 +2196,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &23
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1971,9 +2217,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1628.8
-    y: 28
+    y: 25.6
     width: 881.4
-    height: 756.60004
+    height: 759
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2021,9 +2267,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 881.4
-      height: 735.60004
+      height: 738
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 440.7, y: 367.80002}
+    m_Translation: {x: 440.7, y: 369}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -2031,18 +2277,18 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -440.7
-      y: -367.80002
+      y: -369
       width: 881.4
-      height: 735.60004
+      height: 738
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1101.75, y: 945.75006}
+  m_LastWindowPixelSize: {x: 1101.75, y: 948.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &24
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2064,7 +2310,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 524
-    width: 942.2
+    width: 1012.6
     height: 251.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2083,22 +2329,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Data
+    - Assets/Tests/EditorMode/Data
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Data
+  - Assets/Tests/EditorMode/Data
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\_cosas\Desarrollo\GameDev\Projects\ce-fizz-buzz
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 300}
-    m_SelectedIDs: e26b0000
-    m_LastClickedID: 27618
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000786c00000aa2000054a4000000ca9a3b
+    scrollPos: {x: 0, y: 380.6}
+    m_SelectedIDs: fe150100
+    m_LastClickedID: 71166
+    m_ExpandedIDs: 00000000686c00006a6c00006c6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c0000306d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2114,7 +2360,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 14}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2126,7 +2372,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
+    m_ExpandedIDs: 00000000686c00006a6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2153,22 +2399,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Data
+      m_OriginalName: Data
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 71166
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 14}
     m_CreateAssetUtility:
@@ -2182,7 +2428,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 317
---- !u!114 &25
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2204,7 +2450,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 330.2
+    width: 364.6
     height: 429.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2213,9 +2459,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c63effff
-      m_LastClickedID: -49466
-      m_ExpandedIDs: c63effff7e40ffffc656ffffbc57ffff906ffffff07bffffca7dffff0afbfffff4ffffff0a69000010690000fcb500002eb6000016c0000042c0000048c0000024c800002ac80000
+      m_SelectedIDs: 34170100
+      m_LastClickedID: 71476
+      m_ExpandedIDs: 76e4fbffaae5fbfff8ebfbff8ef6fbffb8fbfbff4adffcff78e0fcffeee3fcff12e8fcff64eefcff1c01fdff1c5ffdff6a5ffdffc067fdff826bfdffd06bfdff1e74fdff0476fdff5276fdffc07efdff7a92fdffc892fdff689bfdffc211feff1012feffc216feffb819feff061afefff41bfeff125bfeff1a5cfeffbebcffff84beffffc4c0ffff46ebffffc2edffffb8f8ffff36fbfffff4ffffffea8b0000028c00003a8c000048da000066da000096da0000dada0000e0da00004aea0000c4ea000000fa00001efa000058fa000064fa000090fa000096fa0000a60101005a17010060170100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2239,7 +2485,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &26
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2259,9 +2505,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 331.2
+    x: 365.6
     y: 73.6
-    width: 610
+    width: 646
     height: 429.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2272,8 +2518,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -2294,7 +2540,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -2497,9 +2743,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8476337, y: -1.1561847, z: 0.057568066}
+    m_Target: {x: 1.7471619, y: 1.4371074, z: -0.041634567}
     speed: 2
-    m_Value: {x: -0.8476337, y: -1.1561847, z: 0.057568066}
+    m_Value: {x: 1.7471619, y: 1.4371074, z: -0.041634567}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2550,9 +2796,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.4345765
+    m_Target: 14.163469
     speed: 2
-    m_Value: 4.4345765
+    m_Value: 14.163469
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2577,7 +2823,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &27
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2633,7 +2879,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f45c0000
     m_LastClickedID: 23796
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
+    m_ExpandedIDs: 00000000686c00006a6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2661,7 +2907,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d66b0000d86b0000da6b0000dc6b0000de6b0000e06b0000e26b0000e46b0000
+    m_ExpandedIDs: 00000000686c00006a6c00006e6c0000706c0000726c0000746c0000766c0000786c00007a6c00007c6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2717,7 +2963,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
---- !u!114 &28
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2739,13 +2985,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 524
-    width: 848.6
+    width: 1012.6
     height: 251.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &29
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2765,9 +3011,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 943.2
+    x: 1013.60004
     y: 73.6
-    width: 591.8
+    width: 521.4
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2776,7 +3022,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
