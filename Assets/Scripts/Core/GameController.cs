@@ -24,7 +24,15 @@ namespace Core
         {
             // initialize health to maximum
             _context.PlayerHealth.Value = _context.MaxHealth.Value;
+            
+            // initialize score to 0
             _context.Score.Value = 0;
+            
+            // remove enemies due to serialization
+            _context.Enemies.Clear();
+
+            // set initial difficulty
+            ChangeDifficulty();
             
             return ExecuteEnemiesActions().ToList();
         }
@@ -102,6 +110,10 @@ namespace Core
             return healAmount;
         }
 
+        /// <summary>
+        /// Change difficulty based on score.
+        /// </summary>
+        /// <returns></returns>
         private bool ChangeDifficulty()
         {
             var scoreVariable = _context.Score;
