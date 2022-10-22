@@ -24,73 +24,33 @@ MonoBehaviour:
   - _score: 500
     _rules: {fileID: 11400000, guid: 760ebd528fd9f8348a982087aba2caf7, type: 2}
   _enemies:
-  - _position: {x: 0.34729645, y: 1.9696156}
-    _classes: 03000000
-  - _position: {x: -1.5320889, y: 1.2855753}
-    _classes: 0f000000
-  - _position: {x: -0.34729627, y: -1.9696156}
-    _classes: 05000000
-  - _position: {x: -1.9151111, y: 1.6069691}
-    _classes: 0f000000
-  - _position: {x: 1.9151112, y: -1.6069696}
-    _classes: 0d000000
-  - _position: {x: 1.915111, y: 1.6069689}
-    _classes: 0c000000
-  - _position: {x: 1.2499996, y: -2.1650631}
-    _classes: 07000000
-  - _position: {x: 0.43412033, y: -2.4620192}
-    _classes: 0a000000
-  - _position: {x: -0.52094454, y: 2.9544232}
-    _classes: 03000000
-  - _position: {x: 1.4999998, y: 2.5980759}
-    _classes: 0f000000
   - _position: {x: 0.5209444, y: -2.954423}
-    _classes: 05000000
-  - _position: {x: 3.2889242, y: -1.1970713}
-    _classes: 0d000000
-  - _position: {x: 0.6077688, y: 3.446827}
-    _classes: 05000000
-  - _position: {x: -3.5, y: -0.00000030597974}
-    _classes: 0c000000
+    _classes: 0f000000
+  - _position: {x: -0.5209444, y: -2.9544232}
+    _classes: 0d0000000f000000
+  - _position: {x: 2.2981331, y: 1.9283627}
+    _classes: 010000000f000000
+  - _position: {x: 1.4999998, y: 2.5980759}
+    _classes: 0a0000000f000000
   - _position: {x: -1.7500002, y: 3.0310886}
-    _classes: 05000000
-  - _position: {x: -2.6811554, y: 2.2497568}
-    _classes: 07000000
-  - _position: {x: -0.69459254, y: -3.939231}
-    _classes: 0b000000
-  - _position: {x: 4, y: 0}
-    _classes: 0c000000
-  - _position: {x: 1.9999998, y: 3.4641013}
-    _classes: 03000000
-  - _position: {x: -3.064178, y: -2.5711503}
-    _classes: 01000000
-  - _position: {x: -2.0000002, y: 3.4641013}
-    _classes: 09000000
+    _classes: 050000000f000000
   - _position: {x: 0.6945926, y: -3.9392304}
-    _classes: 0b000000
-  - _position: {x: 3.0641778, y: -2.571151}
-    _classes: 06000000
-  - _position: {x: -3.0641778, y: 2.5711505}
-    _classes: 06000000
-  - _position: {x: -2.2500002, y: 3.897114}
-    _classes: 0e000000
-  - _position: {x: -3.4472, y: 2.8925443}
-    _classes: 0b000000
-  - _position: {x: 0.78141665, y: -4.4316344}
+    _classes: 010000000f000000
+  - _position: {x: 0.781417, y: 4.431635}
     _classes: 04000000
-  - _position: {x: 4.2286167, y: 1.5390905}
-    _classes: 0c000000
-  - _position: {x: -0.7814166, y: -4.431635}
+  - _position: {x: 3.4471998, y: -2.892545}
+    _classes: 09000000
+  - _position: {x: -2.2500002, y: 3.897114}
     _classes: 0b000000
-  - _position: {x: -0.7814169, y: 4.431635}
-    _classes: 0c000000
-  - _position: {x: 2.4999998, y: 4.330127}
-    _classes: 05000000
+  - _position: {x: 4.2286167, y: -1.5390917}
+    _classes: 06000000
+  - _position: {x: -4.5, y: -0.00000039340253}
+    _classes: 0b000000
+  - _position: {x: -5, y: -0.00000043711393}
+    _classes: 0b000000
+  - _position: {x: 2.4999995, y: -4.330127}
+    _classes: 02000000
   - _position: {x: -2.5000002, y: 4.330127}
-    _classes: 01000000
-  - _position: {x: 0.86824113, y: 4.924039}
-    _classes: 0d000000
-  - _position: {x: -4.698463, y: 1.7101011}
-    _classes: 0a000000
-  - _position: {x: -0.86824095, y: 4.924039}
-    _classes: 08000000
+    _classes: 03000000
+  - _position: {x: -4.698463, y: -1.7101008}
+    _classes: 0c000000

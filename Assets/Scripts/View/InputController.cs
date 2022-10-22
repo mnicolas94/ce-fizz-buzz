@@ -1,10 +1,10 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using AsyncUtils;
-using Core;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Utils.Attributes;
 using Utils.Input;
@@ -18,16 +18,17 @@ namespace View
         
         [SerializeField] private Camera _camera;
         
-        [SerializeField] private LayerMask _enemiesMask;
-
         [SerializeField, Tooltip("Bounds around an enemy to keep showing weapon selector, e.i. if the cursor leaves the" +
                                  "bounds area, then the weapon selector popup will hide.")]
         private Vector2 _cursorLeaveBounds;
+        
+        [SerializeField, Tooltip("Bounds offset w.r.t enemy.")]
+        private Vector2 _cursorLeaveBoundsOffset;
 
         [SerializeField] private WeaponSelector _selectorPopupPrefab;
 
         private CancellationTokenSource _cts;
-        private readonly RaycastHit2D[] _raycastResultsBuffer = new RaycastHit2D[10];
+        private List<RaycastResult> _raycastResultsBuffer = new List<RaycastResult>();
 
         private void OnEnable()
         {
@@ -101,24 +102,37 @@ namespace View
             }
         }
 
+        private async Task<GameObject> WaitEnterSomething(InputAction pointerAction, CancellationToken ct)
+        {
+            while (!ct.IsCancellationRequested)
+            {
+                // create pointer data
+                var pointerEventData = new PointerEventData(EventSystem.current)
+                {
+                    position = pointerAction.ReadValue<Vector2>()
+                };
+                EventSystem.current.RaycastAll(pointerEventData, _raycastResultsBuffer);
+                
+                if (_raycastResultsBuffer.Count > 0)  // an enemy or ui component has been detected
+                {
+                    var rayCasted = _raycastResultsBuffer[0].gameObject;
+                    return rayCasted;
+                }
+
+                await Task.Yield();
+            }
+
+            return null;
+        }
+        
         private async Task<EnemyView> WaitEnterEnemy(InputAction pointerAction, CancellationToken ct)
         {
             while (!ct.IsCancellationRequested)
             {
-                // get cursor position
-                var cursorPosition = GetCursorPosition(pointerAction);
-            
-                // raycast to detect enemies
-                var hitsCount = Physics2D.RaycastNonAlloc(
-                    cursorPosition,
-                    Vector2.zero,
-                    _raycastResultsBuffer,
-                    1,
-                    _enemiesMask);
-                
-                if (hitsCount > 0)  // an enemy has been detected
+                var rayCasted = await WaitEnterSomething(pointerAction, ct);
+                var enemyView = rayCasted.GetComponent<EnemyView>();
+                if (enemyView != null)  // an enemy has been detected
                 {
-                    var enemyView = _raycastResultsBuffer[0].collider.GetComponent<EnemyView>();
                     return enemyView;
                 }
 
@@ -150,7 +164,7 @@ namespace View
             while (inside && !ct.IsCancellationRequested)
             {
                 // get cursor position
-                var cursorPosition = GetCursorPosition(pointerAction);
+                var cursorPosition = GetCursorWorldPosition(pointerAction);
                 var delta = (Vector2) cursorPosition - enemyPosition;
 
                 if (Mathf.Abs(delta.x) > _cursorLeaveBounds.x || Mathf.Abs(delta.y) > _cursorLeaveBounds.y)
@@ -162,7 +176,7 @@ namespace View
             }
         }
 
-        private Vector3 GetCursorPosition(InputAction pointerAction)
+        private Vector3 GetCursorWorldPosition(InputAction pointerAction)
         {
             var pointerScreenPosition = pointerAction.ReadValue<Vector2>();
             var pointerWorldPosition = _camera.ScreenToWorldPoint(pointerScreenPosition);
