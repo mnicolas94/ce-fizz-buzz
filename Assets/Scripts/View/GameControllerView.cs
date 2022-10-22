@@ -19,13 +19,18 @@ namespace View
         private GameController _gameController;
 
         [ContextMenu("Start game")]
-        public async Task StartGame()
+        public void StartGame()
         {
-            var game = new GameController(_gameContext);
-            await StartGame(game);
+            StartGameAsync();
         }
         
-        public async Task StartGame(GameController game)
+        public async Task StartGameAsync()
+        {
+            var game = new GameController(_gameContext);
+            await StartGameAsync(game);
+        }
+        
+        public async Task StartGameAsync(GameController game)
         {
             _enemiesPool.Clear();
             _gameController = game;

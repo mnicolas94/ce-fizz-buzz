@@ -56,6 +56,9 @@ MonoBehaviour:
   _destroyAnimation: {fileID: 8020744519609809331}
   _changeClassAnimation: {fileID: 7680673281318084230}
   _attackAnimation: {fileID: 6494058043711693902}
+  _onInitialize:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &7874196208699261007
 BoxCollider2D:
   m_ObjectHideFlags: 0

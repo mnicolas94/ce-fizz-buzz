@@ -21,7 +21,7 @@ namespace Tests.PlayMode
         public IEnumerator AfterStartGame_EnemiesViewsGetTheCorrectPosition()
         {
             var controllerView = Object.FindObjectOfType<GameControllerView>();
-            yield return PlayModeTestsUtils.WaitForAsyncFunction(controllerView.StartGame());
+            yield return PlayModeTestsUtils.WaitForAsyncFunction(controllerView.StartGameAsync());
             
             var enemiesPool = Object.FindObjectOfType<EnemyViewPool>();
             var enemiesViews = enemiesPool.GetViews();
@@ -40,7 +40,7 @@ namespace Tests.PlayMode
         {
             
             var controllerView = Object.FindObjectOfType<GameControllerView>();
-            yield return PlayModeTestsUtils.WaitForAsyncFunction(controllerView.StartGame());
+            yield return PlayModeTestsUtils.WaitForAsyncFunction(controllerView.StartGameAsync());
             
             var enemiesPool = Object.FindObjectOfType<EnemyViewPool>();
             var enemiesViews = enemiesPool.GetViews();

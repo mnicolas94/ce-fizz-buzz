@@ -2,6 +2,7 @@
 using Core;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils.Attributes;
 using View.EnemyClassAppearance;
 
@@ -38,6 +39,7 @@ namespace View
         {
             _enemyData = enemy;
             UpdateAppearance();
+            transform.localScale = Vector3.zero;
         }
 
         public void UpdateAppearance()

@@ -60,6 +60,10 @@ namespace View
                 {
                     // wait enter enemy
                     var enemyView = await WaitEnterEnemy(pointerAction, ct);
+                    if (enemyView == null)
+                    {
+                        continue;
+                    }
                     var enemyPosition = enemyView.transform.position;
 
                     var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
