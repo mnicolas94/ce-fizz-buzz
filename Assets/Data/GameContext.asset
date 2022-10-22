@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eced92b6bae946e98d74ebe937001b5f, type: 3}
+  m_Name: GameContext
+  m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 11400000, guid: bb01e5742c271094f8fa36c17d3d2cbc, type: 2}
+  _maxHealth: {fileID: 11400000, guid: a235f874280b22e4e9da8abbddab321a, type: 2}
+  _score: {fileID: 11400000, guid: 226ef8047917d424db1876b6953b026a, type: 2}
+  _gameRules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}

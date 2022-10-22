@@ -1733,10 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50fb879fe4c85d48b62d944f3ed2631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthVariable: {fileID: 11400000, guid: bb01e5742c271094f8fa36c17d3d2cbc, type: 2}
-  _maxHealth: {fileID: 11400000, guid: a235f874280b22e4e9da8abbddab321a, type: 2}
-  _scoreVariable: {fileID: 11400000, guid: 226ef8047917d424db1876b6953b026a, type: 2}
-  _gameRules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}
+  _gameContext: {fileID: 11400000, guid: e63c9bad392160e4996d8c0a368e8baf, type: 2}
   _turnRenderer: {fileID: 907627148}
   _enemiesPool: {fileID: 1944110328}
 --- !u!1 &1498455976

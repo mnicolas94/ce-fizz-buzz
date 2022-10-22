@@ -22,8 +22,15 @@ namespace Tests.EditorMode
             scoreVariable = scoreVariable != null ? scoreVariable : ScriptableObject.CreateInstance<IntVariable>();
             rules = rules != null ? rules : ScriptableObject.CreateInstance<GameRules>();
             enemies = enemies != null ? enemies : new List<Enemy>();
+
+            var context = ScriptableObject.CreateInstance<GameContext>();
+            context.PlayerHealth = playerHealth;
+            context.MaxHealth = maxHealth;
+            context.Score = scoreVariable;
+            context.GameRules = rules;
+            context.Enemies = enemies;
             
-            var gameController = new GameController(playerHealth, maxHealth, scoreVariable, rules, enemies);
+            var gameController = new GameController(context);
 
             return gameController;
         }

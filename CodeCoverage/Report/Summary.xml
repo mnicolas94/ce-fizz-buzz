@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>10/22/2022 - 9:44:06 AM</Generatedon>
-    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Generatedon>10/22/2022 - 10:09:44 AM</Generatedon>
+    <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
-    <Classes>40</Classes>
-    <Files>38</Files>
-    <Coveredlines>517</Coveredlines>
-    <Uncoveredlines>256</Uncoveredlines>
-    <Coverablelines>773</Coverablelines>
-    <Totallines>1835</Totallines>
-    <Linecoverage>66.8</Linecoverage>
+    <Classes>41</Classes>
+    <Files>39</Files>
+    <Coveredlines>531</Coveredlines>
+    <Uncoveredlines>220</Uncoveredlines>
+    <Coverablelines>751</Coverablelines>
+    <Totallines>1858</Totallines>
+    <Linecoverage>70.7</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="40" coverage="66.8" coveredlines="517" coverablelines="773" totallines="1935" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="com.mnicolas.ce-fizz-buzz" classes="41" coverage="70.7" coveredlines="531" coverablelines="751" totallines="1958" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Core.Enemy" coverage="100" coveredlines="13" coverablelines="13" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.EnemyClassUtils" coverage="100" coveredlines="30" coverablelines="30" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.GameController" coverage="86.7" coveredlines="85" coverablelines="98" totallines="153" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameContext" coverage="100" coveredlines="11" coverablelines="11" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameController" coverage="100" coveredlines="69" coverablelines="69" totallines="134" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameMechanics" coverage="100" coveredlines="71" coverablelines="71" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.GameRules" coverage="83.3" coveredlines="10" coverablelines="12" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Core.GameRules.HealthRules" coverage="75" coveredlines="12" coverablelines="16" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Core.GameRules.HealthRules" coverage="91.6" coveredlines="11" coverablelines="12" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.GameRules.SpawnRules" coverage="90" coveredlines="27" coverablelines="30" totallines="83" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.AbstractListEnemiesTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.AbstractShootTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -33,7 +34,7 @@
       <Class name="Core.TurnSteps.MoveTurnStep" coverage="100" coveredlines="3" coverablelines="3" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.ScoreChangedTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Core.TurnSteps.SpawnTurnStep" coverage="100" coveredlines="5" coverablelines="5" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="UI.HealthPositionUpdater" coverage="85.7" coveredlines="18" coverablelines="21" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="UI.HealthPositionUpdater" coverage="100" coveredlines="21" coverablelines="21" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="UI.HealthUi" coverage="92.8" coveredlines="13" coverablelines="14" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="UI.RangeColor" coverage="100" coveredlines="5" coverablelines="5" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="UI.ScoreUi" coverage="100" coveredlines="3" coverablelines="3" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -43,9 +44,9 @@
       <Class name="View.EnemyClassAppearance.ClassAppearance" coverage="50" coveredlines="1" coverablelines="2" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="View.EnemyView" coverage="81.2" coveredlines="13" coverablelines="16" totallines="51" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="View.EnemyViewPool" coverage="81" coveredlines="30" coverablelines="37" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="View.GameControllerView" coverage="71.4" coveredlines="10" coverablelines="14" totallines="47" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="View.InputController" coverage="31.4" coveredlines="28" coverablelines="89" totallines="168" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="View.PlayerRotationController" coverage="80" coveredlines="12" coverablelines="15" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="View.GameControllerView" coverage="71.4" coveredlines="10" coverablelines="14" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="View.InputController" coverage="47.1" coveredlines="42" coverablelines="89" totallines="168" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="View.PlayerRotationController" coverage="100" coveredlines="15" coverablelines="15" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="View.SerializableTurn" coverage="37.5" coveredlines="15" coverablelines="40" totallines="85" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="View.ShotRay" coverage="12.5" coveredlines="2" coverablelines="16" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="View.TurnRenderer" coverage="100" coveredlines="9" coverablelines="9" totallines="31" branchcoverage="" coveredbranches="0" totalbranches="0" />

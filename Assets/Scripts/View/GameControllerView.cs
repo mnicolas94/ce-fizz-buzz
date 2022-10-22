@@ -12,11 +12,7 @@ namespace View
 {
     public class GameControllerView : MonoBehaviour
     {
-        [SerializeField] private FloatVariable _healthVariable;
-        [SerializeField] private FloatConstant _maxHealth;
-        [SerializeField] private IntVariable _scoreVariable;
-        [SerializeField] private GameRules _gameRules;
-
+        [SerializeField, AutoProperty(AutoPropertyMode.Asset)] private GameContext _gameContext;
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private TurnRenderer _turnRenderer;
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private EnemyViewPool _enemiesPool;
 
@@ -25,7 +21,7 @@ namespace View
         [ContextMenu("Start game")]
         public async Task StartGame()
         {
-            var game = new GameController(_healthVariable, _maxHealth, _scoreVariable, _gameRules);
+            var game = new GameController(_gameContext);
             await StartGame(game);
         }
         

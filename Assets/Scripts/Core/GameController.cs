@@ -1,37 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Core.TurnSteps;
-using UnityAtoms.BaseAtoms;
 
 namespace Core
 {
     public class GameController
     {
-        private FloatVariable _playerHealth;
-        private FloatConstant _maxHealth;
-        private IntVariable _score;
-        private IList<Enemy> _enemies;
-        private GameRules.GameRules _gameRules;
+        private GameContext _context;
 
         private int _lastScoreMultiplierHeal;
 
-        public GameController(FloatVariable playerHealth, FloatConstant maxHealth, IntVariable score, GameRules.GameRules gameRules)
-            : this(playerHealth, maxHealth, score, gameRules, new List<Enemy>())
+        public GameController(GameContext context)
         {
-        }
-        
-        public GameController(
-            FloatVariable playerHealth,
-            FloatConstant maxHealth,
-            IntVariable score,
-            GameRules.GameRules gameRules,
-            List<Enemy> initialEnemies)
-        {
-            _playerHealth = playerHealth;
-            _maxHealth = maxHealth;
-            _score = score;
-            _gameRules = gameRules;
-            _enemies = initialEnemies;
+            _context = context;
         }
 
         /// <summary>
@@ -40,8 +21,8 @@ namespace Core
         public List<TurnStep> StartGame()
         {
             // initialize health to maximum
-            _playerHealth.Value = _maxHealth.Value;
-            _score.Value = 0;
+            _context.PlayerHealth.Value = _context.MaxHealth.Value;
+            _context.Score.Value = 0;
             
             return ExecuteEnemiesActions().ToList();
         }
@@ -67,7 +48,7 @@ namespace Core
         private IEnumerable<TurnStep> ExecutePlayerActions(Enemy shotTarget, EnemyClass shotClass)
         {
             // get neighbour enemies sorted by shot bounce
-            var shotBounceSequence = GameMechanics.GetShotBounceSequence(shotTarget, _enemies, _gameRules);
+            var shotBounceSequence = GameMechanics.GetShotBounceSequence(shotTarget, _context.Enemies, _context.GameRules);
 
             // check if enemy has the same class as shot
             bool sameClass = shotTarget.CurrentClass == shotClass;
@@ -78,8 +59,8 @@ namespace Core
                 int totalScore = 0;
                 foreach (var enemy in shotBounceSequence)
                 {
-                    _enemies.Remove(enemy);
-                    _score.Value += enemy.Score;
+                    _context.Enemies.Remove(enemy);
+                    _context.Score.Value += enemy.Score;
                     totalScore += enemy.Score;
                 }
 
@@ -87,7 +68,7 @@ namespace Core
                 var healAmount = ComputeHealAmountBasedOnScore();
                 if (healAmount > 0)
                 {
-                    _playerHealth.Value += healAmount;
+                    _context.PlayerHealth.Value += healAmount;
                     yield return new HealPlayerTurnStep(healAmount);
                 }
                 
@@ -97,7 +78,7 @@ namespace Core
             else
             {
                 // change enemies' classes
-                GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _gameRules.SpawnRules);
+                GameMechanics.ChangeEnemiesClass(shotClass, shotBounceSequence, _context.GameRules.SpawnRules);
                 yield return new ChangeClassTurnStep(shotBounceSequence, shotClass);
             }
         }
@@ -108,10 +89,10 @@ namespace Core
         /// <returns></returns>
         private int ComputeHealAmountBasedOnScore()
         {
-            var difference = _score.Value - _lastScoreMultiplierHeal;
-            var multiplier = _gameRules.HealthRules.HealPlayerOnScoreMultiplier;
+            var difference = _context.Score.Value - _lastScoreMultiplierHeal;
+            var multiplier = _context.GameRules.HealthRules.HealPlayerOnScoreMultiplier;
             int healAmount = difference / multiplier;
-            _lastScoreMultiplierHeal = _score.Value - _score.Value % multiplier;
+            _lastScoreMultiplierHeal = _context.Score.Value - _context.Score.Value % multiplier;
 
             return healAmount;
         }
@@ -122,26 +103,26 @@ namespace Core
         private IEnumerable<TurnStep> ExecuteEnemiesActions()
         {
             // spawn enemies
-            var newEnemies = GameMechanics.SpawnEnemies(_gameRules.SpawnRules);
+            var newEnemies = GameMechanics.SpawnEnemies(_context.GameRules.SpawnRules);
             foreach (var enemy in newEnemies)
             {
-                _enemies.Add(enemy);
+                _context.Enemies.Add(enemy);
             }
 
             yield return new SpawnTurnStep(newEnemies);
             
             // move enemies
-            GameMechanics.MoveEnemies(_enemies, _gameRules, out var attackingEnemies);
-            var nonAttackingEnemies = _enemies.Where(enemy => !attackingEnemies.Contains(enemy)).ToList();
+            GameMechanics.MoveEnemies(_context.Enemies, _context.GameRules, out var attackingEnemies);
+            var nonAttackingEnemies = _context.Enemies.Where(enemy => !attackingEnemies.Contains(enemy)).ToList();
             
             yield return new MoveTurnStep(nonAttackingEnemies);
 
             float totalDamage = 0;
             foreach (var attackingEnemy in attackingEnemies)
             {
-                _enemies.Remove(attackingEnemy);
-                _playerHealth.Value -= _gameRules.HealthRules.DamagePerHit;
-                totalDamage += _gameRules.HealthRules.DamagePerHit;
+                _context.Enemies.Remove(attackingEnemy);
+                _context.PlayerHealth.Value -= _context.GameRules.HealthRules.DamagePerHit;
+                totalDamage += _context.GameRules.HealthRules.DamagePerHit;
             }
 
             if (attackingEnemies.Count > 0)
