@@ -39,5 +39,10 @@ namespace Core.GameRules
             get => _distanceToBounceShot;
             set => _distanceToBounceShot = value;
         }
+
+        public float GetDangerRadius()
+        {
+            return _moveDistancePerTurn + _healthRules.DistanceToDamagePlayer;
+        }
     }
 }
