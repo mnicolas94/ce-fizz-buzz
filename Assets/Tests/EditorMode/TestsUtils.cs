@@ -14,6 +14,7 @@ namespace Tests.EditorMode
             FloatConstant maxHealth = null,
             IntVariable scoreVariable = null,
             GameRules rules = null,
+            List<ScoreRule> difficulties = null,
             List<Enemy> enemies = null
             )
         {
@@ -21,6 +22,7 @@ namespace Tests.EditorMode
             maxHealth = maxHealth != null ? maxHealth : GetTestMaxHealthConstant();
             scoreVariable = scoreVariable != null ? scoreVariable : ScriptableObject.CreateInstance<IntVariable>();
             rules = rules != null ? rules : ScriptableObject.CreateInstance<GameRules>();
+            difficulties = difficulties != null ? difficulties : new List<ScoreRule>();
             enemies = enemies != null ? enemies : new List<Enemy>();
 
             var context = ScriptableObject.CreateInstance<GameContext>();
@@ -28,6 +30,7 @@ namespace Tests.EditorMode
             context.MaxHealth = maxHealth;
             context.Score = scoreVariable;
             context.GameRules = rules;
+            context.DifficultyScoreMilestones = difficulties;
             context.Enemies = enemies;
             
             var gameController = new GameController(context);

@@ -10,6 +10,8 @@ namespace Core
 
         private int _lastScoreMultiplierHeal;
 
+        public GameContext Context => _context;
+
         public GameController(GameContext context)
         {
             _context = context;
@@ -72,6 +74,9 @@ namespace Core
                     yield return new HealPlayerTurnStep(healAmount);
                 }
                 
+                // change difficulty if applicable
+                ChangeDifficulty();
+                
                 yield return new DestroyTurnStep(shotBounceSequence, shotClass);
                 yield return new ScoreChangedTurnStep(totalScore);
             }
@@ -95,6 +100,28 @@ namespace Core
             _lastScoreMultiplierHeal = _context.Score.Value - _context.Score.Value % multiplier;
 
             return healAmount;
+        }
+
+        private bool ChangeDifficulty()
+        {
+            var scoreVariable = _context.Score;
+            var difficulties = new List<ScoreRule>(_context.DifficultyScoreMilestones);
+            difficulties.Sort(
+                (scoreRuleA, scoreRuleB) => scoreRuleA.Score.CompareTo(scoreRuleB.Score));
+
+            var newRule = _context.GameRules;
+            foreach (var (score, rules) in difficulties)
+            {
+                if (scoreVariable.Value >= score)
+                {
+                    newRule = rules;
+                }
+            }
+
+            bool changed = _context.GameRules != newRule;
+            _context.GameRules = newRule;
+            
+            return changed;
         }
 
         /// <summary>

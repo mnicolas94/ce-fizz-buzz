@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c55ca50626684f1d8444fdcf8bc549e8, type: 3}
-  m_Name: GameRules
+  m_Name: 3_HardRules
   m_EditorClassIdentifier: 
   _spawnRules:
-    _minSpawnCount: 1
-    _maxSpawnCount: 5
+    _minSpawnCount: 3
+    _maxSpawnCount: 10
     _minNumber: 1
     _maxNumber: 15
     _distanceToSpawnEnemy: 5.5
     _circularSectors: 18
   _healthRules:
-    _distanceToDamagePlayer: 1
+    _distanceToDamagePlayer: 2
     _damagePerHit: 1
+    _healPlayerOnScoreMultiplier: 100
+    _healAmount: 1
   _moveDistancePerTurn: 0.5
   _distanceToBounceShot: 3
