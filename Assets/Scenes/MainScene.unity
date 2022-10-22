@@ -1266,6 +1266,8 @@ MonoBehaviour:
   animationSteps:
   - rid: 761664056048222269
   - rid: 761664080351592506
+  - rid: 761664101260984357
+  - rid: 761664101260984358
   - rid: 761664058760888394
   - rid: 761664056048222232
   - rid: 761664039437205507
@@ -1296,7 +1298,7 @@ MonoBehaviour:
     - rid: 761664039437205507
       type: {class: MoveTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
       data:
-        delay: 0.5
+        delay: 0
         flowType: 1
         _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
         _enemiesPool: {fileID: 1944110328}
@@ -1361,6 +1363,34 @@ MonoBehaviour:
             - m_Target: {fileID: 1126045336}
               m_TargetAssemblyTypeName: UI.ScoreUi, com.mnicolas.ce-fizz-buzz
               m_MethodName: UpdateScoreUi
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 761664101260984357
+      type: {class: HealPlayerTurnStepRenderer, ns: View.TurnStepRenderers, asm: com.mnicolas.ce-fizz-buzz}
+      data:
+        delay: 0
+        flowType: 1
+        _lastTurnData: {fileID: 11400000, guid: 9568be8f9a0faa643974447477c1f173, type: 2}
+        _particleCreator: {fileID: 11400000, guid: f9e38aea1c1de5e438f03b12e3e60f20, type: 2}
+        _textColor: {r: 0.25243545, g: 1, b: 0, a: 1}
+    - rid: 761664101260984358
+      type: {class: InvokeCallbackAnimationStep, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        delay: 0
+        flowType: 1
+        callback:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 167408425}
+              m_TargetAssemblyTypeName: UI.HealthUi, com.mnicolas.ce-fizz-buzz
+              m_MethodName: UpdateHealthUi
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}

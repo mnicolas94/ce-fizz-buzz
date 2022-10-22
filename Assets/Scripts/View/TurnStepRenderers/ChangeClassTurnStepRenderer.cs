@@ -30,6 +30,7 @@ namespace View.TurnStepRenderers
                     changeClassStep.ShotClass,
                     GetShotEnemySequence);
             
+                shotSequence.SetDelay(Delay);
                 if (FlowType == FlowType.Append)
                     animationSequence.Append(shotSequence);
                 else

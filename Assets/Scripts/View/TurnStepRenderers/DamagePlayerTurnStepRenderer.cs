@@ -30,6 +30,7 @@ namespace View.TurnStepRenderers
                     attackAnimation.onComplete += () => _enemiesPool.RemoveView(enemyView.EnemyData);
                 }
             
+                sequence.SetDelay(Delay);
                 if (FlowType == FlowType.Append)
                     animationSequence.Append(sequence);
                 else

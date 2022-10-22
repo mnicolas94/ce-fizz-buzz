@@ -36,6 +36,7 @@ namespace View.TurnStepRenderers
                     sequence.Join(animation);
                 }
             
+                sequence.SetDelay(Delay);
                 if (FlowType == FlowType.Append)
                     animationSequence.Append(sequence);
                 else

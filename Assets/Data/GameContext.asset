@@ -17,68 +17,50 @@ MonoBehaviour:
   _score: {fileID: 11400000, guid: 226ef8047917d424db1876b6953b026a, type: 2}
   _gameRules: {fileID: 11400000, guid: 760ebd528fd9f8348a982087aba2caf7, type: 2}
   _difficultyScoreMilestones:
+  - _score: 0
+    _rules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}
   - _score: 250
     _rules: {fileID: 11400000, guid: abc1fee4ddbb35b479607dcd5f327c7b, type: 2}
   - _score: 500
     _rules: {fileID: 11400000, guid: 760ebd528fd9f8348a982087aba2caf7, type: 2}
   _enemies:
-  - _position: {x: -1.5320889, y: 1.2855753}
-    _classes: 05000000
   - _position: {x: -0.34729636, y: 1.9696156}
-    _classes: 02000000
-  - _position: {x: -0.43412045, y: 2.4620194}
-    _classes: 02000000
-  - _position: {x: -1.2499996, y: -2.1650631}
-    _classes: 02000000
-  - _position: {x: 2.2981331, y: 1.9283627}
-    _classes: 09000000
-  - _position: {x: -1.5000002, y: 2.5980759}
-    _classes: 0f000000
-  - _position: {x: -3, y: -0.00000026226834}
     _classes: 05000000
-  - _position: {x: -1.4999996, y: -2.5980759}
-    _classes: 04000000
-  - _position: {x: 3, y: 0}
+  - _position: {x: 1.915111, y: 1.6069689}
     _classes: 09000000
-  - _position: {x: -3.2889242, y: 1.1970707}
+  - _position: {x: 0.43412057, y: 2.4620194}
+    _classes: 09000000
+  - _position: {x: 3.2889242, y: -1.1970713}
     _classes: 0f000000
-  - _position: {x: -0.6077685, y: -3.446827}
+  - _position: {x: 1.7499995, y: -3.0310886}
+    _classes: 04000000
+  - _position: {x: 1.9999995, y: -3.4641013}
+    _classes: 06000000
+  - _position: {x: -0.69459254, y: -3.939231}
+    _classes: 0f000000
+  - _position: {x: 4, y: 0}
+    _classes: 02000000
+  - _position: {x: 2.2499998, y: 3.897114}
     _classes: 0d000000
-  - _position: {x: 1.7499998, y: 3.0310886}
-    _classes: 06000000
-  - _position: {x: -3.2889242, y: -1.1970706}
-    _classes: 0b000000
-  - _position: {x: -0.60776865, y: 3.446827}
-    _classes: 0f000000
-  - _position: {x: 0.6945929, y: 3.939231}
-    _classes: 0b000000
-  - _position: {x: -2.0000002, y: 3.4641013}
-    _classes: 04000000
-  - _position: {x: -3.7587705, y: 1.3680809}
-    _classes: 0c000000
-  - _position: {x: -3.4472003, y: -2.892544}
-    _classes: 02000000
-  - _position: {x: 4.5, y: 0}
-    _classes: 03000000
-  - _position: {x: 0.78141665, y: -4.4316344}
-    _classes: 05000000
+  - _position: {x: -3.4472, y: 2.8925443}
+    _classes: 0e000000
   - _position: {x: -4.5, y: -0.00000039340253}
-    _classes: 09000000
-  - _position: {x: -4.2286167, y: -1.5390906}
-    _classes: 09000000
-  - _position: {x: -2.5000002, y: 4.330127}
-    _classes: 06000000
-  - _position: {x: -3.8302226, y: -3.213938}
+    _classes: 0e000000
+  - _position: {x: -3.4472003, y: -2.892544}
+    _classes: 0d000000
+  - _position: {x: 2.2499995, y: -3.897114}
     _classes: 05000000
-  - _position: {x: 5, y: 0}
-    _classes: 05000000
-  - _position: {x: 2.4999998, y: 4.330127}
-    _classes: 01000000
-  - _position: {x: 2.4999995, y: -4.330127}
-    _classes: 0b000000
-  - _position: {x: -5, y: -0.00000043711393}
+  - _position: {x: -0.7814166, y: -4.431635}
     _classes: 08000000
-  - _position: {x: 0.86824113, y: 4.924039}
+  - _position: {x: -0.7814169, y: 4.431635}
     _classes: 06000000
-  - _position: {x: 0.8682407, y: -4.9240384}
-    _classes: 04000000
+  - _position: {x: -2.2499995, y: -3.897114}
+    _classes: 07000000
+  - _position: {x: -0.86824065, y: -4.924039}
+    _classes: 0a000000
+  - _position: {x: -3.8302226, y: -3.213938}
+    _classes: 0a000000
+  - _position: {x: 3.830222, y: -3.2139387}
+    _classes: 09000000
+  - _position: {x: 4.698463, y: -1.7101018}
+    _classes: 01000000
