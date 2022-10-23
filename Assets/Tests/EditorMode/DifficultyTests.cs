@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Core;
 using Core.GameRules;
+using Core.TurnSteps;
 using NUnit.Framework;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
@@ -48,6 +50,46 @@ namespace Tests.EditorMode
 
             // assert
             Assert.AreEqual(gameController.Context.GameRules, secondRule);
+        }
+        
+        [Test]
+        public void WhenDifficultyGetsChanged_IsDoneAfterEnemiesAttack()
+        {
+            // arrange
+            var score = ScriptableObject.CreateInstance<IntVariable>();
+            score.Value = 500;
+            
+            var initialRule = ScriptableObject.CreateInstance<GameRules>();
+            initialRule.HealthRules.DistanceToDamagePlayer = 1;
+            var secondRule = ScriptableObject.CreateInstance<GameRules>();
+            secondRule.HealthRules.DistanceToDamagePlayer = 100;
+
+            var difficulties = new List<ScoreRule>
+            {
+                new ScoreRule(501, secondRule)
+            };
+
+            var enemy1 = new Enemy(new Vector2(1, 0), 10);
+            var enemy2 = new Enemy(new Vector2(4, 0), 10);
+            var enemies = new List<Enemy>
+            {
+                enemy1,
+                enemy2,
+            };
+            var gameController = TestsUtils.GetGameController(
+                scoreVariable: score,
+                rules: initialRule,
+                difficulties: difficulties,
+                enemies: enemies);
+
+            // act
+            var turnSteps = gameController.PlayTurn(enemy1, EnemyClass.Buzz);
+
+            // assert
+            var expected = false;
+            var result = turnSteps.Exists(step => step is DamagePlayerTurnStep);
+            Assert.AreEqual(secondRule, gameController.Context.GameRules);  // check difficulty changed
+            Assert.AreEqual(expected, result);
         }
     }
 }

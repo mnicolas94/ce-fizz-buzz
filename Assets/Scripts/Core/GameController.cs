@@ -46,8 +46,12 @@ namespace Core
         {
             var turnSteps = ExecutePlayerActions(shotTarget, shotClass);
             turnSteps = turnSteps.Concat(ExecuteEnemiesActions());
+            var turnStepsList = turnSteps.ToList();
+            
+            // change difficulty if applicable
+            ChangeDifficulty();
 
-            return turnSteps.ToList();
+            return turnStepsList;
         }
 
         /// <summary>
@@ -81,9 +85,6 @@ namespace Core
                     _context.PlayerHealth.Value += healAmount;
                     yield return new HealPlayerTurnStep(healAmount);
                 }
-                
-                // change difficulty if applicable
-                ChangeDifficulty();
                 
                 yield return new DestroyTurnStep(shotBounceSequence, shotClass);
                 yield return new ScoreChangedTurnStep(totalScore);
