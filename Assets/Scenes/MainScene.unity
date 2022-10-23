@@ -1140,7 +1140,7 @@ GameObject:
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 08a04b12dd0d5ec4da08f074806d5bf7, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1291,7 +1291,7 @@ Transform:
   - {fileID: 384570597}
   - {fileID: 1786972835}
   m_Father: {fileID: 1971944467}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &523633168
 MonoBehaviour:
@@ -1308,7 +1308,6 @@ MonoBehaviour:
   _gameController: {fileID: 1387679554}
   _camera: {fileID: 519420031}
   _cursorLeaveBounds: {x: 1, y: 1}
-  _cursorLeaveBoundsOffset: {x: 0, y: 0}
   _selectorPopupPrefab: {fileID: 3907156067046627651, guid: 5a9b3af0fc73d6f4bb9d0ec48a69b412, type: 3}
 --- !u!1 &523760231
 GameObject:
@@ -1717,7 +1716,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1498455977}
   m_Father: {fileID: 1971944467}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13700,8 +13700,8 @@ Tilemap:
   - first: {x: -16, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 41
-      m_TileSpriteIndex: 41
+      m_TileIndex: 14
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -24487,7 +24487,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 7a6a30386732bed46978dff47f602bc2, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0b1ed66343c7da8488483567ed2fb6a9, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: ad29fbad36f6a3942aa35c15730965fc, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 77f225a18aa639149a84c88e9606a716, type: 2}
@@ -24541,7 +24541,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 544f212e1a2dc8e4db70c3bd6c7ec372, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 7e65507f022e6d747a2cd2883444e3fa, type: 2}
-  - m_RefCount: 6
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 1bda70c15e76da64d83c0855c68d3f46, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: f1ebfaa69d0463a4f9412ed03820462b, type: 2}
@@ -24618,7 +24618,7 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: e5c7a78ba5adb1741a82b4e844e918c0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: e3f9f8c1dfec8914eab1168dd214c0bd, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 0aa6fe72c64e3dc4a9b40b62ed6f6e09, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 02ab26e700fee6348960adee7d118748, type: 3}
@@ -24672,7 +24672,7 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 0c137c6090522214ab5ed3f3f0bc9bbd, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 82e6bb43e7fb1244684101c6b7093d35, type: 3}
-  - m_RefCount: 6
+  - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: ad13c32becdc1c84ebc742898d85114a, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: dd1fa197a1d4ed54985f629993676dc3, type: 3}
@@ -25703,13 +25703,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498455976}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1971944467}
-  m_RootOrder: 5
+  m_Father: {fileID: 907627147}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1498455978
 MonoBehaviour:
@@ -26341,7 +26341,6 @@ Transform:
   - {fileID: 1387679553}
   - {fileID: 907627147}
   - {fileID: 1944110327}
-  - {fileID: 1498455977}
   - {fileID: 523633167}
   - {fileID: 2100231865}
   m_Father: {fileID: 0}
@@ -26379,7 +26378,7 @@ Transform:
   - {fileID: 468105}
   - {fileID: 253278402}
   m_Father: {fileID: 1971944467}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2100231866
 MonoBehaviour:

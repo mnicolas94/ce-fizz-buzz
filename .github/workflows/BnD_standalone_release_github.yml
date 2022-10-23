@@ -1,0 +1,147 @@
+﻿name: (Standalone | Release on Github) Build and deploy standalone release on Github
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - v**.**.**
+
+jobs:
+  sendTagAnnotations:
+    name: Send information to Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Send notification message that build process started
+        uses: mnicolas94/UnityCICDWorkflows/.github/actions/initial-message@v1-pre-13
+        env:
+          platform: Standalone
+        with:
+          development_build: false
+          platform: ${{ env.platform }}
+          bot-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+  buildForSomePlatforms:
+    name: Build for ${{ matrix.targetPlatform }} with itchio channel ${{ matrix.itch_channel }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - targetPlatform: StandaloneWindows64   # Build a Windows 64-bit standalone
+            itch_channel: windows
+          - targetPlatform: StandaloneLinux64 # Build a Linux 64-bit standalone
+            itch_channel: linux
+          - targetPlatform: StandaloneOSX # Build a macOS standalone.
+            itch_channel: mac
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+      - uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - name: Get variables
+        id: variables
+        run: |
+          version=$(git describe --tags --abbrev=0 --match v[0-9]*)
+          version=${version:1}
+          echo "::set-output name=version::$version"
+      - name: Get project name variable
+        id: project_name
+        uses: mnicolas94/UnityCICDWorkflows/.github/actions/get-project-name@v1-pre-13
+      - name: Download build script
+        run: |
+          mkdir -p Assets/Editor
+          curl 'https://raw.githubusercontent.com/mnicolas94/UnityCICDWorkflows/main/BuildScript.cs' > Assets/Editor/BuildScript.cs
+      - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          buildName: ${{ steps.project_name.outputs.project-name }}
+          buildMethod: UnityBuilderAction.BuildScript.Build
+          targetPlatform: ${{ matrix.targetPlatform }}
+          versioning: Tag
+      - name: Rename game folder
+        id: renaming
+        run: |
+          mkdir renamed
+          cp -r "build/${{ matrix.targetPlatform }}" renamed
+          mv "renamed/${{ matrix.targetPlatform }}" "renamed/${{ steps.project_name.outputs.project-name }}"
+          echo "::set-output name=zipName::${{ steps.project_name.outputs.project-name }}-${{ matrix.itch_channel }}-${{ steps.variables.outputs.version }}.zip"
+      - uses: vimtor/action-zip@v1
+        with:
+          files: renamed
+          dest: ${{ steps.renaming.outputs.zipName }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ steps.variables.outputs.version }}
+          files: ${{ steps.renaming.outputs.zipName }}
+      - uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ matrix.itch_channel }}
+          ITCH_GAME: ${{ secrets.ITCH_GAME }}
+          ITCH_USER: ${{ secrets.ITCH_USER }}
+          PACKAGE: ${{ steps.renaming.outputs.zipName }}
+          VERSION: ${{ steps.variables.outputs.version }}
+      - name: Check if file size is greater than 50 MB
+        id: sizecheck
+        run: |
+          maxsize=50000000
+          filesize=$(stat -c%s "${{ steps.renaming.outputs.zipName }}")
+          echo "The build size is $filesize bytes."
+          if (( filesize > maxsize )); then
+            echo "::set-output name=bigger::true"
+          else
+            echo "::set-output name=bigger::false"
+          fi
+      - name: Send file to telegram
+        if: ${{ steps.sizecheck.outputs.bigger == 'false' }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: Build for ${{ matrix.itch_channel }} completed
+          document: ${{ steps.renaming.outputs.zipName }}
+      - name: Send file to telegram with MTProto API
+        if: ${{ steps.sizecheck.outputs.bigger == 'true' }}
+        uses: mnicolas94/telegram-file-uploader@main
+        with:
+          session-name: ${{ secrets.TELEGRAM_SESSION }}
+          api-id: ${{ secrets.TELEGRAM_API_ID }}
+          api-hash: ${{ secrets.TELEGRAM_API_HASH }}
+          bot-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          file-path: ${{ steps.renaming.outputs.zipName }}
+          message: Build for ${{ matrix.itch_channel }} completed
+          cache-session: "false"
+          reply-request: 'The build size for ${{ matrix.itch_channel }} is bigger than 50 MB. Please, reply to this message to give me permission to send you the file'
+      - name: Send error message if failed
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "⚠️ An error occurred during build."
+
+  sendFinalInformation:
+    name: Send final information to Telegram
+    needs: buildForSomePlatforms
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: All builds completed succesfully.
