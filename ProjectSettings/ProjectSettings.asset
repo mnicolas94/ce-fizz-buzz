@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.9
+  bundleVersion: 0.1.39
   preloadedAssets:
   - {fileID: 11400000, guid: 2a139319d742d53458c9f90b88645631, type: 2}
   - {fileID: 11400000, guid: 07c62301ec2e2154ea2e140dce7f3344, type: 2}
@@ -164,7 +164,7 @@ PlayerSettings:
   applicationIdentifier:
     Standalone: com.Facticus.FizzBuzz
   buildNumber:
-    Standalone: 0.1.9
+    Standalone: 0.1.39
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -698,6 +698,7 @@ PlayerSettings:
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
     Standalone: 3
+    WebGL: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: 2D_BuiltInRenderer
