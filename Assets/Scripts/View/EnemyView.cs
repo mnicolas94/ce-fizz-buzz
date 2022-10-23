@@ -1,4 +1,4 @@
-﻿using BrunoMikoski.AnimationSequencer;
+﻿﻿using BrunoMikoski.AnimationSequencer;
 using Core;
 using TMPro;
 using UnityEngine;
@@ -13,6 +13,7 @@ namespace View
         [SerializeField, AutoProperty(AutoPropertyMode.Asset)]
         private AppearanceSettings _appearanceSettings;
         [SerializeField,AutoProperty] private SpriteRenderer _spriteRenderer;
+        [SerializeField,AutoProperty] private Transform _shadow;
         [SerializeField] private TextMeshProUGUI _numberText;
         
         [SerializeField] private AnimationSequencerController _spawnAnimation;
@@ -46,8 +47,15 @@ namespace View
         {
             gameObject.name = $"Enemy - {_enemyData.CurrentClass} ({_enemyData.Score})";
             _spriteRenderer.sprite = _appearanceSettings.GetAppearance(_enemyData.CurrentClass).EnemySprite;
-            _spriteRenderer.transform.up = -_enemyData.Position;
+            LookAtCenter();
             _numberText.text = $"{_enemyData.CurrentClassNumber}";
+        }
+
+        private void LookAtCenter()
+        {
+            var up = -_enemyData.Position;
+            _spriteRenderer.transform.up = up;
+            _shadow.transform.up = up;
         }
     }
 }
