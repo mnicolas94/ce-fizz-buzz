@@ -9,9 +9,9 @@ using UnityEngine;
 
 namespace UI
 {
-    public class WeaponSelector : AsyncPopup<EnemyClass, Vector3>
+    public class WeaponSelector : AsyncPopup<EnemyClass, (Vector3, Camera)>
     {
-        [SerializeField] private Transform _popupTransform;
+        [SerializeField] private RectTransform _popupTransform;
         [SerializeField] private List<WeaponButton> _weaponButtons;
         [SerializeField] private AnimationSequencerController _hideAnimation;
 
@@ -31,8 +31,18 @@ namespace UI
             }
         }
 
-        public override void Initialize(Vector3 position)
+        public override void Initialize((Vector3, Camera) positionCamera)
         {
+            // check if buttons get out of screen
+            var (position, cam) = positionCamera;
+            var semiHeight = _popupTransform.sizeDelta.y / 2;
+            var limit = cam.orthographicSize - semiHeight;
+            if (position.y >= limit)
+            {
+                // rotate
+                _popupTransform.rotation = Quaternion.Euler(0, 0, 180);
+            }
+            
             _popupTransform.position = position;
         }
     }

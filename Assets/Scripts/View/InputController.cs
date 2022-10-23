@@ -21,9 +21,6 @@ namespace View
         [SerializeField, Tooltip("Bounds around an enemy to keep showing weapon selector, e.i. if the cursor leaves the" +
                                  "bounds area, then the weapon selector popup will hide.")]
         private Vector2 _cursorLeaveBounds;
-        
-        [SerializeField, Tooltip("Bounds offset w.r.t enemy.")]
-        private Vector2 _cursorLeaveBoundsOffset;
 
         [SerializeField] private WeaponSelector _selectorPopupPrefab;
 
@@ -78,7 +75,7 @@ namespace View
                     try
                     {
                         // show weapon selector popup
-                        var popupTask = Popups.ShowPopup(_selectorPopupPrefab, enemyPosition, linkedCt);
+                        var popupTask = Popups.ShowPopup(_selectorPopupPrefab, (enemyPosition, _camera), linkedCt);
                         var enterDifferentEnemyTask = WaitEnterDifferentEnemy(enemyView, pointerAction, linkedCt);
                         var leaveEnemyTask = WaitCursorLeaveEnemy(pointerAction, enemyPosition, linkedCt);
 

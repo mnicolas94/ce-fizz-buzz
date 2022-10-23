@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Core;
-using Core.GameRules;
-using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using Utils.Attributes;
 
@@ -17,6 +12,8 @@ namespace View
         [SerializeField, AutoProperty(AutoPropertyMode.Scene)] private EnemyViewPool _enemiesPool;
 
         private GameController _gameController;
+
+        public GameController GameController => _gameController;
 
         [ContextMenu("Start game")]
         public void StartGame()
