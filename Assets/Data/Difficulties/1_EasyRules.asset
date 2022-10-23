@@ -17,7 +17,7 @@ MonoBehaviour:
     _maxSpawnCount: 5
     _minNumber: 1
     _maxNumber: 15
-    _distanceToSpawnEnemy: 5.5
+    _distanceToSpawnEnemy: 5.75
     _circularSectors: 18
   _healthRules:
     _distanceToDamagePlayer: 1
@@ -25,4 +25,4 @@ MonoBehaviour:
     _healPlayerOnScoreMultiplier: 100
     _healAmount: 1
   _moveDistancePerTurn: 0.5
-  _distanceToBounceShot: 3
+  _distanceToBounceShot: 2

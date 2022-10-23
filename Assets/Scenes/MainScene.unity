@@ -991,6 +991,7 @@ Transform:
   - {fileID: 1126045332}
   - {fileID: 203266131}
   - {fileID: 1783732947}
+  - {fileID: 1308456055}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1177,9 +1178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameController: {fileID: 1387679554}
   _camera: {fileID: 519420031}
-  _enemiesMask:
-    serializedVersion: 2
-    m_Bits: 96
   _cursorLeaveBounds: {x: 1, y: 1}
   _cursorLeaveBoundsOffset: {x: 0, y: 0}
   _selectorPopupPrefab: {fileID: 3907156067046627651, guid: 5a9b3af0fc73d6f4bb9d0ec48a69b412, type: 3}
@@ -1644,6 +1642,7 @@ MonoBehaviour:
   - rid: 761664039437205507
   - rid: 761664058760888400
   - rid: 761664080351592470
+  - rid: 761664108676513852
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
@@ -1782,6 +1781,26 @@ MonoBehaviour:
             - m_Target: {fileID: 2100231866}
               m_TargetAssemblyTypeName: View.DangerCircle, com.mnicolas.ce-fizz-buzz
               m_MethodName: UpdateCircle
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 761664108676513852
+      type: {class: InvokeCallbackAnimationStep, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        delay: 0
+        flowType: 0
+        callback:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1308456056}
+              m_TargetAssemblyTypeName: UI.GameOverPopupLauncher, com.mnicolas.ce-fizz-buzz
+              m_MethodName: CheckGameOverCondition
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
@@ -2242,6 +2261,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209412728}
   m_CullTransparentMesh: 1
+--- !u!1 &1308456054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308456055}
+  - component: {fileID: 1308456056}
+  m_Layer: 0
+  m_Name: GameOverPopupLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1308456055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308456054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 504356742}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1308456056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308456054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f314d78bb684fcda7f2e7c5dbc36b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverPopup: {fileID: 2979446603750017322, guid: 6ce627165ff46cf478a13e415759c799, type: 3}
+  _gameController: {fileID: 1387679554}
+  _playerHealth: {fileID: 11400000, guid: bb01e5742c271094f8fa36c17d3d2cbc, type: 2}
 --- !u!1 &1349801505
 GameObject:
   m_ObjectHideFlags: 0

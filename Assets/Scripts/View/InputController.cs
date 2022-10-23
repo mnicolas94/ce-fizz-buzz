@@ -46,6 +46,11 @@ namespace View
 
         private void Start()
         {
+            StartGameLoop();
+        }
+
+        public void StartGameLoop()
+        {
             var ct = _cts.Token;
             StartGameLoop(ct);
         }

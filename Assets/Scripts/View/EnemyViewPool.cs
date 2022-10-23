@@ -50,6 +50,7 @@ namespace View
             if (_dataToViewMap.ContainsKey(enemy))
             {
                 var view = _dataToViewMap[enemy];
+                _dataToViewMap.Remove(enemy);
                 _enemiesPool.Release(view);
             }
         }
