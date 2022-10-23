@@ -29,6 +29,7 @@ MonoBehaviour:
     m_Name: OpenUPM
     m_Url: https://package.openupm.com
     m_Scopes:
+    - com.brunomikoski.animationsequencer
     - com.dbrizov
     - com.facticus.utils
     - com.mackysoft.serializereference-extensions

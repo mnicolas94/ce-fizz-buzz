@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: The Solar Moose
-  productName: Unity Project Template
+  companyName: Facticus
+  productName: FizzBuzz
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -134,13 +134,15 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.3.16
+  bundleVersion: 0.1.9
   preloadedAssets:
   - {fileID: 11400000, guid: 2a139319d742d53458c9f90b88645631, type: 2}
   - {fileID: 11400000, guid: 07c62301ec2e2154ea2e140dce7f3344, type: 2}
   - {fileID: 11400000, guid: 080a89b675256b744b8bf3fa54eb2741, type: 2}
   - {fileID: 11400000, guid: 04c99e54b1a99514db8e8375dafa241e, type: 2}
   - {fileID: 11400000, guid: 6d65d40fd989d5649a40a6bea17942ea, type: 2}
+  - {fileID: 11400000, guid: 10533a09168a96a42a67ddc5f166e7ba, type: 2}
+  - {fileID: 11400000, guid: 9ca2b2f908f07bd4098f2532f8b97ee9, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -160,9 +162,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.TheSolarMoose.UnityProjectTemplate
+    Standalone: com.Facticus.FizzBuzz
   buildNumber:
-    Standalone: 0.3.16
+    Standalone: 0.1.9
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -664,7 +666,21 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: UNITY_POST_PROCESSING_STACK_V2
+    CloudRendering: UNITY_POST_PROCESSING_STACK_V2
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
+    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
+    Lumin: UNITY_POST_PROCESSING_STACK_V2
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
+    PS4: UNITY_POST_PROCESSING_STACK_V2
+    PS5: UNITY_POST_PROCESSING_STACK_V2
+    Stadia: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: DOTWEEN_ENABLED;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: UNITY_POST_PROCESSING_STACK_V2
+    Windows Store Apps: UNITY_POST_PROCESSING_STACK_V2
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2
+    tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

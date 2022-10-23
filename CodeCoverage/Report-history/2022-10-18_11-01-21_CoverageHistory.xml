@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2022-10-18_11-01-21" tag="">
+  <assembly name="com.mnicolas.ce-fizz-buzz">
+    <class name="Core.Enemy" coveredlines="0" coverablelines="12" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="Core.EnemyClassUtils" coveredlines="0" coverablelines="30" totallines="68" coveredbranches="0" totalbranches="0" />
+    <class name="Core.GameController" coveredlines="0" coverablelines="37" totallines="88" coveredbranches="0" totalbranches="0" />
+    <class name="Core.GameMechanics" coveredlines="8" coverablelines="71" totallines="120" coveredbranches="0" totalbranches="0" />
+    <class name="Core.GameRules.GameRules" coveredlines="0" coverablelines="12" totallines="43" coveredbranches="0" totalbranches="0" />
+    <class name="Core.GameRules.HealthRules" coveredlines="0" coverablelines="6" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="Core.GameRules.SpawnRules" coveredlines="20" coverablelines="25" totallines="77" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

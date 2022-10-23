@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AtomGenerator
   m_EditorClassIdentifier: 
   FullQualifiedName: 
-  Namespace: 
-  BaseType: 
+  Namespace: Core.TurnSteps
+  BaseType: SpawnTurnStep
   GenerationOptions: 4194303
   Scripts: []
