@@ -93,6 +93,14 @@ namespace View
                             // play turn
                             await _gameController.PlayTurn(enemyView.EnemyData, shotClass);
                         }
+                        else if (finishedTask == enterDifferentEnemyTask)
+                        {
+                            Debug.Log("enter differennt enemy");
+                        }
+                        else if (finishedTask == leaveEnemyTask)
+                        {
+                            Debug.Log("leave enemy task");
+                        }
                     }
                     finally
                     {

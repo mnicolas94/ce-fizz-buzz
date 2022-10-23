@@ -28,7 +28,6 @@ namespace UI
             finally
             {
                 _hideAnimation.Play();
-                await _hideAnimation.PlayingSequence.AsyncWaitForCompletion();
             }
         }
 
