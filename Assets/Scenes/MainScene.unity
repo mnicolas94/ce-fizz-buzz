@@ -1365,8 +1365,7 @@ MonoBehaviour:
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
-  playOnAwake: 0
-  pauseOnAwake: 0
+  startPaused: 0
   playbackSpeed: 1
   playType: 0
   loops: 0
@@ -1381,6 +1380,7 @@ MonoBehaviour:
   onProgressEvent:
     m_PersistentCalls:
       m_Calls: []
+  progress: -1
   references:
     version: 2
     RefIds:
@@ -1516,8 +1516,7 @@ MonoBehaviour:
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
-  playOnAwake: 0
-  pauseOnAwake: 0
+  startPaused: 0
   playbackSpeed: 1
   playType: 0
   loops: 0
@@ -1532,6 +1531,7 @@ MonoBehaviour:
   onProgressEvent:
     m_PersistentCalls:
       m_Calls: []
+  progress: -1
   references:
     version: 2
     RefIds:
@@ -1762,8 +1762,7 @@ MonoBehaviour:
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 2
-  playOnAwake: 0
-  pauseOnAwake: 0
+  startPaused: 0
   playbackSpeed: 1
   playType: 0
   loops: 0
@@ -1778,6 +1777,7 @@ MonoBehaviour:
   onProgressEvent:
     m_PersistentCalls:
       m_Calls: []
+  progress: -1
   references:
     version: 2
     RefIds:
@@ -25516,8 +25516,7 @@ MonoBehaviour:
   updateType: 0
   timeScaleIndependent: 0
   autoplayMode: 0
-  playOnAwake: 1
-  pauseOnAwake: 0
+  startPaused: 0
   playbackSpeed: 1
   playType: 0
   loops: 0
@@ -25532,6 +25531,7 @@ MonoBehaviour:
   onProgressEvent:
     m_PersistentCalls:
       m_Calls: []
+  progress: -1
   references:
     version: 2
     RefIds:

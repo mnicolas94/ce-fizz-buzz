@@ -35,6 +35,7 @@ namespace View.TurnStepRenderers
                 else
                     animationSequence.Join(sequence);
             }
+
         }
 
         public override void ResetToInitialState()

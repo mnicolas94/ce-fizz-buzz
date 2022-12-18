@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.av.smart-hierarchy": "https://github.com/neon-age/Smart-Hierarchy.git",
-    "com.brunomikoski.animationsequencer": "0.3.8",
+    "com.brunomikoski.animationsequencer": "0.5.1",
     "com.dbrizov.naughtyattributes": "2.1.4",
     "com.facticus.asyncutils": "https://github.com/mnicolas94/unity-async-utils.git",
     "com.facticus.audio": "https://github.com/mnicolas94/facticus-audio.git",

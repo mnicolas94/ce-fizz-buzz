@@ -53,6 +53,14 @@ namespace Core
 
             return turnStepsList;
         }
+        
+        /// <summary>
+        /// Skip turn, i.e. only spawn and move enemies.
+        /// </summary>
+        public List<TurnStep> SkipTurn()
+        {
+            return ExecuteEnemiesActions().ToList();
+        }
 
         /// <summary>
         /// Destroy or change class of enemies based on shot class.

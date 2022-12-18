@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using AsyncUtils;
@@ -54,6 +55,35 @@ namespace View
 
         private async void StartGameLoop(CancellationToken ct)
         {
+            while (!ct.IsCancellationRequested)
+            {
+                var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+                var linkedCt = linkedCts.Token;
+                try
+                {
+                    var inputTasks = new List<Task<Func<Task>>>
+                    {
+                        PlayTurnTask(linkedCt)
+                    };
+#if UNITY_EDITOR
+                    // allow skip turn only in editor
+                    inputTasks.Add(SkipTurnTask(linkedCt));
+#endif
+                    var finishedTask = await Task.WhenAny(inputTasks);
+                    linkedCts.Cancel(); // cancel the unfinished task
+                    var actionTaskProvider = await finishedTask;
+                    var actionTask = actionTaskProvider();
+                    await actionTask;
+                }
+                finally
+                {
+                    linkedCts.Dispose();
+                }
+            }
+        }
+        
+        private async Task<Func<Task>> PlayTurnTask(CancellationToken ct)
+        {
             var pointerAction = InputActionUtils.GetPointAction();
             pointerAction.Enable();
 
@@ -88,7 +118,8 @@ namespace View
                         {
                             var shotClass = await popupTask;
                             // play turn
-                            await _gameController.PlayTurn(enemyView.EnemyData, shotClass);
+                            Task ActionTaskProvider() => _gameController.PlayTurn(enemyView.EnemyData, shotClass);
+                            return ActionTaskProvider;
                         }
                     }
                     finally
@@ -101,6 +132,26 @@ namespace View
             {
                 pointerAction.Disable();
                 pointerAction.Dispose();
+            }
+
+            return null;
+        }
+        
+        private async Task<Func<Task>> SkipTurnTask(CancellationToken ct)
+        {
+            var keyAction = InputActionUtils.GetKeyAction(Key.Space);
+            keyAction.Enable();
+
+            try
+            {
+                await AsyncUtils.Utils.WaitForInputAction(keyAction, ct);  // wait for key press
+                Task ActionTaskProvider() => _gameController.SkipTurn();
+                return ActionTaskProvider;
+            }
+            finally
+            {
+                keyAction.Disable();
+                keyAction.Dispose();
             }
         }
 

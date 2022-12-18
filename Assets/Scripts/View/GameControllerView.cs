@@ -16,9 +16,9 @@ namespace View
         public GameController GameController => _gameController;
 
         [ContextMenu("Start game")]
-        public void StartGame()
+        public async void StartGame()
         {
-            StartGameAsync();
+            await StartGameAsync();
         }
         
         public async Task StartGameAsync()
@@ -39,6 +39,12 @@ namespace View
         public async Task PlayTurn(Enemy enemy, EnemyClass shotClass)
         {
             var turnSteps = _gameController.PlayTurn(enemy, shotClass);
+            await _turnRenderer.RenderTurn(turnSteps);
+        }
+        
+        public async Task SkipTurn()
+        {
+            var turnSteps = _gameController.SkipTurn();
             await _turnRenderer.RenderTurn(turnSteps);
         }
     }

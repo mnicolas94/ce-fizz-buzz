@@ -19,9 +19,9 @@ namespace UI
         private CancellationTokenSource _cts;
         private bool _paused;
 
-        public void ShowPauseMenu()
+        public async void ShowPauseMenu()
         {
-            ShowPauseMenuAsync();
+            await ShowPauseMenuAsync();
         }
         
         private async void ShowPauseMenuAsync(InputAction.CallbackContext ctx)
