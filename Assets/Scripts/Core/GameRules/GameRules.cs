@@ -9,6 +9,8 @@ namespace Core.GameRules
 
         [SerializeField] private HealthRules _healthRules = new HealthRules();
         
+        [SerializeField] private ScoreRules _scoreRules = new ScoreRules();
+        
         [SerializeField] private float _moveDistancePerTurn = 1;
         
         /// <summary>
@@ -26,6 +28,12 @@ namespace Core.GameRules
         {
             get => _healthRules;
             set => _healthRules = value;
+        }
+
+        public ScoreRules ScoreRules
+        {
+            get => _scoreRules;
+            set => _scoreRules = value;
         }
 
         public float MoveDistancePerTurn

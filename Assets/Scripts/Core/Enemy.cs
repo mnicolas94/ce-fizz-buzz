@@ -27,8 +27,6 @@ namespace Core
         
         public int CurrentClassNumber => _classes[_classes.Count - 1];
 
-        public int Score => CurrentClassNumber;
-
         public Enemy(Vector2 position, int firstClass)
         {
             _position = position;

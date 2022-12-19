@@ -24,5 +24,9 @@ MonoBehaviour:
     _damagePerHit: 1
     _healPlayerOnScoreMultiplier: 100
     _healAmount: 1
+  _scoreRules:
+    _classesScore:
+      m_keys: 00000000010000000200000003000000
+      m_values: 01000000020000000400000008000000
   _moveDistancePerTurn: 0.5
   _distanceToBounceShot: 2

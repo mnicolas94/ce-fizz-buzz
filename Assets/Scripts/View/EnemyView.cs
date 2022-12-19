@@ -45,7 +45,7 @@ namespace View
 
         public void UpdateAppearance()
         {
-            gameObject.name = $"Enemy - {_enemyData.CurrentClass} ({_enemyData.Score})";
+            gameObject.name = $"Enemy - {_enemyData.CurrentClass} ({_enemyData.CurrentClassNumber})";
             _spriteRenderer.sprite = _appearanceSettings.GetAppearance(_enemyData.CurrentClass).EnemySprite;
             LookAtCenter();
         }

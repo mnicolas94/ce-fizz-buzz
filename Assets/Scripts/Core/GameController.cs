@@ -82,8 +82,9 @@ namespace Core
                 foreach (var enemy in shotBounceSequence)
                 {
                     _context.Enemies.Remove(enemy);
-                    _context.Score.Value += enemy.Score;
-                    totalScore += enemy.Score;
+                    var score = _context.GameRules.ScoreRules.GetEnemyScore(enemy);
+                    _context.Score.Value += score;
+                    totalScore += score;
                 }
 
                 // heal player based on score
