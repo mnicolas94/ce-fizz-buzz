@@ -48,7 +48,6 @@ namespace View
             gameObject.name = $"Enemy - {_enemyData.CurrentClass} ({_enemyData.Score})";
             _spriteRenderer.sprite = _appearanceSettings.GetAppearance(_enemyData.CurrentClass).EnemySprite;
             LookAtCenter();
-            _numberText.text = $"{_enemyData.CurrentClassNumber}";
         }
 
         private void LookAtCenter()
