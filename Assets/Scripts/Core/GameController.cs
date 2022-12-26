@@ -92,7 +92,7 @@ namespace Core
                 if (healAmount > 0)
                 {
                     _context.PlayerHealth.Value += healAmount;
-                    yield return new HealPlayerTurnStep(healAmount);
+                    yield return new HealPlayerTurnStep(healAmount, _context.PlayerHealth.Value);
                 }
                 
                 yield return new DestroyTurnStep(shotBounceSequence, shotClass);

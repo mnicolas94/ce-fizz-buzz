@@ -17,7 +17,12 @@ namespace UI
 
         public void UpdateHealthUi()
         {
-            var normalizedHealth = _healthVariable.Value / _maxHealth.Value;
+            UpdateHealthUi(_healthVariable.Value);
+        }
+
+        public void UpdateHealthUi(float currentHealth)
+        {
+            var normalizedHealth = currentHealth / _maxHealth.Value;
             _healthMask.fillAmount = normalizedHealth;
             _healthBar.color = GetColorForHealth(normalizedHealth);
         }
