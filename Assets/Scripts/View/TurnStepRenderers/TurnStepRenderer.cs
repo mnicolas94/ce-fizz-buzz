@@ -1,5 +1,6 @@
 ﻿using System;
 using BrunoMikoski.AnimationSequencer;
+using Core.Serializables;
 using UnityEngine;
 using Utils.Attributes;
 
@@ -14,6 +15,6 @@ namespace View.TurnStepRenderers
     public abstract class TurnStepRenderer : AnimationStepBase
     {
         [SerializeField, AutoProperty(AutoPropertyMode.Asset)]
-        protected SerializableTurn _lastTurnData;
+        protected SerializedTurnAsset _lastTurnData;
     }
 }

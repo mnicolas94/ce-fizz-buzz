@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using BrunoMikoski.AnimationSequencer;
+using Core.Serializables;
 using Core.TurnSteps;
 using DG.Tweening;
 using UnityEngine;
@@ -11,7 +12,7 @@ namespace View
     public class TurnRenderer : MonoBehaviour
     {
         [SerializeField, AutoProperty(AutoPropertyMode.Asset)]
-        private SerializableTurn _lastTurnData;
+        private SerializedTurnAsset _lastTurnData;
 
         [SerializeField] private AnimationSequencerController _turnAnimation;
 

@@ -32,6 +32,11 @@ namespace Core
             _position = position;
             _classes = new List<int>{ firstClass };
         }
+        
+        public Enemy(Vector2 position, EnemyClass firstClass)
+            : this(position, EnemyClassUtils.GetFirstFromClass(firstClass))
+        {
+        }
 
         public void ChangeClass(int newClass)
         {

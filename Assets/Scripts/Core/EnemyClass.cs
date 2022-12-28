@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Core
 {
@@ -63,6 +65,21 @@ namespace Core
                     yield return i;
                 }
             }
+        }
+
+        public static int GetFirstFromClass(EnemyClass enemyClass)
+        {
+            var values = GetValuesFromClass(enemyClass, 1, 15);
+            var first = values.First();
+            return first;
+        }
+
+        public static EnemyClass GetRandomClass()
+        {
+            var values = Enum.GetValues(typeof(EnemyClass));
+            var index = Random.Range(0, values.Length);
+            var clazz = (EnemyClass) values.GetValue(index);
+            return clazz;
         }
     }
 }

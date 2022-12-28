@@ -1,14 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Core.TurnSteps;
 using UnityEngine;
 
-namespace View
+namespace Core.Serializables
 {
-    [CreateAssetMenu(fileName = "SerializableTurn", menuName = "FizzBuzz/SerializableTurn", order = 0)]
-    public class SerializableTurn : ScriptableObject, IList<TurnStep>
+    [Serializable]
+    public class SerializableTurn : IList<TurnStep>
     {
         [SerializeReference] private List<TurnStep> _turnSteps;
+
+        public SerializableTurn() : this(new List<TurnStep>())
+        {
+        }
+
+        public SerializableTurn(IList<TurnStep> steps)
+        {
+            _turnSteps = new List<TurnStep>();
+            AddRange(steps);
+        }
 
         public void AddRange(IList<TurnStep> other)
         {
@@ -17,8 +28,13 @@ namespace View
                 Add(turnStep);
             }
         }
-        
-#region IList implementation
+
+        public override string ToString()
+        {
+            return $"Turn: {_turnSteps.Count} steps";
+        }
+
+        #region IList implementation
 
         public IEnumerator<TurnStep> GetEnumerator()
         {
