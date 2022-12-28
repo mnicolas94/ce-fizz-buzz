@@ -44,7 +44,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2908a2d1f07f39a53c73c26be56ff33547d1916b"
+      "hash": "dd0372406d6e9b7db8637cbd480d6c5e507126b4"
     },
     "com.facticus.loadingutils": {
       "version": "https://github.com/mnicolas94/unity-loading-utils.git",
@@ -85,7 +85,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "bbcd42ae3bd8d6297fd9f6a4c51c5cea5b2d438f"
+      "hash": "1feca3fe89dfb6d8226f59b83b5aedceea6641f4"
     },
     "com.lms.version_mand": {
       "version": "https://github.com/mnicolas94/LMS.Version.git?path=/Assets/Version",

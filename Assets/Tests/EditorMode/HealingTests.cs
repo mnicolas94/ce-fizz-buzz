@@ -28,8 +28,9 @@ namespace Tests.EditorMode
             
             var rules = ScriptableObject.CreateInstance<GameRules>();
             rules.HealthRules.HealPlayerOnScoreMultiplier = scoreMultiplier;
-            
-            var enemy = new Enemy(new Vector2(1, 0), enemyScore);
+            rules.ScoreRules.SetEnemyClassScore(shotClass, enemyScore);
+
+            var enemy = new Enemy(new Vector2(1, 0), shotClass);
             var enemies = new List<Enemy>
             {
                 enemy,
@@ -70,8 +71,9 @@ namespace Tests.EditorMode
             var rules = ScriptableObject.CreateInstance<GameRules>();
             rules.HealthRules.HealPlayerOnScoreMultiplier = scoreMultiplier;
             rules.HealthRules.HealAmount = healAmount;
+            rules.ScoreRules.SetEnemyClassScore(shotClass, enemyScore);
             
-            var enemy = new Enemy(new Vector2(1, 0), enemyScore);
+            var enemy = new Enemy(new Vector2(1, 0), shotClass);
             var enemies = new List<Enemy>
             {
                 enemy,

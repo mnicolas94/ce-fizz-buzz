@@ -28,13 +28,15 @@ namespace Tests.EditorMode
             score.Value = initScore;
             
             var initialRule = ScriptableObject.CreateInstance<GameRules>();
+            initialRule.ScoreRules.SetEnemyClassScore(shotClass, enemyScore);
+            
             var secondRule = ScriptableObject.CreateInstance<GameRules>();
             var difficulties = new List<ScoreRule>
             {
                 new ScoreRule(scoreMilestone, secondRule)
             };
             
-            var enemy = new Enemy(new Vector2(1, 0), enemyScore);
+            var enemy = new Enemy(new Vector2(1, 0), shotClass);
             var enemies = new List<Enemy>
             {
                 enemy,

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05582c20a7df45ad8f4eeb451e0ea007, type: 3}
   m_Name: _LastTurnData
   m_EditorClassIdentifier: 
-  _turnSteps: []
+  _turn:
+    _turnSteps: []
   references:
     version: 2
     RefIds: []

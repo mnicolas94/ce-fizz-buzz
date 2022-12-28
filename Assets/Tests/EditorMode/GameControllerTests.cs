@@ -82,11 +82,11 @@ namespace Tests.EditorMode
             Assert.IsTrue(destroyStep.ShotClass == expectedShotClass);
         }
         
-        [TestCase(4, 4)]
-        [TestCase(3, 3, 2)]
+        [TestCase(1, 4)]
+        [TestCase(1, 3, 2)]
         [TestCase(1, 1, 3, 5, 15)]
-        [TestCase(6, 2, 4, 6)]  // with bounce
-        [TestCase(15, 15, 1, 2, 3, 4, 5, 6)]
+        [TestCase(2, 2, 4, 6)]  // with bounce
+        [TestCase(1, 15, 1, 2, 3, 4, 5, 6)]
         public void WhenShootEnemyWithSameClassShot_ScoreStepOccur(int expectedScore, params int[] numbers)
         {
             // arrange
