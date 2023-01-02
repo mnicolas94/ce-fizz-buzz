@@ -15,6 +15,8 @@ namespace View
 
         public GameController GameController => _gameController;
 
+        public GameContext GameContext => _gameContext;
+
         [ContextMenu("Start game")]
         public async void StartGame()
         {

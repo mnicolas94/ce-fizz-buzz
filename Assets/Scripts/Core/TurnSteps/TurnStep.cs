@@ -8,5 +8,9 @@ namespace Core.TurnSteps
     [Serializable]
     public abstract class TurnStep
     {
+        public override string ToString()
+        {
+            return GetType().Name;
+        }
     }
 }

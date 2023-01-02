@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Core.TurnSteps;
 using UnityEngine;
+using Utils.Attributes;
 
 namespace Core.Serializables
 {
     [Serializable]
     public class SerializableTurn : IList<TurnStep>
     {
-        [SerializeReference] private List<TurnStep> _turnSteps;
+        [SerializeReference, ToStringLabel] private List<TurnStep> _turnSteps;
 
         public SerializableTurn() : this(new List<TurnStep>())
         {
