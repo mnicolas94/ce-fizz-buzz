@@ -15,14 +15,218 @@ MonoBehaviour:
   _playerHealth: {fileID: 11400000, guid: bb01e5742c271094f8fa36c17d3d2cbc, type: 2}
   _maxHealth: {fileID: 11400000, guid: a235f874280b22e4e9da8abbddab321a, type: 2}
   _score: {fileID: 11400000, guid: 226ef8047917d424db1876b6953b026a, type: 2}
-  _gameRules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}
+  _gameRules: {fileID: 11400000, guid: 30053f15894b7244aa67fcaa91b29f56, type: 2}
   _difficultyScoreMilestones:
   - _score: 0
-    _rules: {fileID: 11400000, guid: 2529fc16eb2dc2a448ff594fe24f08e3, type: 2}
+    _rules: {fileID: 11400000, guid: 30053f15894b7244aa67fcaa91b29f56, type: 2}
   _enemies:
-  - _position: {x: 4.0217323, y: -3.3746357}
+  - _position: {x: -1.2135255, y: 0.8816778}
+    _classes: 08000000
+  - _position: {x: -0.15679249, y: -1.4917827}
+    _classes: 0d000000
+  - _position: {x: 0.46352568, y: -1.4265847}
+    _classes: 02000000
+  - _position: {x: 1.5, y: 0}
     _classes: 05000000
-  - _position: {x: 0.91165316, y: 5.1702404}
+  - _position: {x: 1.003696, y: 1.1147172}
+    _classes: 0a000000
+  - _position: {x: 1.3703177, y: 0.6101049}
+    _classes: 01000000
+  - _position: {x: -0.15679276, y: 1.4917829}
+    _classes: 0f000000
+  - _position: {x: -0.75000006, y: 1.2990378}
+    _classes: 0d000000
+  - _position: {x: -0.74999976, y: -1.2990382}
+    _classes: 01000000
+  - _position: {x: 1.370318, y: -0.6101046}
+    _classes: 02000000
+  - _position: {x: 0.4635255, y: 1.4265852}
+    _classes: 0e000000
+  - _position: {x: -1.2135253, y: -0.88167757}
+    _classes: 01000000
+  - _position: {x: 1.0036961, y: -1.114717}
+    _classes: 0b000000
+  - _position: {x: -1.4672216, y: -0.31186768}
+    _classes: 0c000000
+  - _position: {x: -1.4672216, y: 0.31186745}
+    _classes: 0a000000
+  - _position: {x: -1.9562955, y: -0.41582358}
     _classes: 06000000
-  - _position: {x: -4.9333863, y: -1.7956058}
+  - _position: {x: -1.6180339, y: -1.1755701}
+    _classes: 09000000
+  - _position: {x: 1.8270904, y: 0.8134733}
+    _classes: 05000000
+  - _position: {x: 1.3382615, y: -1.4862894}
+    _classes: 06000000
+  - _position: {x: -0.20905702, y: 1.9890438}
+    _classes: 09000000
+  - _position: {x: -1.618034, y: 1.1755704}
+    _classes: 0f000000
+  - _position: {x: -0.20905666, y: -1.9890436}
+    _classes: 0a000000
+  - _position: {x: 0.61803424, y: -1.902113}
+    _classes: 06000000
+  - _position: {x: -1.0000001, y: 1.7320504}
+    _classes: 08000000
+  - _position: {x: 1.8270907, y: -0.8134729}
+    _classes: 05000000
+  - _position: {x: -1.9562955, y: 0.41582325}
+    _classes: 05000000
+  - _position: {x: 2, y: 0}
+    _classes: 0e000000
+  - _position: {x: 0.61803395, y: 1.9021134}
+    _classes: 08000000
+  - _position: {x: -0.9999997, y: -1.7320509}
+    _classes: 0c000000
+  - _position: {x: 1.3382612, y: 1.4862896}
+    _classes: 0f000000
+  - _position: {x: -2.0225425, y: -1.4694626}
+    _classes: 04000000
+  - _position: {x: 2.2838635, y: -1.0168412}
+    _classes: 05000000
+  - _position: {x: -2.4453692, y: 0.519779}
+    _classes: 05000000
+  - _position: {x: -1.2500001, y: 2.1650631}
+    _classes: 06000000
+  - _position: {x: 0.77254283, y: -2.3776412}
+    _classes: 03000000
+  - _position: {x: 1.6728265, y: 1.857862}
+    _classes: 0e000000
+  - _position: {x: 2.5, y: 0}
+    _classes: 06000000
+  - _position: {x: 1.6728269, y: -1.8578618}
+    _classes: 07000000
+  - _position: {x: 2.283863, y: 1.0168417}
+    _classes: 0e000000
+  - _position: {x: -2.4453692, y: -0.51977944}
+    _classes: 09000000
+  - _position: {x: -2.0225425, y: 1.469463}
+    _classes: 09000000
+  - _position: {x: -0.26132128, y: 2.4863048}
+    _classes: 08000000
+  - _position: {x: 0.7725424, y: 2.3776417}
+    _classes: 0e000000
+  - _position: {x: -1.2499996, y: -2.1650636}
+    _classes: 06000000
+  - _position: {x: -0.26132083, y: -2.4863045}
+    _classes: 08000000
+  - _position: {x: 3, y: 0}
+    _classes: 0d000000
+  - _position: {x: 0.9270509, y: 2.85317}
+    _classes: 0a000000
+  - _position: {x: -0.31358552, y: 2.9835656}
+    _classes: 08000000
+  - _position: {x: -2.934443, y: -0.6237353}
+    _classes: 01000000
+  - _position: {x: 2.7406359, y: 1.22021}
+    _classes: 01000000
+  - _position: {x: -2.934443, y: 0.62373483}
+    _classes: 0b000000
+  - _position: {x: -2.427051, y: 1.7633555}
+    _classes: 02000000
+  - _position: {x: -1.4999995, y: -2.5980763}
+    _classes: 0e000000
+  - _position: {x: 2.7406363, y: -1.2202094}
+    _classes: 02000000
+  - _position: {x: 2.007392, y: 2.2294345}
+    _classes: 03000000
+  - _position: {x: -2.427051, y: -1.7633553}
+    _classes: 09000000
+  - _position: {x: 0.92705137, y: -2.8531694}
+    _classes: 0a000000
+  - _position: {x: 2.0073922, y: -2.229434}
+    _classes: 02000000
+  - _position: {x: -1.5000002, y: 2.5980759}
+    _classes: 0d000000
+  - _position: {x: -0.31358498, y: -2.9835656}
+    _classes: 04000000
+  - _position: {x: -1.7500002, y: 3.0310886}
+    _classes: 0e000000
+  - _position: {x: -0.3658498, y: 3.4808264}
+    _classes: 0a000000
+  - _position: {x: -2.8315597, y: -2.0572479}
+    _classes: 01000000
+  - _position: {x: 2.3419576, y: -2.6010065}
+    _classes: 0b000000
+  - _position: {x: -1.7499995, y: -3.031089}
+    _classes: 03000000
+  - _position: {x: -2.8315597, y: 2.057248}
+    _classes: 04000000
+  - _position: {x: 3.1974092, y: -1.4235777}
+    _classes: 02000000
+  - _position: {x: -0.36584917, y: -3.4808264}
+    _classes: 0d000000
+  - _position: {x: 2.341957, y: 2.601007}
+    _classes: 01000000
+  - _position: {x: 3.1974087, y: 1.4235784}
+    _classes: 0b000000
+  - _position: {x: 1.0815599, y: -3.3286977}
+    _classes: 0b000000
+  - _position: {x: 3.5, y: 0}
+    _classes: 0e000000
+  - _position: {x: 1.0815594, y: 3.3286982}
+    _classes: 0b000000
+  - _position: {x: -3.4235168, y: 0.72769064}
+    _classes: 01000000
+  - _position: {x: -3.4235168, y: -0.72769123}
+    _classes: 06000000
+  - _position: {x: -3.9125905, y: -0.8316471}
+    _classes: 09000000
+  - _position: {x: -0.41811404, y: 3.9780874}
+    _classes: 09000000
+  - _position: {x: 4, y: 0}
+    _classes: 0b000000
+  - _position: {x: 2.676523, y: -2.972579}
+    _classes: 06000000
+  - _position: {x: 3.654182, y: -1.6269459}
+    _classes: 09000000
+  - _position: {x: 1.2360679, y: 3.8042264}
+    _classes: 0f000000
+  - _position: {x: -0.41811332, y: -3.9780874}
+    _classes: 0b000000
+  - _position: {x: -3.9125905, y: 0.83164644}
+    _classes: 09000000
+  - _position: {x: -3.2360682, y: -2.3511405}
+    _classes: 07000000
+  - _position: {x: 2.6765223, y: 2.9725795}
+    _classes: 09000000
+  - _position: {x: -2.0000002, y: 3.4641013}
+    _classes: 01000000
+  - _position: {x: -1.9999995, y: -3.4641018}
+    _classes: 0c000000
+  - _position: {x: 3.6541815, y: 1.6269467}
+    _classes: 08000000
+  - _position: {x: -3.2360682, y: 2.3511407}
+    _classes: 0a000000
+  - _position: {x: 1.2360685, y: -3.804226}
+    _classes: 01000000
+  - _position: {x: -3.6405768, y: -2.6450331}
+    _classes: 0e000000
+  - _position: {x: -4.4016643, y: -0.93560296}
+    _classes: 0f000000
+  - _position: {x: -2.2500002, y: 3.897114}
+    _classes: 01000000
+  - _position: {x: 4.5, y: 0}
+    _classes: 0b000000
+  - _position: {x: 3.0110874, y: 3.344152}
+    _classes: 09000000
+  - _position: {x: -2.2499995, y: -3.8971145}
+    _classes: 09000000
+  - _position: {x: 4.1109543, y: 1.830315}
+    _classes: 03000000
+  - _position: {x: -0.47037748, y: -4.4753485}
+    _classes: 05000000
+  - _position: {x: 1.3905771, y: -4.279754}
+    _classes: 0d000000
+  - _position: {x: -0.47037828, y: 4.4753485}
+    _classes: 01000000
+  - _position: {x: -4.4016643, y: 0.93560225}
+    _classes: 02000000
+  - _position: {x: 4.1109548, y: -1.830314}
+    _classes: 01000000
+  - _position: {x: 3.0110884, y: -3.3441515}
+    _classes: 0e000000
+  - _position: {x: -3.6405768, y: 2.6450334}
+    _classes: 0f000000
+  - _position: {x: 1.3905764, y: 4.2797546}
     _classes: 0e000000

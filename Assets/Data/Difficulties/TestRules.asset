@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: TestRules
   m_EditorClassIdentifier: 
   _spawnRules:
-    _minSpawnCount: 1
-    _maxSpawnCount: 5
+    _minSpawnCount: 18
+    _maxSpawnCount: 18
     _minNumber: 1
     _maxNumber: 15
-    _distanceToSpawnEnemy: 5.75
-    _circularSectors: 18
+    _distanceToSpawnEnemy: 6
+    _circularSectors: 15
   _healthRules:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1

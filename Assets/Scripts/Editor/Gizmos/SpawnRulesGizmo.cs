@@ -9,7 +9,9 @@ namespace Editor.Gizmos
         [DrawGizmo(GizmoType.Selected)]
         public static void DrawGizmo(GameControllerView controllerView, GizmoType gizmoType)
         {
-            Handles.color = new Color(1.0f, 0.2f, 0);
+            var color = new Color(1.0f, 0.2f, 0);
+            var textColor = new Color(0.8f, 0.0f, 0.5f);
+            Handles.color = color;
             var gameRules = controllerView.GameContext.GameRules;
             var spawnRules = gameRules.SpawnRules;
             
@@ -32,6 +34,26 @@ namespace Editor.Gizmos
                 var to = Utils.MathUtils.FromPolar(firstRadius, angle);
                 // Handles.DrawDottedLine(from, to, thickness);
                 Handles.DrawBezier(from, to, from, to, Color.red, null, thickness);
+            }
+            
+            // draw arc distances
+            var firstAngle = 0;
+            var secondAngle = angularStep;
+            var labelStyle = new GUIStyle(GUI.skin.label)
+            {
+                fontStyle = FontStyle.Bold,
+                alignment = TextAnchor.MiddleCenter
+            };
+            labelStyle.normal.textColor = textColor;
+            
+            for (float radius = firstRadius; radius > stopRadius; radius -= step)
+            {
+                var from = Utils.MathUtils.FromPolar(radius, firstAngle);
+                var to = Utils.MathUtils.FromPolar(radius, secondAngle);
+                var fromTo = to - from;
+                var distance = fromTo.magnitude;
+                var center = (fromTo / 2) + from;
+                Handles.Label(center, $"{distance:0.##}", labelStyle);
             }
         }
     }
