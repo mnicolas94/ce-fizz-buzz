@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Core.Serializables;
 using UnityEngine;
 using Utils.Attributes;
@@ -9,6 +10,10 @@ namespace Simulations
     {
         [SerializeField] private SimulationInputParameters _parameters;
         [SerializeField, ToStringLabel] private List<SerializableGame> _games;
+
+        public SimulationInputParameters Parameters => _parameters;
+
+        public ReadOnlyCollection<SerializableGame> Games => _games.AsReadOnly();
 
         public static SimulationResult Create(SimulationInputParameters parameters, List<SerializableGame> games)
         {

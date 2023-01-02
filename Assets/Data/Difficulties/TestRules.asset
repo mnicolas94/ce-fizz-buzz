@@ -28,5 +28,5 @@ MonoBehaviour:
     _classesScore:
       m_keys: 00000000010000000200000003000000
       m_values: 01000000020000000400000008000000
-  _moveDistancePerTurn: 0.5
+  _moveDistancePerTurn: 0.6
   _distanceToBounceShot: 2

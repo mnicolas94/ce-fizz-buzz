@@ -20,6 +20,11 @@ namespace Editor.Gizmos
             var stopRadius = gameRules.HealthRules.DistanceToDamagePlayer;
             var step = gameRules.MoveDistancePerTurn;
 
+            if (step == 0)
+            {
+                return;  // do not draw gizmo if step is zero
+            }
+
             var thickness = 2;
             for (float radius = firstRadius; radius > stopRadius; radius -= step)
             {
@@ -53,7 +58,7 @@ namespace Editor.Gizmos
                 var fromTo = to - from;
                 var distance = fromTo.magnitude;
                 var center = (fromTo / 2) + from;
-                Handles.Label(center, $"{distance:0.##}", labelStyle);
+                Handles.Label(center, $"{distance:0.###}", labelStyle);
             }
         }
     }

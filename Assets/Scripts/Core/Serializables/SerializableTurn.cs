@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Core.TurnSteps;
 using UnityEngine;
 using Utils.Attributes;
@@ -11,6 +12,8 @@ namespace Core.Serializables
     public class SerializableTurn : IList<TurnStep>
     {
         [SerializeReference, ToStringLabel] private List<TurnStep> _turnSteps;
+
+        public ReadOnlyCollection<TurnStep> TurnSteps => _turnSteps.AsReadOnly();
 
         public SerializableTurn() : this(new List<TurnStep>())
         {
