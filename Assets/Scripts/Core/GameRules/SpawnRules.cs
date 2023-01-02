@@ -70,7 +70,7 @@ namespace Core.GameRules
         public List<float> GetAvailableSpawnAngles()
         {
             var angles = new List<float>();
-            var angleOffset = 360 / _circularSectors;
+            var angleOffset = 360.0f / _circularSectors;
 
             for (int i = 0; i < _circularSectors; i++)
             {
