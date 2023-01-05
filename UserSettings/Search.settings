@@ -7,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DA94955A" = "t:scriptableobject"
+	"last_search.DA94955A" = "t"
 	"OpenInspectorPreview.DA94955A" = "0"
 	"currentGroup.DA94955A" = "all"
 }
@@ -71,6 +71,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t:sct"
 ]
 searchItemFavorites = [
 ]

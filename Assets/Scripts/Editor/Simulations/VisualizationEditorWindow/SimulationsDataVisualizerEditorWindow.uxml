@@ -1,7 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/Editor/Simulations/VisualizationEditorWindow/SimulationsDataVisualizerEditorWindow.uss?fileID=7433441132597879392&amp;guid=e11bda1a6616c4e419e8ca04ed5f2f8a&amp;type=3#SimulationsDataVisualizerEditorWindow" />
     <ui:VisualElement name="InputsLayout" style="flex-direction: row; flex-grow: 0; height: 162px;">
-        <ui:VisualElement name="InputsLayoutLeft" style="flex-grow: 1;" />
-        <ui:VisualElement name="InputsLayoutRight" style="flex-grow: 1;" />
+        <uie:PropertyField name="ExtractorPropertyField" binding-path="_extractor" label="Extractor" style="flex-grow: 1;" />
+        <uie:PropertyField name="ResultsPropertyField" binding-path="_results" label="Simulation results" style="flex-grow: 1;" />
     </ui:VisualElement>
-    <ui:VisualElement name="OutputsLayout" style="flex-grow: 2;" />
+    <ui:VisualElement style="flex-direction: row-reverse;">
+        <ui:Button text="Compute data" display-tooltip-when-elided="true" name="ComputeButton" style="flex-shrink: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="OutputsLayout" label="Data extractor" style="flex-grow: 2;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="ResultsLabel" class="darkBackgroundLabel" style="flex-grow: 1;" />
+    </ui:VisualElement>
 </ui:UXML>
