@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Core.TurnSteps;
 using UnityEngine;
 
 namespace Simulations.DataExtractors
@@ -12,49 +13,30 @@ namespace Simulations.DataExtractors
             var games = simulationResult.Games;
             var gamesCount = games.Count;
             var turnsCount = games.Select(game => game.Turns.Count).ToList();
+            var scores = games.Select(game =>
+            {
+                var scoreTurns = game.Turns
+                    .SelectMany(turn => turn.TurnSteps)
+                    .Where(step => step is ScoreChangedTurnStep)
+                    .Cast<ScoreChangedTurnStep>();
+                var scoreChanges = scoreTurns.Select(step => step.ScoreChange);
+                var totalScore = scoreChanges.Sum();
+                return totalScore;
+            }).ToList();
 
-            var (turnsMin, turnsMax, turnsMean) = GetMinMaxMean(turnsCount);
+            var (turnsMin, turnsMax, turnsMean) = Utils.GetMinMaxMean(turnsCount);
+            var (scoreMin, scoreMax, scoreMean) = Utils.GetMinMaxMean(scores);
 
             return new Dictionary<string, object>
             {
+                { "games", gamesCount },
                 { "min turns", turnsMin },
                 { "max turns", turnsMax },
                 { "mean turns", turnsMean },
+                { "min score", scoreMin },
+                { "max score", scoreMax },
+                { "mean score", scoreMean },
             };
-        }
-
-        private (int, int, int) GetMinMaxMean(List<int> values)
-        {
-            int min = Int32.MaxValue;
-            int max = Int32.MinValue;
-            int mean = 0;
-            foreach (var value in values)
-            {
-                min = Math.Min(min, value);
-                max = Math.Max(max, value);
-                mean += value;
-            }
-
-            mean /= values.Count;
-
-            return (min, max, mean);
-        }
-        
-        private (float, float, float) GetMinMaxMean(List<float> values)
-        {
-            float min = Int32.MaxValue;
-            float max = Int32.MinValue;
-            float mean = 0;
-            foreach (var value in values)
-            {
-                min = Mathf.Min(min, value);
-                max = Mathf.Max(max, value);
-                mean += value;
-            }
-
-            mean /= values.Count;
-
-            return (min, max, mean);
         }
     }
 }

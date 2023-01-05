@@ -75,7 +75,7 @@ namespace Editor.Simulations
                 var (simulationResult, simulationData) = tuple;
                 var dataValues = simulationData.Values;
 
-                var strData = string.Join(";\t\t", dataValues);
+                var strData = string.Join("\t\t", dataValues);
 
                 var str = $"{simulationResult.name}: \t{strData}";
                 return str;
