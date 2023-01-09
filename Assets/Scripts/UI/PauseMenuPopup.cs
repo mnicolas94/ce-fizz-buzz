@@ -39,12 +39,17 @@ using UnityEngine.UI;
             var resumeKeyTask = AsyncUtils.Utils.WaitForInputAction(_resumeAction, ct);
             var resumeButtonTask = AsyncUtils.Utils.WaitPressButtonAsync(_resumeButton, ct);
             await Task.WhenAny(resumeButtonTask, resumeKeyTask);
-            await _settingsData.Save();
         }
 
         private void OnDisable()
         {
+            SaveSettings();
             _resumeAction?.Dispose();
+        }
+
+        private async void SaveSettings()
+        {
+            await _settingsData.Save();
         }
     }
 }

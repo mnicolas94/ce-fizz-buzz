@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d6fc6f654dd5749a20c09a3cc606f8, type: 3}
   m_Name: SaveSettings
   m_EditorClassIdentifier: 
-  _persistentsLabel:
-    m_LabelString: default
   _serializer:
-    id: 0
+    rid: 0
   _encryptData: 1
   _searchDatabaseAssetsInPaths:
   - Assets/Data/
+  _ignoreDatabaseAssetsInPaths:
+  - Assets/Data/Editor
+  - Assets/Data/Settings/AnimationControllerDefaults.asset
+  - Assets/Data/Settings
+  _persistentObjects: []
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: OdinPersistentSerializer, ns: SaveSystem.Serializers, asm: com.facticus.savesystem}
       data:
         _format: 0

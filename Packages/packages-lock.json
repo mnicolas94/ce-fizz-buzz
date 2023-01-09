@@ -64,7 +64,7 @@
         "com.facticus.utils": "0.10.0",
         "com.unity.addressables": "1.19.18"
       },
-      "hash": "ff0eb1dd55dbcb1a95481ebf8af64cf16caad91d"
+      "hash": "a3ab84badb45127275d7d607e49c0d6b7afa6bd1"
     },
     "com.facticus.serializable-predicate": {
       "version": "https://github.com/mnicolas94/facticus-serializable-predicate.git",

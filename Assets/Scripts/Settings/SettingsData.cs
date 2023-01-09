@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SaveSystem;
+using UnityEngine;
 
 namespace Settings
 {
@@ -14,6 +15,7 @@ namespace Settings
             {
                 _volumeOn = value;
                 AudioListener.volume = value ? 1 : 0;
+                this.Save();
             }
         }
     }
