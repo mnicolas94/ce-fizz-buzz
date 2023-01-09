@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.39
+  bundleVersion: 0.1.42
   preloadedAssets:
   - {fileID: 11400000, guid: 2a139319d742d53458c9f90b88645631, type: 2}
   - {fileID: 11400000, guid: 07c62301ec2e2154ea2e140dce7f3344, type: 2}
@@ -164,7 +164,7 @@ PlayerSettings:
   applicationIdentifier:
     Standalone: com.Facticus.FizzBuzz
   buildNumber:
-    Standalone: 0.1.39
+    Standalone: 0.1.42
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0

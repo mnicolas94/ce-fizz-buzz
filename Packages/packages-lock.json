@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.av.smart-hierarchy": {
-      "version": "https://github.com/neon-age/Smart-Hierarchy.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "87d3437d4ea2017774f27535c669af6958520ad6"
-    },
     "com.brunomikoski.animationsequencer": {
       "version": "0.5.1",
       "depth": 0,
