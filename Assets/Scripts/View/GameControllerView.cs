@@ -29,7 +29,7 @@ namespace View
             await StartGameAsync(game);
         }
         
-        public async Task StartGameAsync(GameController game)
+        private async Task StartGameAsync(GameController game)
         {
             _enemiesPool.Clear();
             _gameController = game;

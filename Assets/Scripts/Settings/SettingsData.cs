@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Settings
 {
     [CreateAssetMenu(fileName = "SettingsData", menuName = "Settings/SettingsData", order = 0)]
-    public class SettingsData : ScriptableObject
+    public class SettingsData : ScriptableObject, IPersistentResetable
     {
         [SerializeField] private bool _volumeOn;
 
@@ -17,6 +17,11 @@ namespace Settings
                 AudioListener.volume = value ? 1 : 0;
                 this.Save();
             }
+        }
+
+        public void ResetToDefault()
+        {
+            _volumeOn = true;
         }
     }
 }

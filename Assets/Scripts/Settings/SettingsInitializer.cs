@@ -11,7 +11,7 @@ namespace Settings
 
         private async void Start()
         {
-            await _settingsData.Load();
+            await _settingsData.LoadOrCreate();
             _settingsData.VolumeOn = _settingsData.VolumeOn;
         }
     }
