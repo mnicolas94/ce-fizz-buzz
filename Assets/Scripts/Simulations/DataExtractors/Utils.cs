@@ -39,5 +39,17 @@ namespace Simulations.DataExtractors
 
             return (min, max, mean);
         }
+        
+        public static string GetMinMaxMeanString(List<int> values)
+        {
+            var (min, max, mean) = GetMinMaxMean(values);
+            return $"{mean}({min}-{max})";
+        }
+        
+        public static string GetMinMaxMeanString(List<float> values)
+        {
+            var (min, max, mean) = GetMinMaxMean(values);
+            return $"{mean}({min}-{max})";
+        }
     }
 }

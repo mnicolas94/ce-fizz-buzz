@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using Core.Serializables;
 using Core.TurnSteps;
 using UnityEngine;
 
 namespace Simulations.DataExtractors
 {
+    [Serializable]
     public class SimpleDataExtractor : ISimulationDataExtractor
     {
         public Dictionary<string, object> ExtractGamesData(SimulationResult simulationResult)
@@ -13,6 +16,24 @@ namespace Simulations.DataExtractors
             var games = simulationResult.Games;
             var gamesCount = games.Count;
             var turnsCount = games.Select(game => game.Turns.Count).ToList();
+            var scoresPerGame = GetScorePerGames(games);
+            var scoresPerTurns = GetScorePerTurns(games);
+
+            var mmmTurnsPerGame = Utils.GetMinMaxMeanString(turnsCount);
+            var mmmScorePerGames = Utils.GetMinMaxMeanString(scoresPerGame);
+            var mmmScorePerTurns = Utils.GetMinMaxMeanString(scoresPerTurns);
+            
+            return new Dictionary<string, object>
+            {
+                { "games", gamesCount },
+                { "turns", mmmTurnsPerGame },
+                { "score (per game)", mmmScorePerGames },
+                { "score (per turn)", mmmScorePerTurns },
+            };
+        }
+
+        private static List<int> GetScorePerGames(ReadOnlyCollection<SerializableGame> games)
+        {
             var scores = games.Select(game =>
             {
                 var scoreTurns = game.Turns
@@ -23,20 +44,21 @@ namespace Simulations.DataExtractors
                 var totalScore = scoreChanges.Sum();
                 return totalScore;
             }).ToList();
-
-            var (turnsMin, turnsMax, turnsMean) = Utils.GetMinMaxMean(turnsCount);
-            var (scoreMin, scoreMax, scoreMean) = Utils.GetMinMaxMean(scores);
-
-            return new Dictionary<string, object>
+            return scores;
+        }
+        
+        private static List<int> GetScorePerTurns(ReadOnlyCollection<SerializableGame> games)
+        {
+            var scores = games.SelectMany(game =>
             {
-                { "games", gamesCount },
-                { "min turns", turnsMin },
-                { "max turns", turnsMax },
-                { "mean turns", turnsMean },
-                { "min score", scoreMin },
-                { "max score", scoreMax },
-                { "mean score", scoreMean },
-            };
+                var scoreTurns = game.Turns
+                    .SelectMany(turn => turn.TurnSteps)
+                    .Where(step => step is ScoreChangedTurnStep)
+                    .Cast<ScoreChangedTurnStep>();
+                var scoreChanges = scoreTurns.Select(step => step.ScoreChange);
+                return scoreChanges;
+            }).ToList();
+            return scores;
         }
     }
 }
