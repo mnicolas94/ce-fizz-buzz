@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: 1_EasyRules
   m_EditorClassIdentifier: 
   _spawnRules:
-    _minSpawnCount: 1
-    _maxSpawnCount: 5
+    _minSpawnCount: 2
+    _maxSpawnCount: 3
     _minNumber: 1
     _maxNumber: 15
-    _distanceToSpawnEnemy: 5.75
-    _circularSectors: 18
+    _distanceToSpawnEnemy: 5.45
+    _circularSectors: 15
   _healthRules:
     _distanceToDamagePlayer: 1
     _damagePerHit: 1
-    _healPlayerOnScoreMultiplier: 100
+    _healPlayerOnScoreMultiplier: 30
     _healAmount: 1
   _scoreRules:
     _classesScore:
       m_keys: 00000000010000000200000003000000
       m_values: 01000000020000000400000008000000
-  _moveDistancePerTurn: 0.5
+  _moveDistancePerTurn: 0.6
   _distanceToBounceShot: 2
